@@ -1,0 +1,470 @@
+[
+  {
+    "page": 1,
+    "image": "images/pages/page_01.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 2,
+    "image": "images/pages/page_02.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 3,
+    "image": "images/pages/page_03.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 4,
+    "image": "images/pages/page_04.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 5,
+    "image": "images/pages/page_05.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 6,
+    "image": "images/pages/page_06.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 7,
+    "image": "images/pages/page_07.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 8,
+    "image": "images/pages/page_08.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 9,
+    "image": "images/pages/page_09.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 10,
+    "image": "images/pages/page_10.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 11,
+    "image": "images/pages/page_11.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 12,
+    "image": "images/pages/page_12.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 13,
+    "image": "images/pages/page_13.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 14,
+    "image": "images/pages/page_14.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 15,
+    "image": "images/pages/page_15.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 16,
+    "image": "images/pages/page_16.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 17,
+    "image": "images/pages/page_17.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 18,
+    "image": "images/pages/page_18.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 19,
+    "image": "images/pages/page_19.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 20,
+    "image": "images/pages/page_20.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 21,
+    "image": "images/pages/page_21.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 22,
+    "image": "images/pages/page_22.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 23,
+    "image": "images/pages/page_23.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 24,
+    "image": "images/pages/page_24.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 25,
+    "image": "images/pages/page_25.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 26,
+    "image": "images/pages/page_26.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 27,
+    "image": "images/pages/page_27.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 28,
+    "image": "images/pages/page_28.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 29,
+    "image": "images/pages/page_29.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 30,
+    "image": "images/pages/page_30.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 31,
+    "image": "images/pages/page_31.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 32,
+    "image": "images/pages/page_32.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 33,
+    "image": "images/pages/page_33.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 34,
+    "image": "images/pages/page_34.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 35,
+    "image": "images/pages/page_35.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 36,
+    "image": "images/pages/page_36.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 37,
+    "image": "images/pages/page_37.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 38,
+    "image": "images/pages/page_38.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 39,
+    "image": "images/pages/page_39.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 40,
+    "image": "images/pages/page_40.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 41,
+    "image": "images/pages/page_41.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 42,
+    "image": "images/pages/page_42.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 43,
+    "image": "images/pages/page_43.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 44,
+    "image": "images/pages/page_44.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 45,
+    "image": "images/pages/page_45.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 46,
+    "image": "images/pages/page_46.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 47,
+    "image": "images/pages/page_47.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 48,
+    "image": "images/pages/page_48.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 49,
+    "image": "images/pages/page_49.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 50,
+    "image": "images/pages/page_50.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 51,
+    "image": "images/pages/page_51.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 52,
+    "image": "images/pages/page_52.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 53,
+    "image": "images/pages/page_53.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 54,
+    "image": "images/pages/page_54.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 55,
+    "image": "images/pages/page_55.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 56,
+    "image": "images/pages/page_56.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 57,
+    "image": "images/pages/page_57.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 58,
+    "image": "images/pages/page_58.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 59,
+    "image": "images/pages/page_59.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 60,
+    "image": "images/pages/page_60.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 61,
+    "image": "images/pages/page_61.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 62,
+    "image": "images/pages/page_62.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 63,
+    "image": "images/pages/page_63.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 64,
+    "image": "images/pages/page_64.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 65,
+    "image": "images/pages/page_65.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 66,
+    "image": "images/pages/page_66.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 67,
+    "image": "images/pages/page_67.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 68,
+    "image": "images/pages/page_68.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 69,
+    "image": "images/pages/page_69.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 70,
+    "image": "images/pages/page_70.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 71,
+    "image": "images/pages/page_71.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 72,
+    "image": "images/pages/page_72.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 73,
+    "image": "images/pages/page_73.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 74,
+    "image": "images/pages/page_74.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 75,
+    "image": "images/pages/page_75.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 76,
+    "image": "images/pages/page_76.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 77,
+    "image": "images/pages/page_77.webp",
+    "width": 1044,
+    "height": 1475
+  },
+  {
+    "page": 78,
+    "image": "images/pages/page_78.webp",
+    "width": 1044,
+    "height": 1475
+  }
+]

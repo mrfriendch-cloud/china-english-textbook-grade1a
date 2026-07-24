@@ -1,0 +1,1037 @@
+{
+  "unit-starter": {
+    "title": "Starter: Greetings Quiz (含5道听力题)",
+    "questions": [
+      {
+        "q": "听录音，选出你听到的问候语：",
+        "audio": "audio/exp_morning.mp3",
+        "audioText": "Good morning!",
+        "opts": [
+          "Good morning!",
+          "Good afternoon!",
+          "Goodbye!",
+          "Hello!"
+        ],
+        "ans": 0
+      },
+      {
+        "q": "听录音，选出对应的中文意思：",
+        "audio": "audio/starter_dlg_3.mp3",
+        "audioText": "Hello! My name is Bill.",
+        "opts": [
+          "再见，比尔！",
+          "下午好，吴老师。",
+          "早上好！我是吴老师。",
+          "你好！我的名字叫比尔。"
+        ],
+        "ans": 3
+      },
+      {
+        "q": "听问句录音，选出你听到的问句：",
+        "audio": "audio/starter_dlg_2.mp3",
+        "audioText": "What's your name?",
+        "opts": [
+          "Goodbye!",
+          "What's your name?",
+          "Good morning! I'm Miss Wu.",
+          "Good afternoon!"
+        ],
+        "ans": 1
+      },
+      {
+        "q": "听录音，选出听到的再见问候语：",
+        "audio": "audio/starter_dlg_6.mp3",
+        "audioText": "Bye, Bill. Goodbye.",
+        "opts": [
+          "Good afternoon!",
+          "Bye, Bill. Goodbye.",
+          "Good morning!",
+          "Hello! My name is Bill."
+        ],
+        "ans": 1
+      },
+      {
+        "q": "听录音，选出对应的英文问候语：",
+        "audio": "audio/exp_afternoon.mp3",
+        "audioText": "Good afternoon!",
+        "opts": [
+          "Hello!",
+          "Goodbye!",
+          "Good afternoon!",
+          "Good morning!"
+        ],
+        "ans": 2
+      },
+      {
+        "q": "How do you say \"你好\" in English?",
+        "opts": [
+          "Thank you!",
+          "Good morning!",
+          "Hello!",
+          "Goodbye!"
+        ],
+        "ans": 2
+      },
+      {
+        "q": "What does \"Goodbye\" mean?",
+        "opts": [
+          "早上好",
+          "下午好",
+          "你好",
+          "再见"
+        ],
+        "ans": 3
+      },
+      {
+        "q": "Which is a greeting?",
+        "opts": [
+          "Hi!",
+          "ruler",
+          "book",
+          "pencil"
+        ],
+        "ans": 0
+      },
+      {
+        "q": "Complete: \"My name ___ Bill.\"",
+        "opts": [
+          "am",
+          "is",
+          "be",
+          "are"
+        ],
+        "ans": 1
+      },
+      {
+        "q": "\"Hi\" and \"___\" have the same meaning.",
+        "opts": [
+          "Hello",
+          "Goodbye",
+          "Sorry",
+          "Thank you"
+        ],
+        "ans": 0
+      }
+    ]
+  },
+  "unit-1": {
+    "title": "Unit 1: School Quiz (含5道听力题)",
+    "questions": [
+      {
+        "q": "听录音，选出听到的文具名称：",
+        "audio": "audio/u1_pencil.mp3",
+        "audioText": "pencil",
+        "opts": [
+          "book",
+          "schoolbag",
+          "pencil",
+          "ruler"
+        ],
+        "ans": 2
+      },
+      {
+        "q": "听录音，选出对应的中文意思：",
+        "audio": "audio/u1_sentence_schoolbag.mp3",
+        "audioText": "I have a schoolbag.",
+        "opts": [
+          "我有一把尺子。",
+          "打开你的书包。",
+          "拿出你的铅笔。",
+          "我有一个书包。"
+        ],
+        "ans": 3
+      },
+      {
+        "q": "听录音，选出听到的文具：",
+        "audio": "audio/u1_ruler.mp3",
+        "audioText": "ruler",
+        "opts": [
+          "ruler",
+          "eraser",
+          "book",
+          "pencil"
+        ],
+        "ans": 0
+      },
+      {
+        "q": "听录音，选出你听到的句子：",
+        "audio": "audio/u1_sentence_book.mp3",
+        "audioText": "I have a book.",
+        "opts": [
+          "I have a schoolbag.",
+          "I have a ruler.",
+          "I have a pencil.",
+          "I have a book."
+        ],
+        "ans": 3
+      },
+      {
+        "q": "听录音指令，选出正确的中文含义：",
+        "audio": "audio/u1_action_ruler.mp3",
+        "audioText": "Show me your ruler.",
+        "opts": [
+          "出示你的尺子。",
+          "出示你的铅笔。",
+          "打开你的书。",
+          "拿出你的书包。"
+        ],
+        "ans": 0
+      },
+      {
+        "q": "\"书包\" in English is ___",
+        "opts": [
+          "ruler",
+          "schoolbag",
+          "book",
+          "pencil"
+        ],
+        "ans": 1
+      },
+      {
+        "q": "\"I have a ruler.\" means?",
+        "opts": [
+          "我有一支铅笔。",
+          "我有一把尺子。",
+          "我有一个书包。",
+          "我有一本书。"
+        ],
+        "ans": 1
+      },
+      {
+        "q": "What is \"book\" in Chinese?",
+        "opts": [
+          "尺子",
+          "笔",
+          "书",
+          "书包"
+        ],
+        "ans": 2
+      },
+      {
+        "q": "Which is a school supply?",
+        "opts": [
+          "pencil",
+          "apple",
+          "dog",
+          "ear"
+        ],
+        "ans": 0
+      },
+      {
+        "q": "\"Open your book.\" means?",
+        "opts": [
+          "站起来",
+          "请坐下",
+          "打开你的书",
+          "拿出你的铅笔"
+        ],
+        "ans": 2
+      }
+    ]
+  },
+  "unit-2": {
+    "title": "Unit 2: Face Quiz (含5道听力题)",
+    "questions": [
+      {
+        "q": "听录音，选出听到的身体部位：",
+        "audio": "audio/u2_eye.mp3",
+        "audioText": "eye",
+        "opts": [
+          "ear",
+          "nose",
+          "eye",
+          "mouth"
+        ],
+        "ans": 2
+      },
+      {
+        "q": "听录音指令，选出听到的英文句子：",
+        "audio": "audio/u2_touch_nose.mp3",
+        "audioText": "Touch your nose.",
+        "opts": [
+          "Touch your ear.",
+          "This is my face.",
+          "Touch your nose.",
+          "Touch your eye."
+        ],
+        "ans": 2
+      },
+      {
+        "q": "听录音，选出对应的中文意思：",
+        "audio": "audio/u2_this_mouth.mp3",
+        "audioText": "This is my mouth.",
+        "opts": [
+          "这是我的鼻子。",
+          "这是我的嘴巴。",
+          "这是我的眼睛。",
+          "这是我的脸。"
+        ],
+        "ans": 1
+      },
+      {
+        "q": "听录音，选出听到的器官英文：",
+        "audio": "audio/u2_ear.mp3",
+        "audioText": "ear",
+        "opts": [
+          "ear",
+          "eye",
+          "face",
+          "nose"
+        ],
+        "ans": 0
+      },
+      {
+        "q": "听录音指令，选出正确的中文动作：",
+        "audio": "audio/u2_touch_mouth.mp3",
+        "audioText": "Touch your mouth.",
+        "opts": [
+          "摸摸你的嘴巴。",
+          "摸摸你的鼻子。",
+          "摸摸你的眼睛。",
+          "摸摸你的耳朵。"
+        ],
+        "ans": 0
+      },
+      {
+        "q": "\"眼睛\" in English is ___",
+        "opts": [
+          "ear",
+          "eye",
+          "mouth",
+          "nose"
+        ],
+        "ans": 1
+      },
+      {
+        "q": "\"face\" in Chinese is ___",
+        "opts": [
+          "脸",
+          "鼻子",
+          "耳朵",
+          "眼睛"
+        ],
+        "ans": 0
+      },
+      {
+        "q": "How many ears do we have?",
+        "opts": [
+          "4",
+          "1",
+          "3",
+          "2"
+        ],
+        "ans": 3
+      },
+      {
+        "q": "\"nose\" in Chinese is ___",
+        "opts": [
+          "眼睛",
+          "耳朵",
+          "嘴巴",
+          "鼻子"
+        ],
+        "ans": 3
+      },
+      {
+        "q": "\"mouth\" in Chinese is ___",
+        "opts": [
+          "鼻子",
+          "脸",
+          "嘴巴",
+          "耳朵"
+        ],
+        "ans": 2
+      }
+    ]
+  },
+  "unit-3": {
+    "title": "Unit 3: Animals Quiz (含5道听力题)",
+    "questions": [
+      {
+        "q": "听录音，选出听到的动物：",
+        "audio": "audio/u3_tiger.mp3",
+        "audioText": "tiger",
+        "opts": [
+          "tiger",
+          "cat",
+          "bird",
+          "dog"
+        ],
+        "ans": 0
+      },
+      {
+        "q": "听对话录音，选出听到的英文句子：",
+        "audio": "audio/u3_q_tiger.mp3",
+        "audioText": "What's this? It's a tiger.",
+        "opts": [
+          "What's this? It's a tiger.",
+          "It's a cat.",
+          "What's this? It's a dog.",
+          "What's this? It's a bird."
+        ],
+        "ans": 0
+      },
+      {
+        "q": "听录音，选出听到的动物：",
+        "audio": "audio/u3_monkey.mp3",
+        "audioText": "monkey",
+        "opts": [
+          "panda",
+          "monkey",
+          "bird",
+          "tiger"
+        ],
+        "ans": 1
+      },
+      {
+        "q": "听对话录音，选出听到的英文问答：",
+        "audio": "audio/u3_q_bird.mp3",
+        "audioText": "What's this? It's a bird.",
+        "opts": [
+          "It's a dog.",
+          "What's this? It's a tiger.",
+          "What's this? It's a bird.",
+          "It's a cat."
+        ],
+        "ans": 2
+      },
+      {
+        "q": "听录音，选出听到的动物：",
+        "audio": "audio/u3_panda.mp3",
+        "audioText": "panda",
+        "opts": [
+          "monkey",
+          "cat",
+          "tiger",
+          "panda"
+        ],
+        "ans": 3
+      },
+      {
+        "q": "\"狗\" in English is ___",
+        "opts": [
+          "tiger",
+          "bird",
+          "cat",
+          "dog"
+        ],
+        "ans": 3
+      },
+      {
+        "q": "\"bird\" in Chinese is ___",
+        "opts": [
+          "猫",
+          "鸟",
+          "猴子",
+          "狗"
+        ],
+        "ans": 1
+      },
+      {
+        "q": "Which is an animal?",
+        "opts": [
+          "red",
+          "nose",
+          "pencil",
+          "bird"
+        ],
+        "ans": 3
+      },
+      {
+        "q": "\"tiger\" in Chinese is ___",
+        "opts": [
+          "猫",
+          "狗",
+          "老虎",
+          "猴子"
+        ],
+        "ans": 2
+      },
+      {
+        "q": "\"panda\" in Chinese is ___",
+        "opts": [
+          "鸟",
+          "熊猫",
+          "老虎",
+          "猴子"
+        ],
+        "ans": 1
+      }
+    ]
+  },
+  "revision-1": {
+    "title": "Revision 1: Mixed Review Quiz (含5道听力题)",
+    "questions": [
+      {
+        "q": "听录音，选出听到的单词：",
+        "audio": "audio/u1_schoolbag.mp3",
+        "audioText": "schoolbag",
+        "opts": [
+          "ruler",
+          "nose",
+          "cat",
+          "schoolbag"
+        ],
+        "ans": 3
+      },
+      {
+        "q": "听录音，选出你听到的问句：",
+        "audio": "audio/starter_dlg_2.mp3",
+        "audioText": "What's your name?",
+        "opts": [
+          "Good morning! I'm Miss Wu.",
+          "What's your name?",
+          "How are you?",
+          "Good morning!"
+        ],
+        "ans": 1
+      },
+      {
+        "q": "听录音，选出对应的中文含义：",
+        "audio": "audio/u2_touch_eye.mp3",
+        "audioText": "Touch your eye.",
+        "opts": [
+          "展示你的书。",
+          "摸摸你的眼睛。",
+          "摸摸你的鼻子。",
+          "摸摸你的耳朵。"
+        ],
+        "ans": 1
+      },
+      {
+        "q": "听录音，选出你听到的句子：",
+        "audio": "audio/u3_q_tiger.mp3",
+        "audioText": "What's this? It's a tiger.",
+        "opts": [
+          "What's this? It's a dog.",
+          "It's a cat.",
+          "It's a bird.",
+          "What's this? It's a tiger."
+        ],
+        "ans": 3
+      },
+      {
+        "q": "听录音，选出你听到的单词：",
+        "audio": "audio/u1_ruler.mp3",
+        "audioText": "ruler",
+        "opts": [
+          "book",
+          "pencil",
+          "ruler",
+          "eraser"
+        ],
+        "ans": 2
+      },
+      {
+        "q": "Complete: \"I have a ___.\" (文具)",
+        "opts": [
+          "schoolbag",
+          "ear",
+          "colour",
+          "tiger"
+        ],
+        "ans": 0
+      },
+      {
+        "q": "Which is a body part?",
+        "opts": [
+          "schoolbag",
+          "book",
+          "nose",
+          "tiger"
+        ],
+        "ans": 2
+      },
+      {
+        "q": "Which is a school object?",
+        "opts": [
+          "pencil",
+          "bird",
+          "eye",
+          "green"
+        ],
+        "ans": 0
+      },
+      {
+        "q": "Which is an animal?",
+        "opts": [
+          "blue",
+          "mouth",
+          "ruler",
+          "monkey"
+        ],
+        "ans": 3
+      },
+      {
+        "q": "\"Show me your book.\" means?",
+        "opts": [
+          "展示你的书。",
+          "这是我的书。",
+          "展示你的铅笔。",
+          "我有一本书。"
+        ],
+        "ans": 0
+      }
+    ]
+  },
+  "unit-4": {
+    "title": "Unit 4: Numbers Quiz (含5道听力题)",
+    "questions": [
+      {
+        "q": "听录音，选出听到的阿拉伯数字：",
+        "audio": "audio/u4_seven.mp3",
+        "audioText": "seven",
+        "opts": [
+          "9",
+          "7",
+          "8",
+          "6"
+        ],
+        "ans": 1
+      },
+      {
+        "q": "听录音，选出听到的问句：",
+        "audio": "audio/u4_q_tigers.mp3",
+        "audioText": "How many tigers are there?",
+        "opts": [
+          "How many tigers are there?",
+          "How many birds are there?",
+          "What colour is it?",
+          "What's this?"
+        ],
+        "ans": 0
+      },
+      {
+        "q": "听录音，选出你听到的回答：",
+        "audio": "audio/u4_a_five.mp3",
+        "audioText": "Five tigers.",
+        "opts": [
+          "Four birds.",
+          "Three dogs.",
+          "Six cats.",
+          "Five tigers."
+        ],
+        "ans": 3
+      },
+      {
+        "q": "听录音，选出你听到的数字：",
+        "audio": "audio/u4_eight.mp3",
+        "audioText": "eight",
+        "opts": [
+          "9",
+          "10",
+          "8",
+          "7"
+        ],
+        "ans": 2
+      },
+      {
+        "q": "听录音，选出你听到的数字：",
+        "audio": "audio/u4_four.mp3",
+        "audioText": "four",
+        "opts": [
+          "3",
+          "5",
+          "4",
+          "6"
+        ],
+        "ans": 2
+      },
+      {
+        "q": "\"七\" in English is ___",
+        "opts": [
+          "seven",
+          "six",
+          "nine",
+          "eight"
+        ],
+        "ans": 0
+      },
+      {
+        "q": "\"nine\" in Chinese is ___",
+        "opts": [
+          "七",
+          "九",
+          "六",
+          "八"
+        ],
+        "ans": 1
+      },
+      {
+        "q": "3 + 2 = ?",
+        "opts": [
+          "three",
+          "four",
+          "six",
+          "five"
+        ],
+        "ans": 3
+      },
+      {
+        "q": "\"ten\" in Chinese is ___",
+        "opts": [
+          "七",
+          "十",
+          "九",
+          "八"
+        ],
+        "ans": 1
+      },
+      {
+        "q": "Count: one, two, ___, four",
+        "opts": [
+          "six",
+          "two",
+          "three",
+          "five"
+        ],
+        "ans": 2
+      }
+    ]
+  },
+  "unit-5": {
+    "title": "Unit 5: Colours Quiz (含5道听力题)",
+    "questions": [
+      {
+        "q": "听录音，选出听到的颜色英文：",
+        "audio": "audio/u5_red.mp3",
+        "audioText": "red",
+        "opts": [
+          "red",
+          "yellow",
+          "blue",
+          "green"
+        ],
+        "ans": 0
+      },
+      {
+        "q": "听录音，选出听到的对话句子：",
+        "audio": "audio/u5_q_yellow.mp3",
+        "audioText": "What colour is it? It's yellow.",
+        "opts": [
+          "How many?",
+          "What colour is it? It's yellow.",
+          "What's your name?",
+          "What's this? It's red."
+        ],
+        "ans": 1
+      },
+      {
+        "q": "听录音，选出听到的颜色英文：",
+        "audio": "audio/u5_green.mp3",
+        "audioText": "green",
+        "opts": [
+          "black",
+          "blue",
+          "green",
+          "yellow"
+        ],
+        "ans": 2
+      },
+      {
+        "q": "听录音，选出你听到的颜色：",
+        "audio": "audio/u5_yellow.mp3",
+        "audioText": "yellow",
+        "opts": [
+          "blue",
+          "red",
+          "black",
+          "yellow"
+        ],
+        "ans": 3
+      },
+      {
+        "q": "听录音，选出听到的英文句子：",
+        "audio": "audio/u5_a_black.mp3",
+        "audioText": "It's black.",
+        "opts": [
+          "It's black.",
+          "It's green.",
+          "It's red.",
+          "It's blue."
+        ],
+        "ans": 0
+      },
+      {
+        "q": "\"红色\" in English is ___",
+        "opts": [
+          "yellow",
+          "blue",
+          "green",
+          "red"
+        ],
+        "ans": 3
+      },
+      {
+        "q": "\"green\" in Chinese is ___",
+        "opts": [
+          "黄色",
+          "红色",
+          "绿色",
+          "蓝色"
+        ],
+        "ans": 2
+      },
+      {
+        "q": "\"yellow\" in Chinese is ___",
+        "opts": [
+          "绿色",
+          "黄色",
+          "黑色",
+          "蓝色"
+        ],
+        "ans": 1
+      },
+      {
+        "q": "Grass is ___",
+        "opts": [
+          "red",
+          "black",
+          "blue",
+          "green"
+        ],
+        "ans": 3
+      },
+      {
+        "q": "Which is NOT a colour?",
+        "opts": [
+          "yellow",
+          "blue",
+          "cat",
+          "red"
+        ],
+        "ans": 2
+      }
+    ]
+  },
+  "unit-6": {
+    "title": "Unit 6: Fruit Quiz (含5道听力题)",
+    "questions": [
+      {
+        "q": "听录音，选出听到的水果英文：",
+        "audio": "audio/u6_apple.mp3",
+        "audioText": "apple",
+        "opts": [
+          "banana",
+          "orange",
+          "pear",
+          "apple"
+        ],
+        "ans": 3
+      },
+      {
+        "q": "听对话录音，选出听到的问答：",
+        "audio": "audio/u6_like_bananas.mp3",
+        "audioText": "Do you like bananas? Yes, I do.",
+        "opts": [
+          "Do you like bananas? Yes, I do.",
+          "Do you like oranges?",
+          "Do you like apples? No, I don't.",
+          "Do you like pears?"
+        ],
+        "ans": 0
+      },
+      {
+        "q": "听对话录音，选出听到的否定的对话：",
+        "audio": "audio/u6_like_pears.mp3",
+        "audioText": "Do you like pears? No, I don't.",
+        "opts": [
+          "Do you like pears? No, I don't.",
+          "Do you like bananas? Yes, I do.",
+          "I have a pear.",
+          "I don't know."
+        ],
+        "ans": 0
+      },
+      {
+        "q": "听录音，选出听到的水果：",
+        "audio": "audio/u6_pear.mp3",
+        "audioText": "pear",
+        "opts": [
+          "orange",
+          "banana",
+          "pear",
+          "apple"
+        ],
+        "ans": 2
+      },
+      {
+        "q": "听录音，选出听到的单词：",
+        "audio": "audio/u6_orange.mp3",
+        "audioText": "orange",
+        "opts": [
+          "orange",
+          "pear",
+          "banana",
+          "apple"
+        ],
+        "ans": 0
+      },
+      {
+        "q": "\"苹果\" in English is ___",
+        "opts": [
+          "orange",
+          "pear",
+          "banana",
+          "apple"
+        ],
+        "ans": 3
+      },
+      {
+        "q": "\"pear\" in Chinese is ___",
+        "opts": [
+          "香蕉",
+          "梨",
+          "苹果",
+          "橙子"
+        ],
+        "ans": 1
+      },
+      {
+        "q": "\"orange\" in Chinese is ___",
+        "opts": [
+          "香蕉",
+          "苹果",
+          "柑橘/橙",
+          "梨"
+        ],
+        "ans": 2
+      },
+      {
+        "q": "Which is a fruit?",
+        "opts": [
+          "ruler",
+          "apple",
+          "blue",
+          "dog"
+        ],
+        "ans": 1
+      },
+      {
+        "q": "\"I like pears.\" means?",
+        "opts": [
+          "梨很好。",
+          "你有梨吗？",
+          "我喜欢梨。",
+          "我有一个梨。"
+        ],
+        "ans": 2
+      }
+    ]
+  },
+  "revision-2": {
+    "title": "Revision 2: Final Review Quiz (含5道听力题)",
+    "questions": [
+      {
+        "q": "听录音，选出你听到的句子：",
+        "audio": "audio/rev2_like_apples.mp3",
+        "audioText": "Do you like apples? Yes, I do.",
+        "opts": [
+          "Do you like apples? Yes, I do.",
+          "How many apples?",
+          "What colour is it?",
+          "Do you like bananas?"
+        ],
+        "ans": 0
+      },
+      {
+        "q": "听录音，选出听到对话的中文含义：",
+        "audio": "audio/u5_q_yellow.mp3",
+        "audioText": "What colour is it? It's yellow.",
+        "opts": [
+          "这是什么颜色？它是黄色的。",
+          "它是红色的。",
+          "它是绿色的。",
+          "这是什么颜色？它是蓝色的。"
+        ],
+        "ans": 0
+      },
+      {
+        "q": "听录音，选出你听到的数字：",
+        "audio": "audio/u4_ten.mp3",
+        "audioText": "ten",
+        "opts": [
+          "9",
+          "7",
+          "8",
+          "10"
+        ],
+        "ans": 3
+      },
+      {
+        "q": "听对话录音，选出你听到的否定回答对话：",
+        "audio": "audio/u6_like_pears.mp3",
+        "audioText": "Do you like pears? No, I don't.",
+        "opts": [
+          "Thank you.",
+          "Yes, I do.",
+          "Do you like pears? No, I don't.",
+          "Goodbye."
+        ],
+        "ans": 2
+      },
+      {
+        "q": "听录音，选出你听到的单词：",
+        "audio": "audio/u6_orange.mp3",
+        "audioText": "orange",
+        "opts": [
+          "ruler",
+          "apple",
+          "black",
+          "orange"
+        ],
+        "ans": 3
+      },
+      {
+        "q": "\"What colour is it?\" means?",
+        "opts": [
+          "有多少个？",
+          "这是什么颜色？",
+          "这是什么？",
+          "你叫什么名字？"
+        ],
+        "ans": 1
+      },
+      {
+        "q": "5 + 5 = ?",
+        "opts": [
+          "eight",
+          "ten",
+          "nine",
+          "seven"
+        ],
+        "ans": 1
+      },
+      {
+        "q": "Which is a fruit?",
+        "opts": [
+          "ruler",
+          "orange",
+          "black",
+          "eye"
+        ],
+        "ans": 1
+      },
+      {
+        "q": "\"I like bananas.\" means?",
+        "opts": [
+          "我有香蕉。",
+          "我不喜欢香蕉。",
+          "我喜欢香蕉。",
+          "你喜欢香蕉吗？"
+        ],
+        "ans": 2
+      },
+      {
+        "q": "\"black\" in Chinese is ___",
+        "opts": [
+          "黑色",
+          "红色",
+          "绿色",
+          "蓝色"
+        ],
+        "ans": 0
+      }
+    ]
+  }
+}

@@ -1,0 +1,1416 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>义务教育教科书 英语（一年级起点）一年级上册 | 电子教材与互动学习平台</title>
+  <meta name="description" content="义务教育教科书 英语（一年级起点）一年级上册 数字化HTML电子教材，包含单元课程、本地提取音轨、词汇朗读、歌谣与歌曲及高清原版页面预览。">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Mobile Sidebar Backdrop Overlay -->
+  <div id="sidebarOverlay" class="sidebar-overlay" onclick="toggleSidebar(false)"></div>
+
+  <!-- Audio Toast Visual Indicator -->
+  <div id="audioToast" class="audio-toast">
+    <span style="font-size:1.2rem;">🔊</span>
+    <span id="audioToastText">正在播放...</span>
+  </div>
+
+  <!-- Floating Back-To-Top Button -->
+  <button type="button" id="backToTopBtn" class="floating-top-btn" onclick="scrollToTop()" aria-label="回到顶部" title="回到顶部">▲</button>
+
+  <div class="app-container">
+    <!-- Sidebar Navigation -->
+    <aside class="app-sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-title">
+          <h1>英语 一年级上册</h1>
+          <span>义务教育教科书（一年级起点）</span>
+        </div>
+        <button class="close-sidebar-btn" onclick="toggleSidebar(false)" aria-label="关闭菜单">✕</button>
+      </div>
+      
+      <nav class="sidebar-nav">
+        <div class="nav-section-title">课程单元 Navigation</div>
+        <a href="#unit-starter" class="nav-item active" onclick="switchNav('unit-starter', this)">
+          <span class="icon">📌</span>
+          <span>Starter (Greetings)</span>
+          <span class="badge">P5-8</span>
+        </a>
+        <a href="#unit-1" class="nav-item" onclick="switchNav('unit-1', this)">
+          <span class="icon">🎒</span>
+          <span>Unit 1 School</span>
+          <span class="badge">P9-16</span>
+        </a>
+        <a href="#unit-2" class="nav-item" onclick="switchNav('unit-2', this)">
+          <span class="icon">👧</span>
+          <span>Unit 2 Face</span>
+          <span class="badge">P17-24</span>
+        </a>
+        <a href="#unit-3" class="nav-item" onclick="switchNav('unit-3', this)">
+          <span class="icon">🐱</span>
+          <span>Unit 3 Animals</span>
+          <span class="badge">P25-32</span>
+        </a>
+        <a href="#revision-1" class="nav-item" onclick="switchNav('revision-1', this)">
+          <span class="icon">🎲</span>
+          <span>Revision 1</span>
+          <span class="badge">P33-34</span>
+        </a>
+        <a href="#unit-4" class="nav-item" onclick="switchNav('unit-4', this)">
+          <span class="icon">🔢</span>
+          <span>Unit 4 Numbers</span>
+          <span class="badge">P35-42</span>
+        </a>
+        <a href="#unit-5" class="nav-item" onclick="switchNav('unit-5', this)">
+          <span class="icon">🎨</span>
+          <span>Unit 5 Colours</span>
+          <span class="badge">P43-50</span>
+        </a>
+        <a href="#unit-6" class="nav-item" onclick="switchNav('unit-6', this)">
+          <span class="icon">🍎</span>
+          <span>Unit 6 Fruit</span>
+          <span class="badge">P51-58</span>
+        </a>
+        <a href="#revision-2" class="nav-item" onclick="switchNav('revision-2', this)">
+          <span class="icon">🎲</span>
+          <span>Revision 2</span>
+          <span class="badge">P59-60</span>
+        </a>
+
+        <div class="nav-section-title">附录与词汇 Appendices</div>
+        <a href="#app-chants" class="nav-item" onclick="switchNav('app-chants', this)">
+          <span class="icon">🎵</span>
+          <span>歌谣与歌曲 Chants & Songs</span>
+        </a>
+        <a href="#app-vocab" class="nav-item" onclick="switchNav('app-vocab', this)">
+          <span class="icon">📖</span>
+          <span>单元词汇表 Vocabulary</span>
+        </a>
+        <a href="#app-expressions" class="nav-item" onclick="switchNav('app-expressions', this)">
+          <span class="icon">💬</span>
+          <span>常用表达法 Expressions</span>
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Main Workspace -->
+    <main class="app-main">
+      <!-- Top Navigation Header -->
+      <header class="top-bar">
+        <div class="top-bar-main">
+          <div class="top-bar-brand">
+            <button class="menu-toggle-btn" onclick="toggleSidebar(true)" aria-label="打开菜单">☰</button>
+            <div class="header-book-title">
+              <span class="book-title-main">英语 一年级上册</span>
+              <span class="book-title-sub">义务教育教科书</span>
+            </div>
+          </div>
+
+          <div class="top-bar-center">
+            <div class="view-mode-tabs">
+              <button class="view-tab active" id="tab-interactive" onclick="setViewMode('interactive')">
+                <span class="tab-icon">💡</span>
+                <span class="tab-text">互动课程</span>
+              </button>
+              <button class="view-tab" id="tab-pageview" onclick="setViewMode('pageview')">
+                <span class="tab-icon">📄</span>
+                <span class="tab-text">原版全页</span>
+              </button>
+              <button class="view-tab" id="tab-vocab" onclick="setViewMode('vocab')">
+                <span class="tab-icon">🎴</span>
+                <span class="tab-text">词汇卡片</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="top-bar-right">
+            <div class="search-box">
+              <span class="search-icon">🔍</span>
+              <input type="text" id="searchInput" placeholder="搜索课文、单词..." oninput="handleSearch()">
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Viewport Content Container -->
+      <div class="content-viewport" id="contentViewport">
+                <!-- SECTION: STARTER -->
+        <section id="unit-starter" class="unit-section view-pane">
+          <div class="unit-header-card">
+            <span class="unit-badge">Starter Unit</span>
+            <h2 class="unit-title">Greetings & Introductions</h2>
+            <p class="unit-desc">认识主要人物角色并学习基础英语打招呼与自我介绍用语 (P5 - P8)</p>
+          </div>
+
+          <div class="lessons-grid">
+            <!-- Characters -->
+            <div class="lesson-card">
+              <div class="lesson-title">
+                <span>Main Characters 主角人物</span>
+                <span class="page-tag" onclick="jumpToPage(5)">P5 📄</span>
+              </div>
+              <p style="margin-bottom:1rem; color:var(--text-muted); font-size:0.9rem;">点击人物名字播放本地提取音轨：</p>
+              <div style="display:flex; flex-wrap:wrap; gap:0.5rem;">
+                <span class="vocab-card audio-trigger" data-audio="audio/starter_miss_wu.mp3" data-text="Miss Wu" style="padding:0.5rem 1rem;"><strong style="color:var(--primary-700)">Miss Wu</strong> (吴老师) 🎵</span>
+                <span class="vocab-card audio-trigger" data-audio="audio/starter_bill.mp3" data-text="Bill" style="padding:0.5rem 1rem;"><strong style="color:var(--primary-700)">Bill</strong> 🎵</span>
+                <span class="vocab-card audio-trigger" data-audio="audio/starter_lily.mp3" data-text="Lily" style="padding:0.5rem 1rem;"><strong style="color:var(--primary-700)">Lily</strong> 🎵</span>
+                <span class="vocab-card audio-trigger" data-audio="audio/starter_yaoyao.mp3" data-text="Yaoyao" style="padding:0.5rem 1rem;"><strong style="color:var(--primary-700)">Yaoyao</strong> 🎵</span>
+                <span class="vocab-card audio-trigger" data-audio="audio/starter_binbin.mp3" data-text="Binbin" style="padding:0.5rem 1rem;"><strong style="color:var(--primary-700)">Binbin</strong> 🎵</span>
+                <span class="vocab-card audio-trigger" data-audio="audio/starter_andy.mp3" data-text="Andy" style="padding:0.5rem 1rem;"><strong style="color:var(--primary-700)">Andy</strong> 🎵</span>
+                <span class="vocab-card audio-trigger" data-audio="audio/starter_lucky.mp3" data-text="Lucky" style="padding:0.5rem 1rem;"><strong style="color:var(--accent-amber)">Lucky</strong> (小狗) 🎵</span>
+                <span class="vocab-card audio-trigger" data-audio="audio/starter_angel.mp3" data-text="Angel" style="padding:0.5rem 1rem;"><strong style="color:var(--accent-purple)">Angel</strong> (小仙女) 🎵</span>
+              </div>
+            </div>
+
+            <!-- Dialogue 1 -->
+            <div class="lesson-card">
+              <div class="lesson-title">
+                <span>Morning Greetings 问好</span>
+                <span class="page-tag" onclick="jumpToPage(7)">P7 📄</span>
+              </div>
+              <div class="dialogue-list">
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/starter_dlg_1.mp3" data-text="Good morning! I'm Miss Wu.">
+                  <div>
+                    <strong>Miss Wu:</strong> Good morning! I’m Miss Wu.
+                    <div style="font-size:0.8rem; color:var(--text-muted);">早上好！我是吴老师。</div>
+                  </div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/starter_dlg_2.mp3" data-text="What's your name?">
+                  <div>
+                    <strong>Miss Wu:</strong> What’s your name?
+                    <div style="font-size:0.8rem; color:var(--text-muted);">你叫什么名字？</div>
+                  </div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/starter_dlg_3.mp3" data-text="Hello! My name is Bill.">
+                  <div>
+                    <strong>Bill:</strong> Hello! My name is Bill.
+                    <div style="font-size:0.8rem; color:var(--text-muted);">你好！我的名字叫Bill。</div>
+                  </div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dialogue 2 -->
+            <div class="lesson-card">
+              <div class="lesson-title">
+                <span>Afternoon & Farewell 下午好与道别</span>
+                <span class="page-tag" onclick="jumpToPage(8)">P8 📄</span>
+              </div>
+              <div class="dialogue-list">
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/starter_dlg_4.mp3" data-text="Good afternoon, Miss Wu.">
+                  <div>
+                    <strong>Bill:</strong> Good afternoon, Miss Wu.
+                    <div style="font-size:0.8rem; color:var(--text-muted);">下午好，吴老师。</div>
+                  </div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/starter_dlg_5.mp3" data-text="Hi, Bill.">
+                  <div>
+                    <strong>Miss Wu:</strong> Hi, Bill.
+                    <div style="font-size:0.8rem; color:var(--text-muted);">嗨，Bill。</div>
+                  </div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/starter_dlg_6.mp3" data-text="Bye, Bill. Goodbye.">
+                  <div>
+                    <strong>Friends:</strong> Bye, Bill. Goodbye.
+                    <div style="font-size:0.8rem; color:var(--text-muted);">再见，Bill。再见！</div>
+                  </div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <div id="quiz-unit-starter" class="quiz-section"></div>
+        
+          <div class="unit-bottom-nav">
+            <span class="unit-nav-btn prev-btn" style="opacity:0.4; cursor:not-allowed; pointer-events:none;">
+              <span class="nav-arrow">←</span>
+              <div class="nav-text">
+                <span class="nav-label">START OF COURSE</span>
+                <span class="nav-title">📌 Starter (Greetings)</span>
+              </div>
+            </span>
+            <div class="unit-nav-indicator">
+              <span>Starter Unit • P5-8</span>
+            </div>
+            <button type="button" class="unit-nav-btn next-btn" onclick="navigateToSection('unit-1')">
+              <div class="nav-text">
+                <span class="nav-label">NEXT UNIT</span>
+                <span class="nav-title">🎒 Unit 1 School</span>
+              </div>
+              <span class="nav-arrow">→</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- SECTION: UNIT 1 SCHOOL -->
+        <section id="unit-1" class="unit-section view-pane" style="display:none;">
+          <div class="unit-header-card" style="background: linear-gradient(135deg, #0284c7 0%, #0d9488 100%);">
+            <span class="unit-badge">Unit 1</span>
+            <h2 class="unit-title">School (学校)</h2>
+            <p class="unit-desc">学习学校文具词汇及表达拥有文具的句型 (P9 - P16)</p>
+          </div>
+
+          <h3 style="margin-bottom:1rem; font-size:1.2rem; color:var(--primary-700)">核心词汇 Vocabulary</h3>
+          <div class="vocab-grid">
+            <div class="vocab-card audio-trigger" data-audio="audio/u1_book.mp3" data-text="book">
+              <div class="vocab-word">book 🎵</div>
+              <div class="vocab-phonetic">/bʊk/</div>
+              <div class="vocab-meaning">书，书本</div>
+            </div>
+            <div class="vocab-card audio-trigger" data-audio="audio/u1_ruler.mp3" data-text="ruler">
+              <div class="vocab-word">ruler 🎵</div>
+              <div class="vocab-phonetic">/ˈruːlə/</div>
+              <div class="vocab-meaning">尺子</div>
+            </div>
+            <div class="vocab-card audio-trigger" data-audio="audio/u1_pencil.mp3" data-text="pencil">
+              <div class="vocab-word">pencil 🎵</div>
+              <div class="vocab-phonetic">/ˈpensl/</div>
+              <div class="vocab-meaning">铅笔</div>
+            </div>
+            <div class="vocab-card audio-trigger" data-audio="audio/u1_eraser.mp3" data-text="eraser">
+              <div class="vocab-word">eraser 🎵</div>
+              <div class="vocab-phonetic">/ɪˈreɪzə/</div>
+              <div class="vocab-meaning">橡皮</div>
+            </div>
+            <div class="vocab-card audio-trigger" data-audio="audio/u1_schoolbag.mp3" data-text="schoolbag">
+              <div class="vocab-word">schoolbag 🎵</div>
+              <div class="vocab-phonetic">/ˈskuːlbæɡ/</div>
+              <div class="vocab-meaning">书包</div>
+            </div>
+          </div>
+
+          <div class="lessons-grid">
+            <div class="lesson-card">
+              <div class="lesson-title">
+                <span>Lesson 1: Chant & Actions</span>
+                <span class="page-tag" onclick="jumpToPage(11)">P11 📄</span>
+              </div>
+              <div class="dialogue-list">
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u1_chant_heading.mp3" data-text="Look, listen and chant.">
+                  <div><strong>Part A:</strong> Look, listen and chant. (看、听与歌谣)</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u1_action_ruler.mp3" data-text="Show me your ruler.">
+                  <div><strong>Part B:</strong> Show me your ruler. (出示你的尺子)</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u1_action_pencil.mp3" data-text="Show me your pencil.">
+                  <div><strong>Action:</strong> Show me your pencil. (出示你的铅笔)</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="lesson-card">
+              <div class="lesson-title">
+                <span>Lesson 2: Key Sentence Pattern</span>
+                <span class="page-tag" onclick="jumpToPage(12)">P12 📄</span>
+              </div>
+              <div class="dialogue-list">
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u1_sentence_ruler.mp3" data-text="I have a ruler.">
+                  <div><strong>Bill:</strong> I have a ruler. (我有一把尺子。)</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u1_sentence_pencil.mp3" data-text="I have a pencil.">
+                  <div><strong>Lily:</strong> I have a pencil. (我有一支铅笔。)</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u1_sentence_schoolbag.mp3" data-text="I have a schoolbag.">
+                  <div><strong>Yaoyao:</strong> I have a schoolbag. (我有一个书包。)</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="lesson-card">
+              <div class="lesson-title">
+                <span>Story Time (故事时间)</span>
+                <span class="page-tag" onclick="jumpToPage(15)">P15-16 📄</span>
+              </div>
+              <div class="dialogue-list">
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u1_story_1.mp3" data-text="Show me your schoolbag. Open it.">
+                  <div><strong>Angel:</strong> Show me your schoolbag. Open it.</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u1_sentence_schoolbag.mp3" data-text="I have a schoolbag.">
+                  <div><strong>Bill:</strong> I have a schoolbag.</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u1_story_2.mp3" data-text="Hi! I'm Angel.">
+                  <div><strong>Angel:</strong> Hi! I’m Angel.</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <div id="quiz-unit-1" class="quiz-section"></div>
+        
+          <div class="unit-bottom-nav">
+            <button type="button" class="unit-nav-btn prev-btn" onclick="navigateToSection('unit-starter')">
+              <span class="nav-arrow">←</span>
+              <div class="nav-text">
+                <span class="nav-label">PREVIOUS UNIT</span>
+                <span class="nav-title">📌 Starter (Greetings)</span>
+              </div>
+            </button>
+            <div class="unit-nav-indicator">
+              <span>Unit 1 of 6 • P9-16</span>
+            </div>
+            <button type="button" class="unit-nav-btn next-btn" onclick="navigateToSection('unit-2')">
+              <div class="nav-text">
+                <span class="nav-label">NEXT UNIT</span>
+                <span class="nav-title">👧 Unit 2 Face</span>
+              </div>
+              <span class="nav-arrow">→</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- SECTION: UNIT 2 FACE -->
+        <section id="unit-2" class="unit-section view-pane" style="display:none;">
+          <div class="unit-header-card" style="background: linear-gradient(135deg, #ec4899 0%, #be185d 100%);">
+            <span class="unit-badge">Unit 2</span>
+            <h2 class="unit-title">Face (五官)</h2>
+            <p class="unit-desc">学习身体五官名称及 Touch 动作指令 (P17 - P24)</p>
+          </div>
+
+          <h3 style="margin-bottom:1rem; font-size:1.2rem; color:var(--primary-700)">核心词汇 Vocabulary</h3>
+          <div class="vocab-grid">
+            <div class="vocab-card audio-trigger" data-audio="audio/u2_face.mp3" data-text="face">
+              <div class="vocab-word">face 🎵</div>
+              <div class="vocab-phonetic">/feɪs/</div>
+              <div class="vocab-meaning">脸</div>
+            </div>
+            <div class="vocab-card audio-trigger" data-audio="audio/u2_eye.mp3" data-text="eye">
+              <div class="vocab-word">eye 🎵</div>
+              <div class="vocab-phonetic">/aɪ/</div>
+              <div class="vocab-meaning">眼睛</div>
+            </div>
+            <div class="vocab-card audio-trigger" data-audio="audio/u2_ear.mp3" data-text="ear">
+              <div class="vocab-word">ear 🎵</div>
+              <div class="vocab-phonetic">/ɪə/</div>
+              <div class="vocab-meaning">耳朵</div>
+            </div>
+            <div class="vocab-card audio-trigger" data-audio="audio/u2_nose.mp3" data-text="nose">
+              <div class="vocab-word">nose 🎵</div>
+              <div class="vocab-phonetic">/nəʊz/</div>
+              <div class="vocab-meaning">鼻子</div>
+            </div>
+            <div class="vocab-card audio-trigger" data-audio="audio/u2_mouth.mp3" data-text="mouth">
+              <div class="vocab-word">mouth 🎵</div>
+              <div class="vocab-phonetic">/maʊθ/</div>
+              <div class="vocab-meaning">嘴巴</div>
+            </div>
+          </div>
+
+          <div class="lessons-grid">
+            <div class="lesson-card">
+              <div class="lesson-title">
+                <span>Lesson 1: Touch Actions</span>
+                <span class="page-tag" onclick="jumpToPage(19)">P19 📄</span>
+              </div>
+              <div class="dialogue-list">
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u2_touch_mouth.mp3" data-text="Touch your mouth.">
+                  <div><strong>Action:</strong> Touch your mouth. (摸摸你的嘴巴。)</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u2_touch_nose.mp3" data-text="Touch your nose.">
+                  <div><strong>Action:</strong> Touch your nose. (摸摸你的鼻子。)</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u2_touch_eye.mp3" data-text="Touch your eye.">
+                  <div><strong>Action:</strong> Touch your eye. (摸摸你的眼睛。)</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="lesson-card">
+              <div class="lesson-title">
+                <span>Lesson 2: This is my...</span>
+                <span class="page-tag" onclick="jumpToPage(20)">P20 📄</span>
+              </div>
+              <div class="dialogue-list">
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u2_this_mouth.mp3" data-text="This is my mouth.">
+                  <div><strong>Dialogue:</strong> This is my mouth. (这是我的嘴巴。)</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u2_this_nose.mp3" data-text="This is my nose.">
+                  <div><strong>Dialogue:</strong> This is my nose. (这是我的鼻子。)</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u2_this_ear.mp3" data-text="This is my ear.">
+                  <div><strong>Dialogue:</strong> This is my ear. (这是我的耳朵。)</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <div id="quiz-unit-2" class="quiz-section"></div>
+        
+          <div class="unit-bottom-nav">
+            <button type="button" class="unit-nav-btn prev-btn" onclick="navigateToSection('unit-1')">
+              <span class="nav-arrow">←</span>
+              <div class="nav-text">
+                <span class="nav-label">PREVIOUS UNIT</span>
+                <span class="nav-title">🎒 Unit 1 School</span>
+              </div>
+            </button>
+            <div class="unit-nav-indicator">
+              <span>Unit 2 of 6 • P17-24</span>
+            </div>
+            <button type="button" class="unit-nav-btn next-btn" onclick="navigateToSection('unit-3')">
+              <div class="nav-text">
+                <span class="nav-label">NEXT UNIT</span>
+                <span class="nav-title">🐱 Unit 3 Animals</span>
+              </div>
+              <span class="nav-arrow">→</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- SECTION: UNIT 3 ANIMALS -->
+        <section id="unit-3" class="unit-section view-pane" style="display:none;">
+          <div class="unit-header-card" style="background: linear-gradient(135deg, #10b981 0%, #047857 100%);">
+            <span class="unit-badge">Unit 3</span>
+            <h2 class="unit-title">Animals (动物)</h2>
+            <p class="unit-desc">学习常见的动物英文名称及问答句型 What's this? (P25 - P32)</p>
+          </div>
+
+          <h3 style="margin-bottom:1rem; font-size:1.2rem; color:var(--primary-700)">核心词汇 Vocabulary</h3>
+          <div class="vocab-grid">
+            <div class="vocab-card audio-trigger" data-audio="audio/u3_cat.mp3" data-text="cat">
+              <div class="vocab-word">cat 🎵</div>
+              <div class="vocab-phonetic">/kæt/</div>
+              <div class="vocab-meaning">猫</div>
+            </div>
+            <div class="vocab-card audio-trigger" data-audio="audio/u3_dog.mp3" data-text="dog">
+              <div class="vocab-word">dog 🎵</div>
+              <div class="vocab-phonetic">/dɒɡ/</div>
+              <div class="vocab-meaning">狗</div>
+            </div>
+            <div class="vocab-card audio-trigger" data-audio="audio/u3_bird.mp3" data-text="bird">
+              <div class="vocab-word">bird 🎵</div>
+              <div class="vocab-phonetic">/bɜːd/</div>
+              <div class="vocab-meaning">鸟</div>
+            </div>
+            <div class="vocab-card audio-trigger" data-audio="audio/u3_monkey.mp3" data-text="monkey">
+              <div class="vocab-word">monkey 🎵</div>
+              <div class="vocab-phonetic">/ˈmʌŋki/</div>
+              <div class="vocab-meaning">猴子</div>
+            </div>
+            <div class="vocab-card audio-trigger" data-audio="audio/u3_tiger.mp3" data-text="tiger">
+              <div class="vocab-word">tiger 🎵</div>
+              <div class="vocab-phonetic">/ˈtaɪɡə/</div>
+              <div class="vocab-meaning">老虎</div>
+            </div>
+            <div class="vocab-card audio-trigger" data-audio="audio/u3_panda.mp3" data-text="panda">
+              <div class="vocab-word">panda 🎵</div>
+              <div class="vocab-phonetic">/ˈpændə/</div>
+              <div class="vocab-meaning">熊猫</div>
+            </div>
+          </div>
+
+          <div class="lessons-grid">
+            <div class="lesson-card">
+              <div class="lesson-title">
+                <span>Lesson 2: What's this?</span>
+                <span class="page-tag" onclick="jumpToPage(28)">P28 📄</span>
+              </div>
+              <div class="dialogue-list">
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u3_q_tiger.mp3" data-text="What's this? It's a tiger.">
+                  <div><strong>Question:</strong> What’s this? — It’s a tiger. (这是什么？这是一只老虎。)</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u3_q_dog.mp3" data-text="What's this? It's a dog.">
+                  <div><strong>Question:</strong> What’s this? — It’s a dog. (这是什么？这是一只狗。)</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u3_q_bird.mp3" data-text="What's this? It's a bird.">
+                  <div><strong>Question:</strong> What’s this? — It’s a bird. (这是什么？这是一只鸟。)</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <div id="quiz-unit-3" class="quiz-section"></div>
+        
+          <div class="unit-bottom-nav">
+            <button type="button" class="unit-nav-btn prev-btn" onclick="navigateToSection('unit-2')">
+              <span class="nav-arrow">←</span>
+              <div class="nav-text">
+                <span class="nav-label">PREVIOUS UNIT</span>
+                <span class="nav-title">👧 Unit 2 Face</span>
+              </div>
+            </button>
+            <div class="unit-nav-indicator">
+              <span>Unit 3 of 6 • P25-32</span>
+            </div>
+            <button type="button" class="unit-nav-btn next-btn" onclick="navigateToSection('revision-1')">
+              <div class="nav-text">
+                <span class="nav-label">NEXT REVISION</span>
+                <span class="nav-title">🎲 Revision 1</span>
+              </div>
+              <span class="nav-arrow">→</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- SECTION: REVISION 1 -->
+        <section id="revision-1" class="unit-section view-pane" style="display:none;">
+          <div class="unit-header-card" style="background: linear-gradient(135deg, #6366f1 0%, #4338ca 100%);">
+            <span class="unit-badge">Revision 1</span>
+            <h2 class="unit-title">Revision 1: Safety Island Game</h2>
+            <p class="unit-desc">阶段复习 1 (Unit 1 ~ Unit 3) 综合拓展与游戏 (P33 - P34)</p>
+          </div>
+          <div class="lesson-card">
+            <div class="lesson-title"><span>Safety Island 安全岛关卡句型</span><span class="page-tag" onclick="jumpToPage(34)">P34 📄</span></div>
+            <div class="dialogue-list">
+              <div class="dialogue-bubble audio-trigger" data-audio="audio/rev1_q_pencil.mp3" data-text="What's this? This is my pencil."><div>What’s this? — This is my pencil.</div><button class="speak-btn">🎵</button></div>
+              <div class="dialogue-bubble audio-trigger" data-audio="audio/rev1_show_book.mp3" data-text="Show me your book."><div>Show me your book.</div><button class="speak-btn">🎵</button></div>
+              <div class="dialogue-bubble audio-trigger" data-audio="audio/u2_touch_nose.mp3" data-text="Touch your nose."><div>Touch your nose.</div><button class="speak-btn">🎵</button></div>
+            </div>
+          </div>
+        
+          <div id="quiz-revision-1" class="quiz-section"></div>
+        
+          <div class="unit-bottom-nav">
+            <button type="button" class="unit-nav-btn prev-btn" onclick="navigateToSection('unit-3')">
+              <span class="nav-arrow">←</span>
+              <div class="nav-text">
+                <span class="nav-label">PREVIOUS UNIT</span>
+                <span class="nav-title">🐱 Unit 3 Animals</span>
+              </div>
+            </button>
+            <div class="unit-nav-indicator">
+              <span>Revision 1 • P33-34</span>
+            </div>
+            <button type="button" class="unit-nav-btn next-btn" onclick="navigateToSection('unit-4')">
+              <div class="nav-text">
+                <span class="nav-label">NEXT UNIT</span>
+                <span class="nav-title">🔢 Unit 4 Numbers</span>
+              </div>
+              <span class="nav-arrow">→</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- SECTION: UNIT 4 NUMBERS -->
+        <section id="unit-4" class="unit-section view-pane" style="display:none;">
+          <div class="unit-header-card" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);">
+            <span class="unit-badge">Unit 4</span>
+            <h2 class="unit-title">Numbers (数字 1 - 10)</h2>
+            <p class="unit-desc">学习英文数字 1-10 及数量询问句型 How many... are there? (P35 - P42)</p>
+          </div>
+
+          <h3 style="margin-bottom:1rem; font-size:1.2rem; color:var(--primary-700)">核心词汇 Vocabulary</h3>
+          <div class="vocab-grid">
+            <div class="vocab-card audio-trigger" data-audio="audio/u4_one.mp3" data-text="one"><div class="vocab-word">one (1) 🎵</div></div>
+            <div class="vocab-card audio-trigger" data-audio="audio/u4_two.mp3" data-text="two"><div class="vocab-word">two (2) 🎵</div></div>
+            <div class="vocab-card audio-trigger" data-audio="audio/u4_three.mp3" data-text="three"><div class="vocab-word">three (3) 🎵</div></div>
+            <div class="vocab-card audio-trigger" data-audio="audio/u4_four.mp3" data-text="four"><div class="vocab-word">four (4) 🎵</div></div>
+            <div class="vocab-card audio-trigger" data-audio="audio/u4_five.mp3" data-text="five"><div class="vocab-word">five (5) 🎵</div></div>
+            <div class="vocab-card audio-trigger" data-audio="audio/u4_six.mp3" data-text="six"><div class="vocab-word">six (6) 🎵</div></div>
+            <div class="vocab-card audio-trigger" data-audio="audio/u4_seven.mp3" data-text="seven"><div class="vocab-word">seven (7) 🎵</div></div>
+            <div class="vocab-card audio-trigger" data-audio="audio/u4_eight.mp3" data-text="eight"><div class="vocab-word">eight (8) 🎵</div></div>
+            <div class="vocab-card audio-trigger" data-audio="audio/u4_nine.mp3" data-text="nine"><div class="vocab-word">nine (9) 🎵</div></div>
+            <div class="vocab-card audio-trigger" data-audio="audio/u4_ten.mp3" data-text="ten"><div class="vocab-word">ten (10) 🎵</div></div>
+          </div>
+
+          <div class="lessons-grid">
+            <div class="lesson-card">
+              <div class="lesson-title"><span>Lesson 2: How many?</span><span class="page-tag" onclick="jumpToPage(38)">P38 📄</span></div>
+              <div class="dialogue-list">
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u4_q_tigers.mp3" data-text="How many tigers are there?">
+                  <div><strong>Question:</strong> How many tigers are there? (有多少只老虎？)</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u4_a_five.mp3" data-text="Five tigers.">
+                  <div><strong>Answer:</strong> Five tigers. (5只老虎。)</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <div id="quiz-unit-4" class="quiz-section"></div>
+        
+          <div class="unit-bottom-nav">
+            <button type="button" class="unit-nav-btn prev-btn" onclick="navigateToSection('revision-1')">
+              <span class="nav-arrow">←</span>
+              <div class="nav-text">
+                <span class="nav-label">PREVIOUS REVISION</span>
+                <span class="nav-title">🎲 Revision 1</span>
+              </div>
+            </button>
+            <div class="unit-nav-indicator">
+              <span>Unit 4 of 6 • P35-42</span>
+            </div>
+            <button type="button" class="unit-nav-btn next-btn" onclick="navigateToSection('unit-5')">
+              <div class="nav-text">
+                <span class="nav-label">NEXT UNIT</span>
+                <span class="nav-title">🎨 Unit 5 Colours</span>
+              </div>
+              <span class="nav-arrow">→</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- SECTION: UNIT 5 COLOURS -->
+        <section id="unit-5" class="unit-section view-pane" style="display:none;">
+          <div class="unit-header-card" style="background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);">
+            <span class="unit-badge">Unit 5</span>
+            <h2 class="unit-title">Colours (颜色)</h2>
+            <p class="unit-desc">学习常见色彩英文及问答句型 What colour is it? (P43 - P50)</p>
+          </div>
+
+          <h3 style="margin-bottom:1rem; font-size:1.2rem; color:var(--primary-700)">核心词汇 Vocabulary</h3>
+          <div class="vocab-grid">
+            <div class="vocab-card audio-trigger" data-audio="audio/u5_red.mp3" data-text="red"><div class="vocab-word" style="color:#ef4444;">red (红色) 🎵</div></div>
+            <div class="vocab-card audio-trigger" data-audio="audio/u5_yellow.mp3" data-text="yellow"><div class="vocab-word" style="color:#eab308;">yellow (黄色) 🎵</div></div>
+            <div class="vocab-card audio-trigger" data-audio="audio/u5_blue.mp3" data-text="blue"><div class="vocab-word" style="color:#3b82f6;">blue (蓝色) 🎵</div></div>
+            <div class="vocab-card audio-trigger" data-audio="audio/u5_green.mp3" data-text="green"><div class="vocab-word" style="color:#22c55e;">green (绿色) 🎵</div></div>
+            <div class="vocab-card audio-trigger" data-audio="audio/u5_black.mp3" data-text="black"><div class="vocab-word" style="color:#000000;">black (黑色) 🎵</div></div>
+          </div>
+
+          <div class="lessons-grid">
+            <div class="lesson-card">
+              <div class="lesson-title"><span>Lesson 2: What colour is it?</span><span class="page-tag" onclick="jumpToPage(46)">P46 📄</span></div>
+              <div class="dialogue-list">
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u5_q_yellow.mp3" data-text="What colour is it? It's yellow.">
+                  <div><strong>Question:</strong> What colour is it? — It’s yellow. (这是什么颜色？是黄色。)</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u5_a_black.mp3" data-text="It's black.">
+                  <div><strong>Answer:</strong> It’s black. (是黑色。)</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <div id="quiz-unit-5" class="quiz-section"></div>
+        
+          <div class="unit-bottom-nav">
+            <button type="button" class="unit-nav-btn prev-btn" onclick="navigateToSection('unit-4')">
+              <span class="nav-arrow">←</span>
+              <div class="nav-text">
+                <span class="nav-label">PREVIOUS UNIT</span>
+                <span class="nav-title">🔢 Unit 4 Numbers</span>
+              </div>
+            </button>
+            <div class="unit-nav-indicator">
+              <span>Unit 5 of 6 • P43-50</span>
+            </div>
+            <button type="button" class="unit-nav-btn next-btn" onclick="navigateToSection('unit-6')">
+              <div class="nav-text">
+                <span class="nav-label">NEXT UNIT</span>
+                <span class="nav-title">🍎 Unit 6 Fruit</span>
+              </div>
+              <span class="nav-arrow">→</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- SECTION: UNIT 6 FRUIT -->
+        <section id="unit-6" class="unit-section view-pane" style="display:none;">
+          <div class="unit-header-card" style="background: linear-gradient(135deg, #f43f5e 0%, #be123c 100%);">
+            <span class="unit-badge">Unit 6</span>
+            <h2 class="unit-title">Fruit (水果)</h2>
+            <p class="unit-desc">学习常见水果词汇及表达喜好的句型 Do you like...? (P51 - P58)</p>
+          </div>
+
+          <h3 style="margin-bottom:1rem; font-size:1.2rem; color:var(--primary-700)">核心词汇 Vocabulary</h3>
+          <div class="vocab-grid">
+            <div class="vocab-card audio-trigger" data-audio="audio/u6_apple.mp3" data-text="apple"><div class="vocab-word">apple (苹果) 🎵</div></div>
+            <div class="vocab-card audio-trigger" data-audio="audio/u6_banana.mp3" data-text="banana"><div class="vocab-word">banana (香蕉) 🎵</div></div>
+            <div class="vocab-card audio-trigger" data-audio="audio/u6_pear.mp3" data-text="pear"><div class="vocab-word">pear (梨) 🎵</div></div>
+            <div class="vocab-card audio-trigger" data-audio="audio/u6_orange.mp3" data-text="orange"><div class="vocab-word">orange (桔子) 🎵</div></div>
+          </div>
+
+          <div class="lessons-grid">
+            <div class="lesson-card">
+              <div class="lesson-title"><span>Lesson 2: Do you like...?</span><span class="page-tag" onclick="jumpToPage(54)">P54 📄</span></div>
+              <div class="dialogue-list">
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u6_like_bananas.mp3" data-text="Do you like bananas? Yes, I do.">
+                  <div><strong>Question:</strong> Do you like bananas? — Yes, I do. (你喜欢香蕉吗？是的，我喜欢。)</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u6_like_pears.mp3" data-text="Do you like pears? No, I don't.">
+                  <div><strong>Question:</strong> Do you like pears? — No, I don’t. (你喜欢梨吗？不，我不喜欢。)</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <div id="quiz-unit-6" class="quiz-section"></div>
+        
+          <div class="unit-bottom-nav">
+            <button type="button" class="unit-nav-btn prev-btn" onclick="navigateToSection('unit-5')">
+              <span class="nav-arrow">←</span>
+              <div class="nav-text">
+                <span class="nav-label">PREVIOUS UNIT</span>
+                <span class="nav-title">🎨 Unit 5 Colours</span>
+              </div>
+            </button>
+            <div class="unit-nav-indicator">
+              <span>Unit 6 of 6 • P51-58</span>
+            </div>
+            <button type="button" class="unit-nav-btn next-btn" onclick="navigateToSection('revision-2')">
+              <div class="nav-text">
+                <span class="nav-label">NEXT REVISION</span>
+                <span class="nav-title">🎲 Revision 2</span>
+              </div>
+              <span class="nav-arrow">→</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- SECTION: REVISION 2 -->
+        <section id="revision-2" class="unit-section view-pane" style="display:none;">
+          <div class="unit-header-card" style="background: linear-gradient(135deg, #0284c7 0%, #4f46e5 100%);">
+            <span class="unit-badge">Revision 2</span>
+            <h2 class="unit-title">Revision 2: Board Game & Review</h2>
+            <p class="unit-desc">阶段复习 2 (Unit 4 ~ Unit 6) 综合棋盘游戏与核心问答句型 (P59 - P60)</p>
+          </div>
+
+          <div class="lessons-grid">
+            <div class="lesson-card">
+              <div class="lesson-title"><span>Safety Island 1: Fruit & Preferences (水果与喜好问答)</span><span class="page-tag" onclick="jumpToPage(59)">P59 📄</span></div>
+              <div class="dialogue-list">
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/rev2_like_apples.mp3" data-text="Do you like apples? Yes, I do.">
+                  <div><strong>Question:</strong> Do you like apples? — Yes, I do. (你喜欢苹果吗？是的，我喜欢。)</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u6_like_bananas.mp3" data-text="Do you like bananas? Yes, I do.">
+                  <div><strong>Question:</strong> Do you like bananas? — Yes, I do. (你喜欢香蕉吗？是的，我喜欢。)</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u6_like_pears.mp3" data-text="Do you like pears? No, I don't.">
+                  <div><strong>Question:</strong> Do you like pears? — No, I don't. (你喜欢梨吗？不，我不喜欢。)</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="lesson-card">
+              <div class="lesson-title"><span>Safety Island 2: Colours & Recognition (颜色辨识与询问)</span><span class="page-tag" onclick="jumpToPage(59)">P59 📄</span></div>
+              <div class="dialogue-list">
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/rev2_q_colour.mp3" data-text="What colour is it? It's red.">
+                  <div><strong>Question:</strong> What colour is it? — It’s red. (它是什么颜色的？是红色的。)</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u5_q_yellow.mp3" data-text="What colour is it? It's yellow.">
+                  <div><strong>Question:</strong> What colour is it? — It’s yellow. (它是什么颜色的？是黄色的。)</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u5_a_black.mp3" data-text="It's black.">
+                  <div><strong>Answer:</strong> It’s black. (它是黑色的。)</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="lesson-card">
+              <div class="lesson-title"><span>Safety Island 3: Numbers & Counting (数量数数关卡)</span><span class="page-tag" onclick="jumpToPage(60)">P60 📄</span></div>
+              <div class="dialogue-list">
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u4_q_tigers.mp3" data-text="How many tigers are there?">
+                  <div><strong>Question:</strong> How many tigers are there? (那里有多少只老虎？)</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/rev2_five.mp3" data-text="Five.">
+                  <div><strong>Answer:</strong> Five. (5只。)</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <div id="quiz-revision-2" class="quiz-section"></div>
+        
+          <div class="unit-bottom-nav">
+            <button type="button" class="unit-nav-btn prev-btn" onclick="navigateToSection('unit-6')">
+              <span class="nav-arrow">←</span>
+              <div class="nav-text">
+                <span class="nav-label">PREVIOUS UNIT</span>
+                <span class="nav-title">🍎 Unit 6 Fruit</span>
+              </div>
+            </button>
+            <div class="unit-nav-indicator">
+              <span>Revision 2 • P59-60</span>
+            </div>
+            <button type="button" class="unit-nav-btn next-btn" onclick="navigateToSection('app-chants')">
+              <div class="nav-text">
+                <span class="nav-label">NEXT APPENDIX</span>
+                <span class="nav-title">🎵 Chants & Songs</span>
+              </div>
+              <span class="nav-arrow">→</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- SECTION: APPENDIX CHANTS -->
+        <section id="app-chants" class="unit-section view-pane" style="display:none;">
+          <div class="unit-header-card" style="background: linear-gradient(135deg, #059669 0%, #047857 100%);">
+            <span class="unit-badge">附录一 Appendix 1</span>
+            <h2 class="unit-title">歌谣与歌曲 (Chants & Songs)</h2>
+            <p class="unit-desc">全册 6 个单元的经典歌谣与本地音轨朗读 (P61 - P62)</p>
+          </div>
+
+          <div class="lessons-grid">
+            <div class="lesson-card">
+              <div class="lesson-title"><span>Unit 1 Chant: Hello, Pencil!</span><span class="page-tag" onclick="jumpToPage(61)">P61 📄</span></div>
+              <div class="dialogue-list">
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/chant_u1.mp3" data-text="Hello, pencil! Hello, ruler!">
+                  <div>Hello, pencil! Hello, ruler! Hello, schoolbag! Hello!</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="lesson-card">
+              <div class="lesson-title"><span>Unit 3 Song: Two Little Black Birds</span><span class="page-tag" onclick="jumpToPage(62)">P62 📄</span></div>
+              <div class="dialogue-list">
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/chant_u3_1.mp3" data-text="Two little black birds sitting on a hill.">
+                  <div>Two little black birds sitting on a hill.<br>One named Jack, one named Jill.</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/chant_u3_2.mp3" data-text="Fly away Jack! Fly away Jill!">
+                  <div>Fly away Jack! Fly away Jill!<br>Come back Jack, come back Jill!</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <div class="unit-bottom-nav">
+            <button type="button" class="unit-nav-btn prev-btn" onclick="navigateToSection('revision-2')">
+              <span class="nav-arrow">←</span>
+              <div class="nav-text">
+                <span class="nav-label">PREVIOUS REVISION</span>
+                <span class="nav-title">🎲 Revision 2</span>
+              </div>
+            </button>
+            <div class="unit-nav-indicator">
+              <span>Appendix 1 • P61-62</span>
+            </div>
+            <button type="button" class="unit-nav-btn next-btn" onclick="navigateToSection('app-vocab')">
+              <div class="nav-text">
+                <span class="nav-label">NEXT APPENDIX</span>
+                <span class="nav-title">📖 Vocabulary List</span>
+              </div>
+              <span class="nav-arrow">→</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- SECTION: APPENDIX VOCABULARY -->
+        <section id="app-vocab" class="unit-section view-pane" style="display:none;">
+          <div class="unit-header-card">
+            <span class="unit-badge">附录二 Appendix 2</span>
+            <h2 class="unit-title">单元词汇表 (Vocabulary List)</h2>
+            <p class="unit-desc">全册重点单词发音与中文对照 (P63 - P66)</p>
+          </div>
+          <div class="vocab-grid" id="fullVocabGrid"></div>
+        
+          <div class="unit-bottom-nav">
+            <button type="button" class="unit-nav-btn prev-btn" onclick="navigateToSection('app-chants')">
+              <span class="nav-arrow">←</span>
+              <div class="nav-text">
+                <span class="nav-label">PREVIOUS APPENDIX</span>
+                <span class="nav-title">🎵 Chants & Songs</span>
+              </div>
+            </button>
+            <div class="unit-nav-indicator">
+              <span>Appendix 2 • P63-66</span>
+            </div>
+            <button type="button" class="unit-nav-btn next-btn" onclick="navigateToSection('app-expressions')">
+              <div class="nav-text">
+                <span class="nav-label">NEXT APPENDIX</span>
+                <span class="nav-title">💬 Expressions</span>
+              </div>
+              <span class="nav-arrow">→</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- SECTION: APPENDIX EXPRESSIONS -->
+        <section id="app-expressions" class="unit-section view-pane" style="display:none;">
+          <div class="unit-header-card" style="background: linear-gradient(135deg, #475569 0%, #1e293b 100%);">
+            <span class="unit-badge">附录三 Appendix 3</span>
+            <h2 class="unit-title">常用表达法 (Everyday Expressions)</h2>
+            <p class="unit-desc">日常问候与课堂常用交际用语 (P67)</p>
+          </div>
+          <div class="lessons-grid">
+            <div class="lesson-card">
+              <div class="lesson-title"><span>Greetings 问候语</span><span class="page-tag" onclick="jumpToPage(67)">P67 📄</span></div>
+              <div class="dialogue-list">
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/exp_morning.mp3" data-text="Good morning!"><div>Good morning! (早上好！)</div><button class="speak-btn">🎵</button></div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/exp_afternoon.mp3" data-text="Good afternoon!"><div>Good afternoon! (下午好！)</div><button class="speak-btn">🎵</button></div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/exp_hello.mp3" data-text="Hello! / Hi!"><div>Hello! / Hi! (你好！)</div><button class="speak-btn">🎵</button></div>
+              </div>
+            </div>
+          </div>
+        
+          <div class="unit-bottom-nav">
+            <button type="button" class="unit-nav-btn prev-btn" onclick="navigateToSection('app-vocab')">
+              <span class="nav-arrow">←</span>
+              <div class="nav-text">
+                <span class="nav-label">PREVIOUS APPENDIX</span>
+                <span class="nav-title">📖 Vocabulary List</span>
+              </div>
+            </button>
+            <div class="unit-nav-indicator">
+              <span>Appendix 3 • P67</span>
+            </div>
+            <button type="button" class="unit-nav-btn next-btn" onclick="navigateToSection('unit-starter')">
+              <div class="nav-text">
+                <span class="nav-label">RETURN TO START</span>
+                <span class="nav-title">📌 Starter (Greetings)</span>
+              </div>
+              <span class="nav-arrow">→</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- SECTION: FULL PAGE PDF VIEWER (PAGEVIEW MODE) -->
+        <section id="pageview-mode-section" class="view-pane" style="display:none;">
+          <div class="page-viewer-container">
+            <div class="page-image-wrapper">
+              <img id="pdfPageImage" src="images/pages/page_01.webp" alt="Textbook Page View">
+              <div class="page-controls">
+                <button onclick="changePage(-1)">◀ 上一页</button>
+                <span>第 <strong id="currentPageNum">1</strong> / 78 页</span>
+                <button onclick="changePage(1)">下一页 ▶</button>
+              </div>
+            </div>
+            <div class="page-transcript-panel">
+              <h3 style="font-size:1.1rem; color:var(--primary-700); margin-bottom:1rem;" id="pageTranscriptTitle">第 1 页 文本识别</h3>
+              <div id="pageTextContent" style="font-size:0.9rem; line-height:1.7; color:var(--text-main);"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Rich Editorial Footer -->
+        <footer class="footer-info">
+          <div class="footer-brand">
+            <span class="footer-brand-icon">📘</span>
+            <div class="footer-text">
+              <h4>义务教育教科书 英语（一年级起点）一年级上册</h4>
+              <p>人民教育出版社 (PEP) • 数字化互动电子教材与学习平台</p>
+            </div>
+          </div>
+          <div class="footer-links">
+            <span class="footer-chip">💡 6大核心单元 & 2阶段复习</span>
+            <span class="footer-chip">🎧 100% 本地高保真音轨</span>
+            <button type="button" class="footer-chip" onclick="scrollToTop()" style="cursor:pointer; background:#e0f2fe; color:#0369a1; border-color:#bae6fd; font-weight:700;">⬆️ 回到顶部</button>
+          </div>
+        </footer>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- Audio Player & Script Engine -->
+  <script>
+    // Embedded Data Injection Placeholders
+    window.FALLBACK_PDF_STRUCTURE = [{"page": 1, "text": "\u4e00\u5e74\u7ea7\n\u4e0b\u518c\n\uff08\u4e00\u5e74\u7ea7\u8d77\u70b9\uff09\n\u4e00\u5e74\u7ea7\n\u4e0a\u518c\n\u82f1\u8bed\n\u5168\u56fd\u4f18\u79c0\u6559\u6750\u4e8c\u7b49\u5956\n\u4e49\u52a1\u6559\u80b2\u6559\u79d1\u4e66\n", "block_count": 8, "image_count": 2}, {"page": 2, "text": "\u4e49\u52a1\u6559\u80b2\u6559\u79d1\u4e66\n\u82f1\u8bed\n\u4e00\u5e74\u7ea7\n\u4e0a\u518c\n\uff08\u4e00\u5e74\u7ea7\u8d77\u70b9\uff09\n\u4eba\u6c11\u6559\u80b2\u51fa\u7248\u793e  \u8bfe\u7a0b\u6559\u6750\u7814\u7a76\u6240\n\u82f1\u8bed\u8bfe\u7a0b\u6559\u6750\u7814\u7a76\u5f00\u53d1\u4e2d\u5fc3\n\u7075\n\u901a\n\u6559\n\u80b2\n\u6709\n\u9650\n\u516c\n\u53f8\n\u7f16\u8457\n\uff08\u4e2d \u56fd\uff09\n\uff08\u52a0\u62ff\u5927\uff09\n\u00b7\u5317 \u4eac\u00b7\n", "block_count": 9, "image_count": 0}, {"page": 3, "text": "Copyright \u00a9 2012 by People\u2019s Education Press Ltd. and Lingo Learning Inc. \nNo part of this publication may be reproduced or transmitted in any form or by any means, \nwithout permission in writing from the publisher. \n\u7248\u6743\u5171\u6709\uff0c\u672a\u7ecf\u51fa\u7248\u793e\u4e66\u9762\u540c\u610f\uff0c\u4efb\u4f55\u4eba\u4e0d\u5f97\u4ee5\u4efb\u4f55\u5f62\u5f0f\u6216\u65b9\u5f0f\u590d\u5236\u6216\u8f6c\u6362\u672c\u4f5c\u54c1\u7684\u4efb\u4f55\u90e8\u5206\u3002\n\u4e3b\u2003 \u7f16\uff1a\u5434 \u6b23\u2003 Larry Swartz\u2003 Beth Levy\n\u526f\u4e3b\u7f16\uff1a\u9676\u660e\u5929\u2003 \u95eb\u8d64\u5175\n\u4e3b\u8981\u7f16\u5199\u4eba\u5458\uff1a\t\u674e\u2003 \u9759\u2003 \u7a0b\u2003 \u71d5\u2003 \u9a6c\u2003 \u831c\u2003 \u9a6c\u6dd1\u82f1\u2003 \u5f20\u6d77\u7fd4\n\u5218\u2003 \u83b9\u2003 \u738b\u2003 \u5fae\u2003 \u5f20\u2003 \u827a\u2003 \u674e\u7ea2\u971e\u2003 \u5f20\u9c81\u9759\nBill Mayes\u2003 Chris Andersen\n\u8d23\u4efb\u7f16\u8f91\uff1a\u9a6c\u2003 \u831c\n\u7f8e\u672f\u7f16\u8f91\uff1a\u674e\u5b8f\u5e86\n\u7248\u5f0f\u8bbe\u8ba1\uff1a\u674e\u5b8f\u5e86 \u5f20 \u9759\n\u63d2  \u56fe\uff1a\u674e\u601d\u4e1c\u5de5\u4f5c\u5ba4\n\u4e49\u52a1\u6559\u80b2\u6559\u79d1\u4e66\u2003 \u82f1\u8bed\uff08\u4e00\u5e74\u7ea7\u8d77\u70b9\uff09\u2003 \u4e00\u5e74\u7ea7\u2003 \u4e0a\u518c\n\uff08\u4e2d\u2003 \u56fd\uff09\u4eba\u6c11\u6559\u80b2\u51fa\u7248\u793e\u2003 \u8bfe\u7a0b\u6559\u6750\u7814\u7a76\u6240\n\u2003 \u82f1\u8bed\u8bfe\u7a0b\u6559\u6750\u7814\u7a76\u5f00\u53d1\u4e2d\u5fc3\u2003 \u7f16\u8457\n\uff08\u52a0\u62ff\u5927\uff09\u7075\n\u901a\n\u6559\n\u80b2\n\u6709\n\u9650\n\u516c\n\u53f8\n\u51fa\u2003\n\u7f51\u2003\n\u7248\u2003\n\uff08\u5317\u4eac\u5e02\u6d77\u6dc0\u533a\u4e2d\u5173\u6751\u5357\u5927\u885717\u53f7\u96621\u53f7\u697c\u2003 \u90ae\u7f16\uff1a100081\uff09\n\u5740\u2003 http://www.pep.com.cn\n \n\u7248\u6743\u6240\u6709\u00b7\u672a\u7ecf\u8bb8\u53ef\u4e0d\u5f97\u91c7\u7528\u4efb\u4f55\u65b9\u5f0f\u64c5\u81ea\u590d\u5236\u6216\u4f7f\u7528\u672c\u4ea7\u54c1\u4efb\u4f55\u90e8\u5206\u00b7\u8fdd\u8005\u5fc5\u7a76\n\u5982\u53d1\u73b0\u5185\u5bb9\u8d28\u91cf\u95ee\u9898\uff0c\u8bf7\u767b\u5f55\u4e2d\u5c0f\u5b66\u6559\u6750\u610f\u89c1\u53cd\u9988\u5e73\u53f0\uff1ajcyjfk.pep.com.cn\n\u5982\u53d1\u73b0\u5370\u3001\u88c5\u8d28\u91cf\u95ee\u9898\uff0c\u5f71\u54cd\u9605\u8bfb\uff0c\u8bf7\u4e0e\u00d7\u00d7\u00d7\u8054\u7cfb\u8c03\u6362\u3002\u7535\u8bdd\uff1a010-58759215\n", "block_count": 20, "image_count": 0}, {"page": 4, "text": "\u81f4\u540c\u5b66\n\u4eb2\u7231\u7684\u540c\u5b66\uff1a\n\u4f60\u597d\uff01\u6b22\u8fce\u6765\u5230\u201c\u65b0\u8d77\u70b9\uff08Starting Line\uff09\u82f1\u8bed\u201d\u7684\u4e16\u754c\u3002\n\u5728\u8fd9\u91cc\uff0c\u4f60\u5c06\u8ba4\u8bc6Andy\u3001Bill\u3001Binbin\u3001Joy\u3001Lily\u548cYaoyao\uff0c\u4ed6\n\u4eec\u5c06\u966a\u4f60\u6f2b\u6e38\u82f1\u8bed\u4e16\u754c\u3002\u53e6\u5916\uff0cLucky\u548cAngel\u4e5f\u4f1a\u65f6\u4e0d\u65f6\u51fa\u73b0\uff0c\u5e26\n\u7ed9\u4f60\u8bb8\u591a\u60ca\u559c\u3002\n\u5728\u8fd9\u91cc\uff0c\u4f60\u5c06\u5b66\u4e60\u8bb8\u591a\u82f1\u6587\u5bf9\u8bdd\u3001\u82f1\u6587\u6b4c\u66f2\u548c\u82f1\u6587\u6545\u4e8b\uff0c\u5e76\u53c2\n\u4e0e\u5f88\u591a\u82f1\u6587\u6d3b\u52a8\u548c\u6e38\u620f\u3002\u5728\u8fd9\u4e2a\u8fc7\u7a0b\u4e2d\uff0c\u4f60\u4e00\u5b9a\u4f1a\u9047\u5230\u4e0d\u5c11\u56f0\u96be\uff0c\n\u521a\u5f00\u59cb\u751a\u81f3\u542c\u4e0d\u61c2\u4e5f\u8bf4\u4e0d\u51fa\uff0c\u4f46\u5343\u4e07\u4e0d\u8981\u5bb3\u6015\uff0c\u53ea\u8981\u52aa\u529b\u591a\u542c\u3001\u591a\n\u8bf4\u548c\u591a\u7ec3\uff0c\u4f60\u4e00\u5b9a\u4f1a\u53d6\u5f97\u8fdb\u6b65\u7684\u3002 \n\u6b64\u5916\uff0c\u6b4c\u66f2\u3001\u6b4c\u8c23\u3001\u6e38\u620f\u548c\u6d3b\u52a8\u80fd\u4f7f\u4f60\u4e0d\u77e5\u4e0d\u89c9\u5730\u5b66\u4f1a\u5f88\u591a\u82f1\n\u8bed\u3002\u6240\u4ee5\uff0c\u522b\u5bb3\u7f9e\uff0c\u5c3d\u60c5\u4eab\u53d7\u82f1\u8bed\u4e16\u754c\u7684\u5feb\u4e50\u5427\u3002\n\u6700\u540e\uff0c\u6211\u8981\u544a\u8bc9\u4f60\u4e00\u4e2a\u5c0f\u7a8d\u95e8\uff1a\u5728\u542c\u6545\u4e8b\u4e4b\u524d\uff0c\u81ea\u5df1\u5148\u770b\u770b\u6545\n\u4e8b\u7684\u56fe\u7247\u548c\u6587\u5b57\uff0c\u770b\u4f60\u80fd\u8bfb\u61c2\u591a\u5c11\uff0c\u7136\u540e\u518d\u542c\u8001\u5e08\u8bb2\u89e3\u6216\u542c\u5f55\u97f3\uff0c\n\u90a3\u65f6\u4f60\u5c31\u4f1a\u53d1\u73b0\u81ea\u5df1\u539f\u6765\u597d\u68d2\uff01\u6211\u77e5\u9053\uff0c\u540c\u5b66\u4eec\u90fd\u559c\u6b22\u4e00\u904d\u53c8\u4e00\u904d\n\u5730\u542c\u6545\u4e8b\u3002\u56de\u5bb6\u540e\uff0c\u4f60\u5c31\u8ddf\u7740\u5f55\u97f3\uff0c\u4e00\u904d\u53c8\u4e00\u904d\u5730\u542c\u5427\u3002\u5bf9\u4e86\uff0c\u522b\n\u5fd8\u4e86\u548c\u7238\u7238\u5988\u5988\u6216\u5c0f\u4f19\u4f34\u4e00\u8d77\u5206\u4eab\u8fd9\u4e9b\u6709\u8da3\u7684\u6545\u4e8b\u54e6\u3002\u7528\u82f1\u6587\u8bb2\u6545\n\u4e8b\u4e00\u5b9a\u5f88\u9177\uff01\n\u597d\u4e86\uff0c\u73b0\u5728\u5c31\u8ba9\u6211\u4eec\u4e00\u8d77\u8fdb\u5165\u201c\u65b0\u8d77\u70b9\u82f1\u8bed\u201d\u7684\u4e16\u754c\u5427\uff01\n \n\u7f16 \u8005\n\t\n2012\u5e745\u6708\n", "block_count": 20, "image_count": 0}, {"page": 5, "text": "Angel\nBill\nLily\nYaoyao\nBinbin\nLucky\nJoy\nAndy\nJo\nMiss Wu\n", "block_count": 7, "image_count": 14}, {"page": 6, "text": "Starter\nUnit 1 School\nUnit 2 Face\nUnit 3 Animals\nRevision 1\nUnit 4 Numbers\nUnit 5 Colours\nUnit 6 Fruit\nRevision 2\n\u9644\u5f55\u4e00 \u6b4c\u8c23\u548c\u6b4c\u66f2\n\u9644\u5f55\u4e8c \u5355\u5143\u8bcd\u6c47\u8868\n\u9644\u5f55\u4e09 \u603b\u8bcd\u6c47\u8868\n\u9644\u5f55\u56db \u5e38\u7528\u8bed\u8868\n2\n4\n12\n20\n28\n30\n38\n46\n54\n56\n58\n60\n62\n\u76ee  \u5f55\n", "block_count": 27, "image_count": 0}, {"page": 7, "text": "Starter\nGood morning! I\u2019m Miss Wu. \nWhat\u2019s your name?\nHello! My name is Bill.\n2\n", "block_count": 4, "image_count": 3}, {"page": 8, "text": "Good afternoon, \nMiss Wu. \nHi, Bill.\nBye, Bill.\nGoodbye.\n3\n", "block_count": 5, "image_count": 3}, {"page": 9, "text": "Unit 1 School\nI have a ruler.\nI have a pencil.\n4\n", "block_count": 4, "image_count": 1}, {"page": 10, "text": "I have a book.\n5\n", "block_count": 2, "image_count": 1}, {"page": 11, "text": "Lesson 1\n Look, listen and chant.\nA\nB\nC\n Listen and do.\n Listen and chant again.\nruler\npencil\nteacher\nteache\nbook\nschoolbag\nStand up, Joy. Show \nme your pencil. Sit \ndown, please.\n6\n", "block_count": 11, "image_count": 28}, {"page": 12, "text": " Let\u2019s play.\nLesson 2\n Look, listen and repeat.\nA\nB\nI have a schoolbag.\nI have a book.\nI have a pencil.\nI have a ruler.\n7\n", "block_count": 8, "image_count": 2}, {"page": 13, "text": "Lesson 3\n Let\u2019s play.\nA\nB Let\u2019s sing.\nClose your eyes.\nI have a ruler. \nI have a \nschoolbag.\nI have a book.\nI have a pencil.\nOpen your eyes. \nWhat\u2019s missing?\nPencil.\nPencil.\nPencil.\nPencil.\n8\n", "block_count": 13, "image_count": 14}, {"page": 14, "text": "Review & Rewards \n Let\u2019s review.\n Let\u2019s stick.\nLe\nLe\nL\nA\nB\n9\n", "block_count": 8, "image_count": 23}, {"page": 15, "text": "Story Time\nShow me your \nschoolbag.\nOpen it.\nI have a \nschoolbag.\nShow me \nyour ruler.\nI have a ruler.\nGood night!\n2\n4\n1\n3\n10\n", "block_count": 12, "image_count": 4}, {"page": 16, "text": "Show me \nyour pencil.\nHi! I\u2019m Angel.\nShow me \nyour book.\nI have a pencil.\nWow!\nOpen your book.\nGood morning!\n6\n8\n5\n7\n11\n", "block_count": 12, "image_count": 4}, {"page": 17, "text": "Unit 2 Face\nThis is my \nmouth.\nTouch your \nmouth.\n12\n", "block_count": 4, "image_count": 1}, {"page": 18, "text": "Touch your \nnose.\nThis is my nose.\n13\n", "block_count": 3, "image_count": 1}, {"page": 19, "text": "Lesson 1\n Look, listen and chant.\nA\nB Listen and do.\neye\nnose\nmouth\near\nface\nC Listen and chant again.\nTouch your ear.\n14\n", "block_count": 11, "image_count": 12}, {"page": 20, "text": " Let\u2019s play.\nLesson 2\n Look, listen and repeat.\nA\nB\nThis is my mouth.\nTouch your \nnose.\nThis is my nose.\n15\n", "block_count": 8, "image_count": 2}, {"page": 21, "text": "Lesson 3\n Let\u2019s play.\nA\nB Let\u2019s sing.\nThis is my ear.\nThis is my ear.\nThis is my eye.\nThis is my eye.\nThis is my ruler.\nThis is my pencil.\nHi! I\u2019m Bill.\nHi! I\u2019m Lily.\n16\n", "block_count": 9, "image_count": 10}, {"page": 22, "text": "Review & Rewards \n Let\u2019s review.\n Let\u2019s stick.\nLe\nLe\nL\nA\nB\n17\n", "block_count": 8, "image_count": 22}, {"page": 23, "text": "Story Time\nTouch your ear.\nThis is my ear.\nTouch your \nnose.\nThis is my nose.\nGood morning!\n2\n4\n1\n3\nTouch your \nmouth.\nThis is my \nmouth.\n18\n", "block_count": 13, "image_count": 67}, {"page": 24, "text": "Touch your tail.\nI have no tail.\n6\n5\n7\nTouch your face.\nThis is my face.\n19\n", "block_count": 7, "image_count": 28}, {"page": 25, "text": "Unit 3 Animals\nIt\u2019s a tiger.\nWhat\u2019s this?\n20\n", "block_count": 4, "image_count": 1}, {"page": 26, "text": "It\u2019s a dog.\nWhat\u2019s this?\n21\n", "block_count": 2, "image_count": 1}, {"page": 27, "text": "Lesson 1\n Look, listen and chant.\nA\nB Listen and act.\nbird\ntiger\nmonkey\ndog\ncat\nC Listen and chant again.\nAct like a monkey.\n22\n", "block_count": 11, "image_count": 13}, {"page": 28, "text": " Look, find and say.\nLesson 2\n Look, listen and repeat.\nA\nB\nWhat\u2019s this?\nIt\u2019s a tiger.\nWhat\u2019s this?\nIt\u2019s a dog.\n23\n", "block_count": 9, "image_count": 39}, {"page": 29, "text": "Lesson 3\n Let\u2019s play.\nA\nB Let\u2019s sing.\nWhat\u2019s this?\nIt\u2019s a bird.\n24\n", "block_count": 5, "image_count": 16}, {"page": 30, "text": "Review & Rewards \n Let\u2019s review.\n Let\u2019s stick.\n Le\n Le\nL\nA\nB\n25\n", "block_count": 8, "image_count": 22}, {"page": 31, "text": "Story Time\nGood morning!\nWhat\u2019s this?\nWhat\u2019s this?\n1\n2\n3\nGood morning!\nIt\u2019s a monkey.\nIt\u2019s a bird.\n26\n", "block_count": 11, "image_count": 3}, {"page": 32, "text": "What\u2019s this?\nWhat\u2019s this?\nWhat\u2019s this?\nBye-bye!\nBye-bye!\n4\n5\n6\n27\n", "block_count": 8, "image_count": 3}, {"page": 33, "text": "Revision 1\n Look, listen and point.\n Let\u2019s say.\n Let\u2019s play.\nA\nB\nC\n1\n2\nI have a \u2026\nSTART\n28\n", "block_count": 12, "image_count": 7}, {"page": 34, "text": "What\u2019s this?\nThis is my \u2026\nSAFETY ISLAND\n3\n29\n", "block_count": 5, "image_count": 18}, {"page": 35, "text": "Unit 4 Numbers\nHow many tigers  \nare there?\n30\n", "block_count": 3, "image_count": 1}, {"page": 36, "text": "How many birds \nare there?\nNine.\nFive.\n31\n", "block_count": 4, "image_count": 1}, {"page": 37, "text": "Lesson 1\n Look, listen and chant.\nA\nB Listen and do.\ntwo\nseven\nfour\nnine\nfive\nten\none\nsix\nthree\neight\nC Listen and chant again.\nHello, Joy.\nHello!\nShow me five.\n32\n", "block_count": 18, "image_count": 6}, {"page": 38, "text": "Lesson 2\n Look, listen and repeat.\nA\n Let\u2019s play.\nB\nHow many tigers \nare there?\nHow many birds \nare there?\nNine.\nFive.\nSix.\n33\n", "block_count": 9, "image_count": 10}, {"page": 39, "text": "Lesson 3\n Look, count and say.\nA\nB Let\u2019s sing.\nHow many dogs \nare there?\nSix.\n34\n", "block_count": 6, "image_count": 43}, {"page": 40, "text": "Review & Rewards \n Let\u2019s review.\n Let\u2019s stick.\nA\nB\n35\n", "block_count": 6, "image_count": 1}, {"page": 41, "text": "Story Time\nOne, two, three ...\n1\n2\n3\nBill, Andy and Joy, \nthis is for you.\nThank you!\nHow many are there?\n36\n", "block_count": 9, "image_count": 4}, {"page": 42, "text": "Let\u2019s share!\nOh, no!\nOK! One for Joy and one \nfor me. One for Andy and \none for me \u2026\n4\n5\n6\n37\n", "block_count": 7, "image_count": 4}, {"page": 43, "text": "Unit 5 Colours\nOh, a bird!\nWhat colour is it?\nWhat colour is it?\nIt\u2019s yellow.\n38\n", "block_count": 6, "image_count": 1}, {"page": 44, "text": "It\u2019s black.\nA dog!\n39\n", "block_count": 3, "image_count": 1}, {"page": 45, "text": "Lesson 1\n Look, listen and chant.\nA\nB\nC\n Listen and do.\n Listen and chant again.\nShow me red.\ngreen\nred\nblue\nyellow\nblack\n40\n", "block_count": 12, "image_count": 2}, {"page": 46, "text": " Let\u2019s play.\nLesson 2\n Look, listen and repeat.\nA\nB\nGuess! What\u2019s this?\nIt\u2019s a pencil. What \ncolour is it? \nIt\u2019s yellow.\nOh, a bird!\nIt\u2019s yellow.\nWhat colour is it?\n41\n", "block_count": 10, "image_count": 18}, {"page": 47, "text": "Lesson 3\n Let\u2019s play.\nA\nB Let\u2019s sing.\nWhat\u2019s this?\nThree.\nBlack.\nIt\u2019s a bird.\nHow many \nbirds are \nthere?\nWhat colour is it?\n42\n", "block_count": 10, "image_count": 3}, {"page": 48, "text": "Review & Rewards \n Let\u2019s review.\n Let\u2019s stick.\n Le\n Le\nL\nA\nB\n43\n", "block_count": 8, "image_count": 22}, {"page": 49, "text": "Story Time\nWow! Balloons!\nA red \nballoon, \nplease.\n2\n4\n1\n3\n44\n", "block_count": 8, "image_count": 15}, {"page": 50, "text": "Oh, a yellow balloon, \nand a green balloon! \nA big black \nballoon, please.\nOh, a blue balloon!\nHelp!\nHelp!\n6\n8\n5\n7\n45\n", "block_count": 9, "image_count": 4}, {"page": 51, "text": "Unit 6 Fruit\nDo you like \nbananas?\n46\n", "block_count": 3, "image_count": 1}, {"page": 52, "text": "Yes, I do.\nDo you like \npears?\nNo, I don\u2019t.\n47\n", "block_count": 4, "image_count": 1}, {"page": 53, "text": "Lesson 1\n Look, listen and chant.\nA\nB Listen and do.\napple\norange\nbanana\npear\nShow me\nan apple.\nC Listen and chant again.\n48\n", "block_count": 9, "image_count": 54}, {"page": 54, "text": " Look, choose and say.\nLesson 2\n Look, listen and repeat.\nA\nB\nChoose a number, please.\nDo you like apples?\nDo you like \nbananas?\nYes, I do.\nDo you like \npears?\nNo, I don\u2019t.\nYes, I do.\nThree.\nNo, I don\u2019t.\n49\n", "block_count": 12, "image_count": 6}, {"page": 55, "text": "Lesson 3\n Look, draw and say.\nA\nB Let\u2019s sing.\napples\ncats\ndogs\nyellow\ngreen\noranges\nblue\nbananas\npears\nDo you like pears?\nNo, I don\u2019t.\n50\n", "block_count": 12, "image_count": 12}, {"page": 56, "text": "Review & Rewards \n Let\u2019s review.\n Let\u2019s stick.\n Le\n Le\nL\nA\nB\n51\n", "block_count": 8, "image_count": 31}, {"page": 57, "text": "Story Time\nA gift for you.\nThank you!\n1\n2\n3\nWhat is it?\n52\n", "block_count": 8, "image_count": 4}, {"page": 58, "text": "Oh no, a f ish!\nDo you like f ish?\n4\n5\n6\nOh no, a banana!\nDo you like bananas?\n53\n", "block_count": 7, "image_count": 5}, {"page": 59, "text": "Revision 2\n Look, listen and point.\n Let\u2019s say.\n Let\u2019s play.\nA\nB\nC\nSTART\nSAFETY ISLAND\nDo you like \u2026?\n3\n2\nWhat colour is it?\n54\n", "block_count": 14, "image_count": 15}, {"page": 60, "text": "FINISH\nHow many \u2026 \nare there?\n1\n2\n55\n", "block_count": 5, "image_count": 13}, {"page": 61, "text": "\u9644\u5f55\u4e00   \u6b4c\u8c23\u548c\u6b4c\u66f2\nUnit 1\nLesson 1, A & C\nHello, pencil!\nHello, ruler!\nHello, schoolbag! Hello!\nHello, book!\nHello, teacher!\nHello! Hello! Hello!\nLesson 3, B\nI have a pencil.\nI have a book.\nI have a beautiful \nschoolbag, too.\nI have a ruler.\nI have a teacher.\nHello! Hello to you!\nUnit 2\nLesson 1, A & C\nLook at my eye.\nLook at my ear.\nLook at my nose.\nLook at my mouth,\nAnd my little face, \nMy little face.\nLesson 3, B\nI have two ears.\nI have two eyes.\nOne little nose.\nOne little mouth.\nI have two ears.\nI have two eyes.\nOne little face.\nOne little face.\nUnit 3\nLesson 1, A & C\nCat, cat, what do you see?\nI see a dog looking at me.\nDog, dog, what do you see?\nI see a bird looking at me.\nBird, bird, what do you see?\nI see a monkey looking at me.\nMonkey, monkey, what do you \nsee?\nI see a tiger looking at me.\nLesson 3, B\nTwo little black birds sitting \non a hill.\nOne named Jack, one \nnamed Jill.\nFly away Jack, fly away Jill.\n56\n", "block_count": 19, "image_count": 0}, {"page": 62, "text": "Come back Jack, come \nback Jill.\nTwo little black birds sitting \non a hill.\nOne named Jack, one \nnamed Jill.\nUnit 4\nLesson 1, A & C\nOne finger, two fingers, \nthree fingers, four.\nOne, two, three, four,\n\t\nfive fingers more.\nSix fingers, seven fingers, \neight fingers, nine.\nSix, seven, eight, nine, \nten fingers. Hooray!\nLesson 3, B\nOne little, two little, three \nlittle Indians.\nFour little, five little, six little \nIndians.\nSeven little, eight little, nine \nlittle Indians.\nTen little Indian boys.\nUnit 5\nLesson 1, A & C\nRed, red, \nI like red.\nYellow, yellow,\nI like yellow.\nBlack, black,\nI like black.\nBlue, blue,\nI like blue.\nGreen, green,\nI like green.\nLesson 3, B\nRed and yellow and pink and \ngreen.\nPurple and orange and blue.\nI can sing a rainbow,\nSing a rainbow,\nSing a rainbow now.\nUnit 6\nLesson 1, A & C\nI like pears.\nI like apples.\nI like oranges.\nI like bananas.\nThey are all good to eat.\nLesson 3, B\nApple round, apple red.\nApple juicy, apple sweet.\nApple, apple, I love you.\nApple sweet, I love to eat.\n57\n", "block_count": 22, "image_count": 0}, {"page": 63, "text": "Unit 1\nbook \t\n\u4e66\uff0c\u4e66\u672c\uff086\uff09\nruler\t\n\u5c3a\u5b50\uff086\uff09\npencil\t\n\u94c5\u7b14\uff086\uff09\nschoolbag\t\n\u4e66\u5305\uff086\uff09\nteacher\t\n\u6559\u5e08\uff086\uff09\nI \t\n\u6211\uff087\uff09\nhave\t\n\u6709\uff087\uff09\na/an\t\n\u4e00( \u4e2a)\uff087\uff09 \nUnit 2\nface\t\n\u8138\uff0814\uff09\near\t\n\u8033\u6735\uff0814\uff09\neye\t\n\u773c\u775b\uff0814\uff09\nnose\t\n\u9f3b\u5b50\uff0814\uff09\nmouth\t\n\u5634\u5df4\uff0814\uff09\nthis\t\n\u8fd9\uff08\u4e2a\uff09\uff0815\uff09\nis\t\n\u662f\uff0815\uff09\nmy\t\n\u6211\u7684\uff0815\uff09\nUnit 3\ndog\t\n\u72d7\uff0822\uff09\nbird\t\n\u9e1f\uff0822\uff09\ntiger\t\n\u8001\u864e\uff0822\uff09\n\u9644\u5f55\u4e8c   \u5355\u5143\u8bcd\u6c47\u8868\nmonkey\t\n\u7334\u5b50\uff0822\uff09\ncat\t\n\u732b\uff0822\uff09\nwhat\t\n\u4ec0\u4e48\uff0823\uff09\nit\t\n\u5b83\uff0823\uff09\nUnit 4\none\t\n\u4e00\uff0832\uff09\ntwo\t\n\u4e8c\uff0832\uff09\nthree\t\n\u4e09\uff0832\uff09\nfour\t\n\u56db\uff0832\uff09\nfive\t\n\u4e94\uff0832\uff09\nsix\t\n\u516d\uff0832\uff09\nseven\t\n\u4e03\uff0832\uff09\neight\t\n\u516b\uff0832\uff09\nnine\t\n\u4e5d\uff0832\uff09\nten\t\n\u5341\uff0832\uff09\nhow\t\n\u591a\u5c11\uff0833\uff09\nmany\t\n\u591a\u7684\uff0c\u8bb8\u591a\u7684\uff0833\uff09\nare\t\n\u662f\uff0833\uff09\nthere\t\n\uff08\u4ee3\u66ff\u4e3b\u8bed\uff09\uff0833\uff09\nUnit 5\nblack\t\n\u9ed1\u8272\uff1b\u9ed1\u8272\u7684\uff0840\uff09\nyellow\t \u9ec4\u8272\uff1b\u9ec4\u8272\u7684\uff0840\uff09\n\uff08\u6ce8\uff1a\u9ed1\u4f53\u8bcd\u4e3a\u672c\u518c\u7684\u91cd\u70b9\u8bcd\u6c47\uff09\n58\n", "block_count": 14, "image_count": 0}, {"page": 64, "text": "blue\t\n\u84dd\u8272\uff1b\u84dd\u8272\u7684\uff0840\uff09\nred\t\n\u7ea2\u8272\uff1b\u7ea2\u8272\u7684\uff0840\uff09\ngreen\t\n\u7eff\u8272\uff1b\u7eff\u8272\u7684\uff0840\uff09\ncolour\t\n\u989c\u8272\uff0841\uff09\nUnit 6\napple\t\n\u82f9\u679c\uff0848\uff09\npear\t\n\u68a8\uff0848\uff09\nbanana\t\n\u9999\u8549\uff0848\uff09\norange\t\n\u67d1\u6a58\uff1b\u6a59\uff0848\uff09\ndo\t\n\uff08\u52a9\u52a8\u8bcd\uff09\uff0849\uff09\nyou\t\n\u4f60\uff1b\u4f60\u4eec\uff0849\uff09\nlike \t\n\u559c\u6b22\uff0c\u559c\u7231\uff0849\uff09\nyes\t\n\u662f\uff0c\u662f\u7684\uff0849\uff09\nno\t\n\u4e0d\uff0c\u4e0d\u662f\uff0849\uff09\n59\n", "block_count": 5, "image_count": 0}, {"page": 65, "text": "A \na/an\t\n\u4e00\uff08\u4e2a\uff09\uff087\uff09 \napple\t\n\u82f9\u679c\uff0848\uff09\nare\t\n\u662f\uff0833\uff09\nB\nbanana\t\n\u9999\u8549\uff0848\uff09\nbird\t\n\u9e1f\uff0822\uff09\nblack\t\n\u9ed1\u8272\uff1b\u9ed1\u8272\u7684\uff0840\uff09\nblue\t\n\u84dd\u8272\uff1b\u84dd\u8272\u7684\uff0840\uff09\nbook\t\n\u4e66\uff0c\u4e66\u672c\uff086\uff09\nC\ncat\t\n\u732b\uff0822\uff09\ncolour\t\n\u989c\u8272\uff0841\uff09\nD\ndo\t\n\uff08\u52a9\u52a8\u8bcd\uff09\uff0849\uff09\ndog\t\n\u72d7\uff0822\uff09\nE\near\t\n\u8033\u6735\uff0814\uff09\neight\t\n\u516b\uff0832\uff09\neye\t\n\u773c\u775b\uff0814\uff09\nF\nface\t\n\u8138\uff0814\uff09\nfive\t\n\u4e94\uff0832\uff09\nfour\t\n\u56db\uff0832\uff09\nG\ngreen\t\n\u7eff\u8272\uff1b\u7eff\u8272\u7684\uff0840\uff09\nH\nhave\t\n\u6709\uff087\uff09\nhow\t\n\u591a\u5c11\uff0833\uff09\nI\nI\t\n\u6211\uff087\uff09\nis\t\n\u662f\uff0815\uff09\nit\t\n\u5b83\uff0823\uff09\nL\nlike\t\n\u559c\u6b22\uff0c\u559c\u7231\uff0849\uff09\n\u9644\u5f55\u4e09   \u603b\u8bcd\u6c47\u8868\n\uff08\u6ce8\uff1a\u9ed1\u4f53\u8bcd\u4e3a\u672c\u518c\u7684\u91cd\u70b9\u8bcd\u6c47\uff09\n60\n", "block_count": 24, "image_count": 0}, {"page": 66, "text": "M\nmany\t\n\u591a\u7684\uff0c\u8bb8\u591a\u7684\uff0833\uff09\nmonkey\t\n\u7334\u5b50\uff0822\uff09\nmouth\t\n\u5634\u5df4\uff0814\uff09\nmy\t\n\u6211\u7684\uff0815\uff09\nN\nnine\t\n\u4e5d\uff0832\uff09\nno\t\n\u4e0d\uff0c\u4e0d\u662f\uff0849\uff09\nnose\t\n\u9f3b\u5b50\uff0814\uff09\nO\none\t\n\u4e00\uff0832\uff09\norange\t\n\u67d1\u6a58\uff1b\u6a59\uff0848\uff09\nP\npear\t\n\u68a8\uff0848\uff09\npencil\t\n\u94c5\u7b14\uff086\uff09\nR\nred\t\n\u7ea2\u8272\uff1b\u7ea2\u8272\u7684\uff0840\uff09\nruler\t\n\u5c3a\u5b50\uff086\uff09\nS\nschoolbag\t\n\u4e66\u5305\uff086\uff09\nseven\t\n\u4e03\uff0832\uff09\nsix\t\n\u516d\uff0832\uff09\nT\nteacher\t\n\u6559\u5e08\uff086\uff09\nten\t\n\u5341\uff0832\uff09\nthere\t\n\uff08\u4ee3\u66ff\u4e3b\u8bed\uff09\uff0833\uff09\nthis\t\n\u8fd9\uff08\u4e2a\uff09\uff0815\uff09\nthree\t\n\u4e09\uff0832\uff09\ntiger\t\n\u8001\u864e\uff0822\uff09\ntwo\t\n\u4e8c\uff0832\uff09\nW\nwhat\t\n\u4ec0\u4e48\uff0823\uff09\nY\nyellow\t \u9ec4\u8272\uff1b\u9ec4\u8272\u7684\uff0840\uff09\nyes\t\n\u662f\uff0c\u662f\u7684\uff0849\uff09\nyou\t\n\u4f60\uff1b\u4f60\u4eec\uff0849\uff09\n61\n", "block_count": 19, "image_count": 0}, {"page": 67, "text": "Starter\nGood morning! \u65e9\u4e0a\u597d\uff01\nGood afternoon! \u4e0b\u5348\u597d\uff01\nHello! \u4f60\u597d\uff01\nHi! \u4f60\u597d\uff01\nI\u2019m Miss Wu.  \u6211\u662f\u5434\u8001\u5e08\u3002\nWhat\u2019s your name? \u4f60\u53eb\u4ec0\n\u4e48\u540d\u5b57\uff1f\nMy name is Bill. \u6211\u53eb\u6bd4\u5c14\u3002\nBye! \u518d\u89c1\uff01\nGoodbye! \u518d\u89c1\uff01\nUnit 1\nStand up! \u8d77\u7acb!\nShow me your pencil. \u51fa\u793a\n\u4f60\u7684\u94c5\u7b14\u3002\nSit down, please. \u8bf7\u5750\u4e0b\u3002\nClose your eyes. \u95ed\u4e0a\u773c\u775b\u3002\nOpen your eyes. \u7741\u5f00\u773c\u775b\u3002\nWhat\u2019s missing? \u4ec0\u4e48\u4e1c\u897f\u4e0d\n\u89c1\u4e86\uff1f\n\u9644\u5f55\u56db   \u5e38\u7528\u8bed\u8868\nUnit 2\nTouch your ear. \u6478\u4f60\u7684\u8033\u6735\u3002\nUnit 3\nAct like a monkey. \u6a21\u4eff\u7334\u5b50\n\u52a8\u4f5c\u3002\nUnit 4\nShow me five. \u51fa\u793a\u201c5\u201d\u3002\nUnit 5\nShow me red. \u51fa\u793a\u7ea2\u8272\u7684\u4e1c\u897f/\n\u6307\u6307\u7ea2\u8272\u7684\u4e1c\u897f\u3002\nOh! \u554a\uff01\nGuess! \u731c\u4e00\u731c\uff01\nUnit 6\nShow me an apple. \u51fa\u793a\u82f9\u679c\u3002\nChoose a number, please. \n\u8bf7\u9009\u4e00\u4e2a\u6570\u5b57\u3002 \n62\n", "block_count": 23, "image_count": 0}, {"page": 68, "text": "\u540e \u8bb0\n\u672c\u518c\u6559\u79d1\u4e66\u662f\u4eba\u6c11\u6559\u80b2\u51fa\u7248\u793e\u8bfe\u7a0b\u6559\u6750\u7814\u7a76\u6240\u82f1\u8bed\u8bfe\u7a0b\u6559\u6750\u7814\u7a76\u5f00\u53d1\u4e2d\u5fc3\n\u4f9d\u636e\u6559\u80b2\u90e8\u300a\u4e49\u52a1\u6559\u80b2\u82f1\u8bed\u8bfe\u7a0b\u6807\u51c6\u300b\uff082011\u5e74\u7248\uff09\u4e0e\u52a0\u62ff\u5927\u7075\u901a\u6559\u80b2\u6709\u9650\u516c\n\u53f8\u5408\u4f5c\u7f16\u5199\u7684\uff0c\u7ecf\u56fd\u5bb6\u57fa\u7840\u6559\u80b2\u8bfe\u7a0b\u6559\u6750\u4e13\u5bb6\u5de5\u4f5c\u59d4\u5458\u4f1a2012\u5e74\u5ba1\u67e5\u901a\u8fc7\u3002\u5317\n\u4eac\u5e02\u6d77\u6dc0\u533a\u6559\u5e08\u8fdb\u4fee\u5b66\u6821\u5bf9\u672c\u518c\u6559\u79d1\u4e66\u7684\u4fee\u8ba2\u63d0\u4f9b\u4e86\u5168\u65b9\u4f4d\u7684\u652f\u6301\u3002\n\u672c\u518c\u6559\u79d1\u4e66\u96c6\u4e2d\u53cd\u6620\u4e86\u57fa\u7840\u6559\u80b2\u6559\u79d1\u4e66\u7814\u7a76\u4e0e\u5b9e\u9a8c\u7684\u6210\u679c\uff0c\u51dd\u805a\u4e86\u53c2\u4e0e\n\u8bfe\u6539\u5b9e\u9a8c\u7684\u6559\u80b2\u4e13\u5bb6\u3001\u5b66\u79d1\u4e13\u5bb6\u3001\u6559\u7814\u4eba\u5458\u4ee5\u53ca\u4e00\u7ebf\u6559\u5e08\u7684\u96c6\u4f53\u667a\u6167\u3002\u6211\u4eec\n\u611f\u8c22\u6240\u6709\u5bf9\u672c\u518c\u6559\u79d1\u4e66\u7684\u7f16\u5199\u3001\u51fa\u7248\u63d0\u4f9b\u8fc7\u5e2e\u52a9\u4e0e\u652f\u6301\u7684\u540c\u4ec1\u548c\u793e\u4f1a\u5404\u754c\u670b\n\u53cb\u3002\u6211\u4eec\u8fd8\u8981\u7279\u522b\u611f\u8c22\u539f\u6559\u79d1\u4e66\u4e3b\u8981\u7f16\u5199\u4eba\u5458\u9f9a\u4e9a\u592b\u3001\u674e\u9759\u7eaf\u3001\u67f3\u5b81\u3001\u738b\u6653\n\u4e1c\u548c\u8c22\u4e43\u83b9\u3002\n\u672c\u518c\u6559\u79d1\u4e66\u51fa\u7248\u4e4b\u524d\uff0c\u6211\u4eec\u901a\u8fc7\u591a\u79cd\u6e20\u9053\u4e0e\u6559\u79d1\u4e66\u9009\u7528\u4f5c\u54c1\uff08\u5305\u62ec\u7167\u7247\u3001\n\u753b\u4f5c\uff09\u7684\u4f5c\u8005\u8fdb\u884c\u4e86\u8054\u7cfb\uff0c\u5f97\u5230\u4e86\u4ed6\u4eec\u7684\u5927\u529b\u652f\u6301\u3002\u5bf9\u6b64\uff0c\u6211\u4eec\u8868\u793a\u8877\u5fc3\u7684\u611f\n\u8c22\uff01\u4f46\u4ecd\u6709\u90e8\u5206\u4f5c\u8005\u672a\u80fd\u53d6\u5f97\u8054\u7cfb\uff0c\u6073\u8bf7\u5165\u9009\u4f5c\u54c1\u7684\u4f5c\u8005\u4e0e\u6211\u4eec\u8054\u7cfb\uff0c\u4ee5\u4fbf\u652f\n\u4ed8\u7a3f\u916c\u3002\n\u6211\u4eec\u771f\u8bda\u5730\u5e0c\u671b\u5e7f\u5927\u6559\u5e08\u3001\u5b66\u751f\u53ca\u5bb6\u957f\u5728\u4f7f\u7528\u672c\u518c\u6559\u79d1\u4e66\u7684\u8fc7\u7a0b\u4e2d\u63d0\u51fa\u5b9d\n\u8d35\u610f\u89c1\uff0c\u5e76\u5c06\u8fd9\u4e9b\u610f\u89c1\u548c\u5efa\u8bae\u53ca\u65f6\u53cd\u9988\u7ed9\u6211\u4eec\u3002\u8ba9\u6211\u4eec\u643a\u8d77\u624b\u6765\uff0c\u5171\u540c\u5b8c\u6210\u4e49\n\u52a1\u6559\u80b2\u6559\u6750\u5efa\u8bbe\u5de5\u4f5c\uff01\n\u8054\u7cfb\u65b9\u5f0f\n\u7535\u2003 \u2003 \u8bdd\uff1a010-58758251\n\u7535\u5b50\u90ae\u7bb1\uff1ajcfk@pep.com.cn\n\u4eba\u6c11\u6559\u80b2\u51fa\u7248\u793e \u8bfe\u7a0b\u6559\u6750\u7814\u7a76\u6240\n\u82f1\u8bed\u8bfe\u7a0b\u6559\u6750\u7814\u7a76\u5f00\u53d1\u4e2d\u5fc3\n2012\u5e745\u6708\n", "block_count": 21, "image_count": 0}, {"page": 69, "text": "", "block_count": 0, "image_count": 0}, {"page": 70, "text": "\u526a\u8d34\u9875\nUnit 1\nUnit 2\nUnit 3\nLook, listen and chant.\nLook, listen and repeat.\nLet\u2019s play. \nLet\u2019s play. \nLet\u2019s play. \nLet\u2019s sing. \nListen and do.\nLook, listen and repeat.\nLook, listen and chant.\nLook, listen and chant.\nLook, listen and repeat.\nLook, find and say.\nLet\u2019s play. \nLet\u2019s sing. \nListen and act.\nListen and chant again.\nListen and chant again.\nLet\u2019s play. \nLet\u2019s sing. \nListen and do.\nListen and chant again.\n", "block_count": 19, "image_count": 8}, {"page": 71, "text": "", "block_count": 0, "image_count": 0}, {"page": 72, "text": "\u526a\u8d34\u9875\nUnit 4\nLook, listen and chant.\nLook, listen and repeat.\nLook, listen and chant.\nLook, listen and chant.\nListen and do.\nListen and do.\nListen and chant again.\nListen and chant again.\nLook, count and say.\nListen and chant again.\nListen and do.\nUnit 5\nUnit 6\nLet\u2019s play. \nLet\u2019s play. \nLet\u2019s play. \nLet\u2019s sing. \nLet\u2019s sing. \nLook, listen and repeat.\nLook, listen and repeat.\nLook, choose and say.\nLook, draw and say.\nLet\u2019s sing. \n", "block_count": 20, "image_count": 1}, {"page": 73, "text": "", "block_count": 0, "image_count": 0}, {"page": 74, "text": "", "block_count": 0, "image_count": 1}, {"page": 75, "text": "", "block_count": 0, "image_count": 0}, {"page": 76, "text": "", "block_count": 0, "image_count": 1}, {"page": 77, "text": "", "block_count": 0, "image_count": 0}, {"page": 78, "text": "\u82f1\u8bed\n\u4e00\u5e74\u7ea7    \u4e0a\u518c\nYINGYU\nYIWU JIAOYU JIAOKESHU\n\u00ae\n\u4e49\n\u52a1\n\u6559\n\u80b2\n\u6559\n\u79d1\n\u4e66\n\u82f1\n\u8bed\n\u4e0a\n\u518c\n\u4e00\n\u5e74\n\u7ea7\n\uff08\n\u4e00\n\u5e74\n\u7ea7\n\u8d77\n\u70b9\n\uff09\n\u7eff\u8272\u5370\u5237\u4ea7\u54c1 \n\u7eff\u8272\u5370\u5237\u4ea7\u54c1 \n", "block_count": 5, "image_count": 2}];
+    const QUIZZES = {"unit-starter": {"title": "Starter: Greetings Quiz (含5道听力题)", "questions": [{"q": "听录音，选出你听到的问候语：", "audio": "audio/exp_morning.mp3", "audioText": "Good morning!", "opts": ["Good morning!", "Good afternoon!", "Goodbye!", "Hello!"], "ans": 0}, {"q": "听录音，选出对应的中文意思：", "audio": "audio/starter_dlg_3.mp3", "audioText": "Hello! My name is Bill.", "opts": ["再见，比尔！", "下午好，吴老师。", "早上好！我是吴老师。", "你好！我的名字叫比尔。"], "ans": 3}, {"q": "听问句录音，选出你听到的问句：", "audio": "audio/starter_dlg_2.mp3", "audioText": "What's your name?", "opts": ["Goodbye!", "What's your name?", "Good morning! I'm Miss Wu.", "Good afternoon!"], "ans": 1}, {"q": "听录音，选出听到的再见问候语：", "audio": "audio/starter_dlg_6.mp3", "audioText": "Bye, Bill. Goodbye.", "opts": ["Good afternoon!", "Bye, Bill. Goodbye.", "Good morning!", "Hello! My name is Bill."], "ans": 1}, {"q": "听录音，选出对应的英文问候语：", "audio": "audio/exp_afternoon.mp3", "audioText": "Good afternoon!", "opts": ["Hello!", "Goodbye!", "Good afternoon!", "Good morning!"], "ans": 2}, {"q": "How do you say \"你好\" in English?", "opts": ["Thank you!", "Good morning!", "Hello!", "Goodbye!"], "ans": 2}, {"q": "What does \"Goodbye\" mean?", "opts": ["早上好", "下午好", "你好", "再见"], "ans": 3}, {"q": "Which is a greeting?", "opts": ["Hi!", "ruler", "book", "pencil"], "ans": 0}, {"q": "Complete: \"My name ___ Bill.\"", "opts": ["am", "is", "be", "are"], "ans": 1}, {"q": "\"Hi\" and \"___\" have the same meaning.", "opts": ["Hello", "Goodbye", "Sorry", "Thank you"], "ans": 0}]}, "unit-1": {"title": "Unit 1: School Quiz (含5道听力题)", "questions": [{"q": "听录音，选出听到的文具名称：", "audio": "audio/u1_pencil.mp3", "audioText": "pencil", "opts": ["book", "schoolbag", "pencil", "ruler"], "ans": 2}, {"q": "听录音，选出对应的中文意思：", "audio": "audio/u1_sentence_schoolbag.mp3", "audioText": "I have a schoolbag.", "opts": ["我有一把尺子。", "打开你的书包。", "拿出你的铅笔。", "我有一个书包。"], "ans": 3}, {"q": "听录音，选出听到的文具：", "audio": "audio/u1_ruler.mp3", "audioText": "ruler", "opts": ["ruler", "eraser", "book", "pencil"], "ans": 0}, {"q": "听录音，选出你听到的句子：", "audio": "audio/u1_sentence_book.mp3", "audioText": "I have a book.", "opts": ["I have a schoolbag.", "I have a ruler.", "I have a pencil.", "I have a book."], "ans": 3}, {"q": "听录音指令，选出正确的中文含义：", "audio": "audio/u1_action_ruler.mp3", "audioText": "Show me your ruler.", "opts": ["出示你的尺子。", "出示你的铅笔。", "打开你的书。", "拿出你的书包。"], "ans": 0}, {"q": "\"书包\" in English is ___", "opts": ["ruler", "schoolbag", "book", "pencil"], "ans": 1}, {"q": "\"I have a ruler.\" means?", "opts": ["我有一支铅笔。", "我有一把尺子。", "我有一个书包。", "我有一本书。"], "ans": 1}, {"q": "What is \"book\" in Chinese?", "opts": ["尺子", "笔", "书", "书包"], "ans": 2}, {"q": "Which is a school supply?", "opts": ["pencil", "apple", "dog", "ear"], "ans": 0}, {"q": "\"Open your book.\" means?", "opts": ["站起来", "请坐下", "打开你的书", "拿出你的铅笔"], "ans": 2}]}, "unit-2": {"title": "Unit 2: Face Quiz (含5道听力题)", "questions": [{"q": "听录音，选出听到的身体部位：", "audio": "audio/u2_eye.mp3", "audioText": "eye", "opts": ["ear", "nose", "eye", "mouth"], "ans": 2}, {"q": "听录音指令，选出听到的英文句子：", "audio": "audio/u2_touch_nose.mp3", "audioText": "Touch your nose.", "opts": ["Touch your ear.", "This is my face.", "Touch your nose.", "Touch your eye."], "ans": 2}, {"q": "听录音，选出对应的中文意思：", "audio": "audio/u2_this_mouth.mp3", "audioText": "This is my mouth.", "opts": ["这是我的鼻子。", "这是我的嘴巴。", "这是我的眼睛。", "这是我的脸。"], "ans": 1}, {"q": "听录音，选出听到的器官英文：", "audio": "audio/u2_ear.mp3", "audioText": "ear", "opts": ["ear", "eye", "face", "nose"], "ans": 0}, {"q": "听录音指令，选出正确的中文动作：", "audio": "audio/u2_touch_mouth.mp3", "audioText": "Touch your mouth.", "opts": ["摸摸你的嘴巴。", "摸摸你的鼻子。", "摸摸你的眼睛。", "摸摸你的耳朵。"], "ans": 0}, {"q": "\"眼睛\" in English is ___", "opts": ["ear", "eye", "mouth", "nose"], "ans": 1}, {"q": "\"face\" in Chinese is ___", "opts": ["脸", "鼻子", "耳朵", "眼睛"], "ans": 0}, {"q": "How many ears do we have?", "opts": ["4", "1", "3", "2"], "ans": 3}, {"q": "\"nose\" in Chinese is ___", "opts": ["眼睛", "耳朵", "嘴巴", "鼻子"], "ans": 3}, {"q": "\"mouth\" in Chinese is ___", "opts": ["鼻子", "脸", "嘴巴", "耳朵"], "ans": 2}]}, "unit-3": {"title": "Unit 3: Animals Quiz (含5道听力题)", "questions": [{"q": "听录音，选出听到的动物：", "audio": "audio/u3_tiger.mp3", "audioText": "tiger", "opts": ["tiger", "cat", "bird", "dog"], "ans": 0}, {"q": "听对话录音，选出听到的英文句子：", "audio": "audio/u3_q_tiger.mp3", "audioText": "What's this? It's a tiger.", "opts": ["What's this? It's a tiger.", "It's a cat.", "What's this? It's a dog.", "What's this? It's a bird."], "ans": 0}, {"q": "听录音，选出听到的动物：", "audio": "audio/u3_monkey.mp3", "audioText": "monkey", "opts": ["panda", "monkey", "bird", "tiger"], "ans": 1}, {"q": "听对话录音，选出听到的英文问答：", "audio": "audio/u3_q_bird.mp3", "audioText": "What's this? It's a bird.", "opts": ["It's a dog.", "What's this? It's a tiger.", "What's this? It's a bird.", "It's a cat."], "ans": 2}, {"q": "听录音，选出听到的动物：", "audio": "audio/u3_panda.mp3", "audioText": "panda", "opts": ["monkey", "cat", "tiger", "panda"], "ans": 3}, {"q": "\"狗\" in English is ___", "opts": ["tiger", "bird", "cat", "dog"], "ans": 3}, {"q": "\"bird\" in Chinese is ___", "opts": ["猫", "鸟", "猴子", "狗"], "ans": 1}, {"q": "Which is an animal?", "opts": ["red", "nose", "pencil", "bird"], "ans": 3}, {"q": "\"tiger\" in Chinese is ___", "opts": ["猫", "狗", "老虎", "猴子"], "ans": 2}, {"q": "\"panda\" in Chinese is ___", "opts": ["鸟", "熊猫", "老虎", "猴子"], "ans": 1}]}, "revision-1": {"title": "Revision 1: Mixed Review Quiz (含5道听力题)", "questions": [{"q": "听录音，选出听到的单词：", "audio": "audio/u1_schoolbag.mp3", "audioText": "schoolbag", "opts": ["ruler", "nose", "cat", "schoolbag"], "ans": 3}, {"q": "听录音，选出你听到的问句：", "audio": "audio/starter_dlg_2.mp3", "audioText": "What's your name?", "opts": ["Good morning! I'm Miss Wu.", "What's your name?", "How are you?", "Good morning!"], "ans": 1}, {"q": "听录音，选出对应的中文含义：", "audio": "audio/u2_touch_eye.mp3", "audioText": "Touch your eye.", "opts": ["展示你的书。", "摸摸你的眼睛。", "摸摸你的鼻子。", "摸摸你的耳朵。"], "ans": 1}, {"q": "听录音，选出你听到的句子：", "audio": "audio/u3_q_tiger.mp3", "audioText": "What's this? It's a tiger.", "opts": ["What's this? It's a dog.", "It's a cat.", "It's a bird.", "What's this? It's a tiger."], "ans": 3}, {"q": "听录音，选出你听到的单词：", "audio": "audio/u1_ruler.mp3", "audioText": "ruler", "opts": ["book", "pencil", "ruler", "eraser"], "ans": 2}, {"q": "Complete: \"I have a ___.\" (文具)", "opts": ["schoolbag", "ear", "colour", "tiger"], "ans": 0}, {"q": "Which is a body part?", "opts": ["schoolbag", "book", "nose", "tiger"], "ans": 2}, {"q": "Which is a school object?", "opts": ["pencil", "bird", "eye", "green"], "ans": 0}, {"q": "Which is an animal?", "opts": ["blue", "mouth", "ruler", "monkey"], "ans": 3}, {"q": "\"Show me your book.\" means?", "opts": ["展示你的书。", "这是我的书。", "展示你的铅笔。", "我有一本书。"], "ans": 0}]}, "unit-4": {"title": "Unit 4: Numbers Quiz (含5道听力题)", "questions": [{"q": "听录音，选出听到的阿拉伯数字：", "audio": "audio/u4_seven.mp3", "audioText": "seven", "opts": ["9", "7", "8", "6"], "ans": 1}, {"q": "听录音，选出听到的问句：", "audio": "audio/u4_q_tigers.mp3", "audioText": "How many tigers are there?", "opts": ["How many tigers are there?", "How many birds are there?", "What colour is it?", "What's this?"], "ans": 0}, {"q": "听录音，选出你听到的回答：", "audio": "audio/u4_a_five.mp3", "audioText": "Five tigers.", "opts": ["Four birds.", "Three dogs.", "Six cats.", "Five tigers."], "ans": 3}, {"q": "听录音，选出你听到的数字：", "audio": "audio/u4_eight.mp3", "audioText": "eight", "opts": ["9", "10", "8", "7"], "ans": 2}, {"q": "听录音，选出你听到的数字：", "audio": "audio/u4_four.mp3", "audioText": "four", "opts": ["3", "5", "4", "6"], "ans": 2}, {"q": "\"七\" in English is ___", "opts": ["seven", "six", "nine", "eight"], "ans": 0}, {"q": "\"nine\" in Chinese is ___", "opts": ["七", "九", "六", "八"], "ans": 1}, {"q": "3 + 2 = ?", "opts": ["three", "four", "six", "five"], "ans": 3}, {"q": "\"ten\" in Chinese is ___", "opts": ["七", "十", "九", "八"], "ans": 1}, {"q": "Count: one, two, ___, four", "opts": ["six", "two", "three", "five"], "ans": 2}]}, "unit-5": {"title": "Unit 5: Colours Quiz (含5道听力题)", "questions": [{"q": "听录音，选出听到的颜色英文：", "audio": "audio/u5_red.mp3", "audioText": "red", "opts": ["red", "yellow", "blue", "green"], "ans": 0}, {"q": "听录音，选出听到的对话句子：", "audio": "audio/u5_q_yellow.mp3", "audioText": "What colour is it? It's yellow.", "opts": ["How many?", "What colour is it? It's yellow.", "What's your name?", "What's this? It's red."], "ans": 1}, {"q": "听录音，选出听到的颜色英文：", "audio": "audio/u5_green.mp3", "audioText": "green", "opts": ["black", "blue", "green", "yellow"], "ans": 2}, {"q": "听录音，选出你听到的颜色：", "audio": "audio/u5_yellow.mp3", "audioText": "yellow", "opts": ["blue", "red", "black", "yellow"], "ans": 3}, {"q": "听录音，选出听到的英文句子：", "audio": "audio/u5_a_black.mp3", "audioText": "It's black.", "opts": ["It's black.", "It's green.", "It's red.", "It's blue."], "ans": 0}, {"q": "\"红色\" in English is ___", "opts": ["yellow", "blue", "green", "red"], "ans": 3}, {"q": "\"green\" in Chinese is ___", "opts": ["黄色", "红色", "绿色", "蓝色"], "ans": 2}, {"q": "\"yellow\" in Chinese is ___", "opts": ["绿色", "黄色", "黑色", "蓝色"], "ans": 1}, {"q": "Grass is ___", "opts": ["red", "black", "blue", "green"], "ans": 3}, {"q": "Which is NOT a colour?", "opts": ["yellow", "blue", "cat", "red"], "ans": 2}]}, "unit-6": {"title": "Unit 6: Fruit Quiz (含5道听力题)", "questions": [{"q": "听录音，选出听到的水果英文：", "audio": "audio/u6_apple.mp3", "audioText": "apple", "opts": ["banana", "orange", "pear", "apple"], "ans": 3}, {"q": "听对话录音，选出听到的问答：", "audio": "audio/u6_like_bananas.mp3", "audioText": "Do you like bananas? Yes, I do.", "opts": ["Do you like bananas? Yes, I do.", "Do you like oranges?", "Do you like apples? No, I don't.", "Do you like pears?"], "ans": 0}, {"q": "听对话录音，选出听到的否定的对话：", "audio": "audio/u6_like_pears.mp3", "audioText": "Do you like pears? No, I don't.", "opts": ["Do you like pears? No, I don't.", "Do you like bananas? Yes, I do.", "I have a pear.", "I don't know."], "ans": 0}, {"q": "听录音，选出听到的水果：", "audio": "audio/u6_pear.mp3", "audioText": "pear", "opts": ["orange", "banana", "pear", "apple"], "ans": 2}, {"q": "听录音，选出听到的单词：", "audio": "audio/u6_orange.mp3", "audioText": "orange", "opts": ["orange", "pear", "banana", "apple"], "ans": 0}, {"q": "\"苹果\" in English is ___", "opts": ["orange", "pear", "banana", "apple"], "ans": 3}, {"q": "\"pear\" in Chinese is ___", "opts": ["香蕉", "梨", "苹果", "橙子"], "ans": 1}, {"q": "\"orange\" in Chinese is ___", "opts": ["香蕉", "苹果", "柑橘/橙", "梨"], "ans": 2}, {"q": "Which is a fruit?", "opts": ["ruler", "apple", "blue", "dog"], "ans": 1}, {"q": "\"I like pears.\" means?", "opts": ["梨很好。", "你有梨吗？", "我喜欢梨。", "我有一个梨。"], "ans": 2}]}, "revision-2": {"title": "Revision 2: Final Review Quiz (含5道听力题)", "questions": [{"q": "听录音，选出你听到的句子：", "audio": "audio/rev2_like_apples.mp3", "audioText": "Do you like apples? Yes, I do.", "opts": ["Do you like apples? Yes, I do.", "How many apples?", "What colour is it?", "Do you like bananas?"], "ans": 0}, {"q": "听录音，选出听到对话的中文含义：", "audio": "audio/u5_q_yellow.mp3", "audioText": "What colour is it? It's yellow.", "opts": ["这是什么颜色？它是黄色的。", "它是红色的。", "它是绿色的。", "这是什么颜色？它是蓝色的。"], "ans": 0}, {"q": "听录音，选出你听到的数字：", "audio": "audio/u4_ten.mp3", "audioText": "ten", "opts": ["9", "7", "8", "10"], "ans": 3}, {"q": "听对话录音，选出你听到的否定回答对话：", "audio": "audio/u6_like_pears.mp3", "audioText": "Do you like pears? No, I don't.", "opts": ["Thank you.", "Yes, I do.", "Do you like pears? No, I don't.", "Goodbye."], "ans": 2}, {"q": "听录音，选出你听到的单词：", "audio": "audio/u6_orange.mp3", "audioText": "orange", "opts": ["ruler", "apple", "black", "orange"], "ans": 3}, {"q": "\"What colour is it?\" means?", "opts": ["有多少个？", "这是什么颜色？", "这是什么？", "你叫什么名字？"], "ans": 1}, {"q": "5 + 5 = ?", "opts": ["eight", "ten", "nine", "seven"], "ans": 1}, {"q": "Which is a fruit?", "opts": ["ruler", "orange", "black", "eye"], "ans": 1}, {"q": "\"I like bananas.\" means?", "opts": ["我有香蕉。", "我不喜欢香蕉。", "我喜欢香蕉。", "你喜欢香蕉吗？"], "ans": 2}, {"q": "\"black\" in Chinese is ___", "opts": ["黑色", "红色", "绿色", "蓝色"], "ans": 0}]}};
+
+    // Audio Controller
+    let currentAudio = null;
+    let toastTimeout = null;
+
+    function playAudio(audioUrl, text) {
+      if (!audioUrl) return;
+      if (currentAudio) {
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
+      }
+      currentAudio = new Audio(audioUrl);
+      
+      const toast = document.getElementById('audioToast');
+      const toastText = document.getElementById('audioToastText');
+      if (toast && toastText) {
+        toastText.textContent = text ? `正在播放: "${text}"` : '正在播放音轨...';
+        toast.classList.add('show');
+        clearTimeout(toastTimeout);
+      }
+
+      currentAudio.play().catch(err => console.log('Audio playback prevented:', err));
+      currentAudio.onended = () => {
+        if (toast) {
+          toastTimeout = setTimeout(() => toast.classList.remove('show'), 1500);
+        }
+      };
+    }
+
+    // Attach delegated audio triggers
+    document.addEventListener('click', function(e) {
+      const trigger = e.target.closest('.audio-trigger');
+      if (trigger) {
+        const audio = trigger.getAttribute('data-audio');
+        const text = trigger.getAttribute('data-text');
+        if (audio) playAudio(audio, text);
+      }
+    });
+
+    // Web Speech API Fallback
+    function speak(text) {
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+        const msg = new SpeechSynthesisUtterance(text);
+        msg.lang = 'en-US';
+        msg.rate = 0.85;
+        window.speechSynthesis.speak(msg);
+      }
+    }
+
+    // PDF Structure Text Data Loader
+    let pdfData = window.FALLBACK_PDF_STRUCTURE || [];
+    let currentPage = 1;
+
+    if (window.location.protocol.startsWith('http')) {
+      fetch('pdf_structure.json')
+        .then(res => res.json())
+        .then(data => {
+          pdfData = data;
+          renderFullVocab();
+          updatePageViewer(1);
+        })
+        .catch(err => {
+          console.log('Loaded embedded JSON fallback:', err);
+          renderFullVocab();
+          updatePageViewer(1);
+        });
+    } else {
+      renderFullVocab();
+      updatePageViewer(1);
+    }
+
+    // Toggle Mobile Sidebar Drawer
+    function toggleSidebar(show) {
+      const sidebar = document.querySelector('.app-sidebar');
+      const overlay = document.getElementById('sidebarOverlay');
+      if (!sidebar || !overlay) return;
+      if (show === undefined) {
+        show = !sidebar.classList.contains('open');
+      }
+      if (show) {
+        sidebar.classList.add('open');
+        overlay.classList.add('show');
+      } else {
+        sidebar.classList.remove('open');
+        overlay.classList.remove('show');
+      }
+    }
+
+    let lastActiveUnit = 'unit-starter';
+
+    function switchNav(sectionId, element) {
+      document.querySelectorAll('.sidebar-nav .nav-item').forEach(item => item.classList.remove('active'));
+      if (element) element.classList.add('active');
+
+      lastActiveUnit = sectionId;
+
+      document.querySelectorAll('.unit-section').forEach(sec => sec.style.display = 'none');
+      document.getElementById('pageview-mode-section').style.display = 'none';
+
+      const targetSec = document.getElementById(sectionId);
+      if (targetSec) targetSec.style.display = 'block';
+
+      setViewMode('interactive');
+
+      // Scroll top
+      document.getElementById('contentViewport').scrollTop = 0;
+
+      // Close mobile drawer on item selection
+      toggleSidebar(false);
+    }
+
+    function scrollToTop() {
+      const viewport = document.getElementById('contentViewport');
+      if (viewport) {
+        viewport.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }
+
+    function navigateToSection(targetId) {
+      if (!targetId) return;
+      const targetNav = document.querySelector(`.sidebar-nav .nav-item[href="#${targetId}"]`);
+      switchNav(targetId, targetNav);
+      scrollToTop();
+    }
+
+    // Toggle Back-To-Top button on viewport scroll
+    window.addEventListener('DOMContentLoaded', function() {
+      const viewport = document.getElementById('contentViewport');
+      const topBtn = document.getElementById('backToTopBtn');
+      if (viewport && topBtn) {
+        viewport.addEventListener('scroll', function() {
+          if (viewport.scrollTop > 220) {
+            topBtn.classList.add('show');
+          } else {
+            topBtn.classList.remove('show');
+          }
+        });
+      }
+    });
+
+    // Listen for hashchange for native browser back/forward and direct links
+    window.addEventListener('hashchange', function() {
+      const hash = window.location.hash.replace('#', '');
+      if (hash) {
+        const targetNav = document.querySelector(`.sidebar-nav .nav-item[href="#${hash}"]`);
+        if (targetNav) {
+          switchNav(hash, targetNav);
+        }
+      }
+    });
+
+    function setViewMode(mode) {
+      document.querySelectorAll('.view-tab').forEach(t => t.classList.remove('active'));
+      
+      if (mode === 'interactive') {
+        document.getElementById('tab-interactive').classList.add('active');
+        document.getElementById('pageview-mode-section').style.display = 'none';
+        document.querySelectorAll('.unit-section').forEach(sec => sec.style.display = 'none');
+        document.getElementById(lastActiveUnit).style.display = 'block';
+      } else if (mode === 'pageview') {
+        document.getElementById('tab-pageview').classList.add('active');
+        document.querySelectorAll('.unit-section').forEach(sec => sec.style.display = 'none');
+        document.getElementById('pageview-mode-section').style.display = 'block';
+      } else if (mode === 'vocab') {
+        document.getElementById('tab-vocab').classList.add('active');
+        document.querySelectorAll('.unit-section').forEach(sec => sec.style.display = 'none');
+        document.getElementById('pageview-mode-section').style.display = 'none';
+        document.getElementById('app-vocab').style.display = 'block';
+      }
+    }
+
+    function changePage(delta) {
+      let newPage = currentPage + delta;
+      if (newPage >= 1 && newPage <= 78) {
+        currentPage = newPage;
+        updatePageViewer(currentPage);
+      }
+    }
+
+    function updatePageViewer(pageNum) {
+      const pageStr = String(pageNum).padStart(2, '0');
+      document.getElementById('pdfPageImage').src = `images/pages/page_${pageStr}.webp`;
+      document.getElementById('currentPageNum').innerText = pageNum;
+      document.getElementById('pageTranscriptTitle').innerText = `第 ${pageNum} 页 文本与提取内容`;
+
+      const pageInfo = pdfData.find(p => p.page === pageNum);
+      const textContainer = document.getElementById('pageTextContent');
+      if (pageInfo && pageInfo.text && pageInfo.text.trim()) {
+        textContainer.innerHTML = pageInfo.text.split('\\n').map(line => `<p style="margin-bottom:0.5rem; cursor:pointer;" onclick="speak(this.innerText)">🗣️ ${line}</p>`).join('');
+      } else {
+        textContainer.innerHTML = '<p style="color:#94a3b8; font-style:italic;">(此页面为整页图画/插图，无纯文本识别数据。请参看左侧高清页面。)</p>';
+      }
+
+      // Performance Optimization: Preload adjacent textbook page images
+      [pageNum + 1, pageNum - 1].forEach(pNum => {
+        if (pNum >= 1 && pNum <= 78) {
+          const img = new Image();
+          img.src = `images/pages/page_${String(pNum).padStart(2, '0')}.webp`;
+        }
+      });
+    }
+
+    function renderFullVocab() {
+      const vocabList = [
+        { w: 'book', p: '/bʊk/', m: '书，书本', u: 'Unit 1', audio: 'audio/u1_book.mp3' },
+        { w: 'ruler', p: '/ˈruːlə/', m: '尺子', u: 'Unit 1', audio: 'audio/u1_ruler.mp3' },
+        { w: 'pencil', p: '/ˈpensl/', m: '铅笔', u: 'Unit 1', audio: 'audio/u1_pencil.mp3' },
+        { w: 'eraser', p: '/ɪˈreɪzə/', m: '橡皮', u: 'Unit 1', audio: 'audio/u1_eraser.mp3' },
+        { w: 'schoolbag', p: '/ˈskuːlbæɡ/', m: '书包', u: 'Unit 1', audio: 'audio/u1_schoolbag.mp3' },
+        { w: 'face', p: '/feɪs/', m: '脸', u: 'Unit 2', audio: 'audio/u2_face.mp3' },
+        { w: 'eye', p: '/aɪ/', m: '眼睛', u: 'Unit 2', audio: 'audio/u2_eye.mp3' },
+        { w: 'ear', p: '/ɪə/', m: '耳朵', u: 'Unit 2', audio: 'audio/u2_ear.mp3' },
+        { w: 'nose', p: '/nəʊz/', m: '鼻子', u: 'Unit 2', audio: 'audio/u2_nose.mp3' },
+        { w: 'mouth', p: '/maʊθ/', m: '嘴巴', u: 'Unit 2', audio: 'audio/u2_mouth.mp3' },
+        { w: 'cat', p: '/kæt/', m: '猫', u: 'Unit 3', audio: 'audio/u3_cat.mp3' },
+        { w: 'dog', p: '/dɒɡ/', m: '狗', u: 'Unit 3', audio: 'audio/u3_dog.mp3' },
+        { w: 'bird', p: '/bɜːd/', m: '鸟', u: 'Unit 3', audio: 'audio/u3_bird.mp3' },
+        { w: 'monkey', p: '/ˈmʌŋki/', m: '猴子', u: 'Unit 3', audio: 'audio/u3_monkey.mp3' },
+        { w: 'tiger', p: '/ˈtaɪɡə/', m: '老虎', u: 'Unit 3', audio: 'audio/u3_tiger.mp3' },
+        { w: 'panda', p: '/ˈpændə/', m: '熊猫', u: 'Unit 3', audio: 'audio/u3_panda.mp3' },
+        { w: 'one', p: '/wʌn/', m: '一', u: 'Unit 4', audio: 'audio/u4_one.mp3' },
+        { w: 'two', p: '/tuː/', m: '二', u: 'Unit 4', audio: 'audio/u4_two.mp3' },
+        { w: 'three', p: '/θriː/', m: '三', u: 'Unit 4', audio: 'audio/u4_three.mp3' },
+        { w: 'four', p: '/fɔː/', m: '四', u: 'Unit 4', audio: 'audio/u4_four.mp3' },
+        { w: 'five', p: '/faɪv/', m: '五', u: 'Unit 4', audio: 'audio/u4_five.mp3' },
+        { w: 'six', p: '/sɪks/', m: '六', u: 'Unit 4', audio: 'audio/u4_six.mp3' },
+        { w: 'seven', p: '/ˈsevn/', m: '七', u: 'Unit 4', audio: 'audio/u4_seven.mp3' },
+        { w: 'eight', p: '/eɪt/', m: '八', u: 'Unit 4', audio: 'audio/u4_eight.mp3' },
+        { w: 'nine', p: '/naɪn/', m: '九', u: 'Unit 4', audio: 'audio/u4_nine.mp3' },
+        { w: 'ten', p: '/ten/', m: '十', u: 'Unit 4', audio: 'audio/u4_ten.mp3' },
+        { w: 'red', p: '/red/', m: '红色', u: 'Unit 5', audio: 'audio/u5_red.mp3' },
+        { w: 'yellow', p: '/ˈjeləʊ/', m: '黄色', u: 'Unit 5', audio: 'audio/u5_yellow.mp3' },
+        { w: 'blue', p: '/bluː/', m: '蓝色', u: 'Unit 5', audio: 'audio/u5_blue.mp3' },
+        { w: 'green', p: '/ɡriːn/', m: '绿色', u: 'Unit 5', audio: 'audio/u5_green.mp3' },
+        { w: 'black', p: '/blæk/', m: '黑色', u: 'Unit 5', audio: 'audio/u5_black.mp3' },
+        { w: 'apple', p: '/ˈæpl/', m: '苹果', u: 'Unit 6', audio: 'audio/u6_apple.mp3' },
+        { w: 'banana', p: '/bəˈnɑːnə/', m: '香蕉', u: 'Unit 6', audio: 'audio/u6_banana.mp3' },
+        { w: 'pear', p: '/peə/', m: '梨', u: 'Unit 6', audio: 'audio/u6_pear.mp3' },
+        { w: 'orange', p: '/ˈɒrɪndʒ/', m: '桔子', u: 'Unit 6', audio: 'audio/u6_orange.mp3' }
+      ];
+
+      const grid = document.getElementById('fullVocabGrid');
+      if (grid) {
+        grid.innerHTML = vocabList.map(item => `
+          <div class="vocab-card audio-trigger" data-audio="${item.audio}" data-text="${item.w}">
+            <div class="vocab-word">${item.w} 🎵</div>
+            <div class="vocab-phonetic">${item.p}</div>
+            <div class="vocab-meaning">${item.m}</div>
+            <div style="font-size:0.7rem; color:#94a3b8; margin-top:0.3rem;">${item.u}</div>
+          </div>
+        `).join('');
+      }
+    }
+
+    // Performance Optimization: Cached DOM Text Search Index to prevent layout thrashing
+    let searchIndexCache = null;
+
+    function getSearchIndex() {
+      if (!searchIndexCache) {
+        searchIndexCache = Array.from(document.querySelectorAll('.vocab-card, .dialogue-bubble, .lesson-card')).map(el => ({
+          element: el,
+          text: el.textContent.toLowerCase()
+        }));
+      }
+      return searchIndexCache;
+    }
+
+    function handleSearch() {
+      const q = document.getElementById('searchInput').value.toLowerCase().trim();
+      const index = getSearchIndex();
+
+      if (!q) {
+        index.forEach(item => item.element.style.display = '');
+        return;
+      }
+
+      setViewMode('interactive');
+      document.querySelectorAll('.unit-section').forEach(sec => sec.style.display = 'block');
+
+      index.forEach(item => {
+        item.element.style.display = item.text.includes(q) ? '' : 'none';
+      });
+    }
+
+    // ===== QUIZ ENGINE =====
+    function renderQuiz(unitId) {
+      const container = document.getElementById('quiz-' + unitId);
+      if (!container || !QUIZZES[unitId]) return;
+      const quiz = QUIZZES[unitId];
+      const labels = ['A', 'B', 'C', 'D'];
+      let html = `
+        <div class="quiz-header">
+          <h3>📝 ${quiz.title}</h3>
+          <span class="quiz-badge">10 Points</span>
+        </div>
+        <div id="quiz-questions-${unitId}">`;
+      quiz.questions.forEach((q, qi) => {
+        const listeningTag = q.audioText ? `<span class="quiz-listening-tag">🎧 听力题</span>` : '';
+        const safeText = q.audioText ? q.audioText.replace(/"/g, '&quot;') : '';
+        const playBtn = q.audioText ? `<button type="button" class="quiz-speak-btn audio-trigger" data-audio="${q.audio || ''}" data-text="${safeText}">🔊 点击听音 Play</button>` : '';
+        html += `<div class="quiz-question" id="qq-${unitId}-${qi}">
+          <div class="quiz-q-text"><span class="quiz-q-num">${qi+1}</span>${listeningTag}${q.q}${playBtn}</div>
+          <div class="quiz-options">`;
+        q.opts.forEach((opt, oi) => {
+          html += `<label class="quiz-option" id="opt-${unitId}-${qi}-${oi}">
+            <input type="radio" name="q-${unitId}-${qi}" value="${oi}"> ${labels[oi]}. ${opt}
+          </label>`;
+        });
+        html += `</div></div>`;
+      });
+      html += `</div>
+        <div class="quiz-actions">
+          <button class="quiz-submit-btn" onclick="submitQuiz('${unitId}')">✅ Submit Quiz</button>
+          <button class="quiz-reset-btn" onclick="resetQuiz('${unitId}')">🔄 Reset</button>
+        </div>
+        <div class="quiz-result" id="quiz-result-${unitId}">
+          <span class="quiz-result-icon"></span>
+          <div class="quiz-result-text">
+            <div class="quiz-result-score"></div>
+            <div class="quiz-result-label"></div>
+          </div>
+        </div>`;
+      container.innerHTML = html;
+    }
+
+    function submitQuiz(unitId) {
+      const quiz = QUIZZES[unitId];
+      if (!quiz) return;
+      let score = 0;
+      quiz.questions.forEach((q, qi) => {
+        const selected = document.querySelector(`input[name="q-${unitId}-${qi}"]:checked`);
+        const correct = q.ans;
+        let chosen = null;
+        if (selected) {
+          chosen = parseInt(selected.value);
+          if (chosen === correct) score++;
+        }
+        // Mark all options
+        q.opts.forEach((_, oi) => {
+          const label = document.getElementById(`opt-${unitId}-${qi}-${oi}`);
+          if (!label) return;
+          label.classList.add('disabled');
+          if (oi === correct) label.classList.add('correct-answer');
+          if (chosen !== null && oi === chosen && chosen !== correct) label.classList.add('wrong');
+          if (chosen !== null && oi === chosen && chosen === correct) label.classList.add('correct');
+        });
+      });
+
+      // Disable submit button
+      const submitBtn = document.querySelector(`#quiz-${unitId} .quiz-submit-btn`);
+      if (submitBtn) submitBtn.disabled = true;
+
+      // Show result score card
+      const resultEl = document.getElementById(`quiz-result-${unitId}`);
+      if (!resultEl) return;
+      const grade = score >= 9 ? 'a' : score >= 6 ? 'b' : 'c';
+      const icons = { a: '🏆', b: '👍', c: '💪' };
+      const msgs = {
+        a: 'Excellent! Outstanding work!',
+        b: 'Good job! Keep practicing!',
+        c: score === 0 ? 'Score: 0 / 10. Try taking the test again!' : 'Keep going! Try again!'
+      };
+      resultEl.className = `quiz-result show grade-${grade}`;
+      resultEl.querySelector('.quiz-result-icon').textContent = icons[grade];
+      resultEl.querySelector('.quiz-result-score').textContent = `${score} / 10`;
+      resultEl.querySelector('.quiz-result-label').textContent = msgs[grade];
+      resultEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    function resetQuiz(unitId) {
+      renderQuiz(unitId);
+    }
+
+    function renderAllQuizzes() {
+      Object.keys(QUIZZES).forEach(uid => renderQuiz(uid));
+    }
+
+    renderAllQuizzes();
+  </script>
+</body>
+</html>

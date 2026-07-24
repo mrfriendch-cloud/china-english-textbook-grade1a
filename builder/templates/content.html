@@ -1,0 +1,882 @@
+        <!-- SECTION: STARTER -->
+        <section id="unit-starter" class="unit-section view-pane">
+          <div class="unit-header-card">
+            <span class="unit-badge">Starter Unit</span>
+            <h2 class="unit-title">Greetings & Introductions</h2>
+            <p class="unit-desc">认识主要人物角色并学习基础英语打招呼与自我介绍用语 (P5 - P8)</p>
+          </div>
+
+          <div class="lessons-grid">
+            <!-- Characters -->
+            <div class="lesson-card">
+              <div class="lesson-title">
+                <span>Main Characters 主角人物</span>
+                <span class="page-tag" onclick="jumpToPage(5)">P5 📄</span>
+              </div>
+              <p style="margin-bottom:1rem; color:var(--text-muted); font-size:0.9rem;">点击人物名字播放本地提取音轨：</p>
+              <div style="display:flex; flex-wrap:wrap; gap:0.5rem;">
+                <span class="vocab-card audio-trigger" data-audio="audio/starter_miss_wu.mp3" data-text="Miss Wu" style="padding:0.5rem 1rem;"><strong style="color:var(--primary-700)">Miss Wu</strong> (吴老师) 🎵</span>
+                <span class="vocab-card audio-trigger" data-audio="audio/starter_bill.mp3" data-text="Bill" style="padding:0.5rem 1rem;"><strong style="color:var(--primary-700)">Bill</strong> 🎵</span>
+                <span class="vocab-card audio-trigger" data-audio="audio/starter_lily.mp3" data-text="Lily" style="padding:0.5rem 1rem;"><strong style="color:var(--primary-700)">Lily</strong> 🎵</span>
+                <span class="vocab-card audio-trigger" data-audio="audio/starter_yaoyao.mp3" data-text="Yaoyao" style="padding:0.5rem 1rem;"><strong style="color:var(--primary-700)">Yaoyao</strong> 🎵</span>
+                <span class="vocab-card audio-trigger" data-audio="audio/starter_binbin.mp3" data-text="Binbin" style="padding:0.5rem 1rem;"><strong style="color:var(--primary-700)">Binbin</strong> 🎵</span>
+                <span class="vocab-card audio-trigger" data-audio="audio/starter_andy.mp3" data-text="Andy" style="padding:0.5rem 1rem;"><strong style="color:var(--primary-700)">Andy</strong> 🎵</span>
+                <span class="vocab-card audio-trigger" data-audio="audio/starter_lucky.mp3" data-text="Lucky" style="padding:0.5rem 1rem;"><strong style="color:var(--accent-amber)">Lucky</strong> (小狗) 🎵</span>
+                <span class="vocab-card audio-trigger" data-audio="audio/starter_angel.mp3" data-text="Angel" style="padding:0.5rem 1rem;"><strong style="color:var(--accent-purple)">Angel</strong> (小仙女) 🎵</span>
+              </div>
+            </div>
+
+            <!-- Dialogue 1 -->
+            <div class="lesson-card">
+              <div class="lesson-title">
+                <span>Morning Greetings 问好</span>
+                <span class="page-tag" onclick="jumpToPage(7)">P7 📄</span>
+              </div>
+              <div class="dialogue-list">
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/starter_dlg_1.mp3" data-text="Good morning! I'm Miss Wu.">
+                  <div>
+                    <strong>Miss Wu:</strong> Good morning! I’m Miss Wu.
+                    <div style="font-size:0.8rem; color:var(--text-muted);">早上好！我是吴老师。</div>
+                  </div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/starter_dlg_2.mp3" data-text="What's your name?">
+                  <div>
+                    <strong>Miss Wu:</strong> What’s your name?
+                    <div style="font-size:0.8rem; color:var(--text-muted);">你叫什么名字？</div>
+                  </div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/starter_dlg_3.mp3" data-text="Hello! My name is Bill.">
+                  <div>
+                    <strong>Bill:</strong> Hello! My name is Bill.
+                    <div style="font-size:0.8rem; color:var(--text-muted);">你好！我的名字叫Bill。</div>
+                  </div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dialogue 2 -->
+            <div class="lesson-card">
+              <div class="lesson-title">
+                <span>Afternoon & Farewell 下午好与道别</span>
+                <span class="page-tag" onclick="jumpToPage(8)">P8 📄</span>
+              </div>
+              <div class="dialogue-list">
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/starter_dlg_4.mp3" data-text="Good afternoon, Miss Wu.">
+                  <div>
+                    <strong>Bill:</strong> Good afternoon, Miss Wu.
+                    <div style="font-size:0.8rem; color:var(--text-muted);">下午好，吴老师。</div>
+                  </div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/starter_dlg_5.mp3" data-text="Hi, Bill.">
+                  <div>
+                    <strong>Miss Wu:</strong> Hi, Bill.
+                    <div style="font-size:0.8rem; color:var(--text-muted);">嗨，Bill。</div>
+                  </div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/starter_dlg_6.mp3" data-text="Bye, Bill. Goodbye.">
+                  <div>
+                    <strong>Friends:</strong> Bye, Bill. Goodbye.
+                    <div style="font-size:0.8rem; color:var(--text-muted);">再见，Bill。再见！</div>
+                  </div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <div id="quiz-unit-starter" class="quiz-section"></div>
+        
+          <div class="unit-bottom-nav">
+            <span class="unit-nav-btn prev-btn" style="opacity:0.4; cursor:not-allowed; pointer-events:none;">
+              <span class="nav-arrow">←</span>
+              <div class="nav-text">
+                <span class="nav-label">START OF COURSE</span>
+                <span class="nav-title">📌 Starter (Greetings)</span>
+              </div>
+            </span>
+            <div class="unit-nav-indicator">
+              <span>Starter Unit • P5-8</span>
+            </div>
+            <button type="button" class="unit-nav-btn next-btn" onclick="navigateToSection('unit-1')">
+              <div class="nav-text">
+                <span class="nav-label">NEXT UNIT</span>
+                <span class="nav-title">🎒 Unit 1 School</span>
+              </div>
+              <span class="nav-arrow">→</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- SECTION: UNIT 1 SCHOOL -->
+        <section id="unit-1" class="unit-section view-pane" style="display:none;">
+          <div class="unit-header-card" style="background: linear-gradient(135deg, #0284c7 0%, #0d9488 100%);">
+            <span class="unit-badge">Unit 1</span>
+            <h2 class="unit-title">School (学校)</h2>
+            <p class="unit-desc">学习学校文具词汇及表达拥有文具的句型 (P9 - P16)</p>
+          </div>
+
+          <h3 style="margin-bottom:1rem; font-size:1.2rem; color:var(--primary-700)">核心词汇 Vocabulary</h3>
+          <div class="vocab-grid">
+            <div class="vocab-card audio-trigger" data-audio="audio/u1_book.mp3" data-text="book">
+              <div class="vocab-word">book 🎵</div>
+              <div class="vocab-phonetic">/bʊk/</div>
+              <div class="vocab-meaning">书，书本</div>
+            </div>
+            <div class="vocab-card audio-trigger" data-audio="audio/u1_ruler.mp3" data-text="ruler">
+              <div class="vocab-word">ruler 🎵</div>
+              <div class="vocab-phonetic">/ˈruːlə/</div>
+              <div class="vocab-meaning">尺子</div>
+            </div>
+            <div class="vocab-card audio-trigger" data-audio="audio/u1_pencil.mp3" data-text="pencil">
+              <div class="vocab-word">pencil 🎵</div>
+              <div class="vocab-phonetic">/ˈpensl/</div>
+              <div class="vocab-meaning">铅笔</div>
+            </div>
+            <div class="vocab-card audio-trigger" data-audio="audio/u1_eraser.mp3" data-text="eraser">
+              <div class="vocab-word">eraser 🎵</div>
+              <div class="vocab-phonetic">/ɪˈreɪzə/</div>
+              <div class="vocab-meaning">橡皮</div>
+            </div>
+            <div class="vocab-card audio-trigger" data-audio="audio/u1_schoolbag.mp3" data-text="schoolbag">
+              <div class="vocab-word">schoolbag 🎵</div>
+              <div class="vocab-phonetic">/ˈskuːlbæɡ/</div>
+              <div class="vocab-meaning">书包</div>
+            </div>
+          </div>
+
+          <div class="lessons-grid">
+            <div class="lesson-card">
+              <div class="lesson-title">
+                <span>Lesson 1: Chant & Actions</span>
+                <span class="page-tag" onclick="jumpToPage(11)">P11 📄</span>
+              </div>
+              <div class="dialogue-list">
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u1_chant_heading.mp3" data-text="Look, listen and chant.">
+                  <div><strong>Part A:</strong> Look, listen and chant. (看、听与歌谣)</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u1_action_ruler.mp3" data-text="Show me your ruler.">
+                  <div><strong>Part B:</strong> Show me your ruler. (出示你的尺子)</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u1_action_pencil.mp3" data-text="Show me your pencil.">
+                  <div><strong>Action:</strong> Show me your pencil. (出示你的铅笔)</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="lesson-card">
+              <div class="lesson-title">
+                <span>Lesson 2: Key Sentence Pattern</span>
+                <span class="page-tag" onclick="jumpToPage(12)">P12 📄</span>
+              </div>
+              <div class="dialogue-list">
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u1_sentence_ruler.mp3" data-text="I have a ruler.">
+                  <div><strong>Bill:</strong> I have a ruler. (我有一把尺子。)</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u1_sentence_pencil.mp3" data-text="I have a pencil.">
+                  <div><strong>Lily:</strong> I have a pencil. (我有一支铅笔。)</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u1_sentence_schoolbag.mp3" data-text="I have a schoolbag.">
+                  <div><strong>Yaoyao:</strong> I have a schoolbag. (我有一个书包。)</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="lesson-card">
+              <div class="lesson-title">
+                <span>Story Time (故事时间)</span>
+                <span class="page-tag" onclick="jumpToPage(15)">P15-16 📄</span>
+              </div>
+              <div class="dialogue-list">
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u1_story_1.mp3" data-text="Show me your schoolbag. Open it.">
+                  <div><strong>Angel:</strong> Show me your schoolbag. Open it.</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u1_sentence_schoolbag.mp3" data-text="I have a schoolbag.">
+                  <div><strong>Bill:</strong> I have a schoolbag.</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u1_story_2.mp3" data-text="Hi! I'm Angel.">
+                  <div><strong>Angel:</strong> Hi! I’m Angel.</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <div id="quiz-unit-1" class="quiz-section"></div>
+        
+          <div class="unit-bottom-nav">
+            <button type="button" class="unit-nav-btn prev-btn" onclick="navigateToSection('unit-starter')">
+              <span class="nav-arrow">←</span>
+              <div class="nav-text">
+                <span class="nav-label">PREVIOUS UNIT</span>
+                <span class="nav-title">📌 Starter (Greetings)</span>
+              </div>
+            </button>
+            <div class="unit-nav-indicator">
+              <span>Unit 1 of 6 • P9-16</span>
+            </div>
+            <button type="button" class="unit-nav-btn next-btn" onclick="navigateToSection('unit-2')">
+              <div class="nav-text">
+                <span class="nav-label">NEXT UNIT</span>
+                <span class="nav-title">👧 Unit 2 Face</span>
+              </div>
+              <span class="nav-arrow">→</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- SECTION: UNIT 2 FACE -->
+        <section id="unit-2" class="unit-section view-pane" style="display:none;">
+          <div class="unit-header-card" style="background: linear-gradient(135deg, #ec4899 0%, #be185d 100%);">
+            <span class="unit-badge">Unit 2</span>
+            <h2 class="unit-title">Face (五官)</h2>
+            <p class="unit-desc">学习身体五官名称及 Touch 动作指令 (P17 - P24)</p>
+          </div>
+
+          <h3 style="margin-bottom:1rem; font-size:1.2rem; color:var(--primary-700)">核心词汇 Vocabulary</h3>
+          <div class="vocab-grid">
+            <div class="vocab-card audio-trigger" data-audio="audio/u2_face.mp3" data-text="face">
+              <div class="vocab-word">face 🎵</div>
+              <div class="vocab-phonetic">/feɪs/</div>
+              <div class="vocab-meaning">脸</div>
+            </div>
+            <div class="vocab-card audio-trigger" data-audio="audio/u2_eye.mp3" data-text="eye">
+              <div class="vocab-word">eye 🎵</div>
+              <div class="vocab-phonetic">/aɪ/</div>
+              <div class="vocab-meaning">眼睛</div>
+            </div>
+            <div class="vocab-card audio-trigger" data-audio="audio/u2_ear.mp3" data-text="ear">
+              <div class="vocab-word">ear 🎵</div>
+              <div class="vocab-phonetic">/ɪə/</div>
+              <div class="vocab-meaning">耳朵</div>
+            </div>
+            <div class="vocab-card audio-trigger" data-audio="audio/u2_nose.mp3" data-text="nose">
+              <div class="vocab-word">nose 🎵</div>
+              <div class="vocab-phonetic">/nəʊz/</div>
+              <div class="vocab-meaning">鼻子</div>
+            </div>
+            <div class="vocab-card audio-trigger" data-audio="audio/u2_mouth.mp3" data-text="mouth">
+              <div class="vocab-word">mouth 🎵</div>
+              <div class="vocab-phonetic">/maʊθ/</div>
+              <div class="vocab-meaning">嘴巴</div>
+            </div>
+          </div>
+
+          <div class="lessons-grid">
+            <div class="lesson-card">
+              <div class="lesson-title">
+                <span>Lesson 1: Touch Actions</span>
+                <span class="page-tag" onclick="jumpToPage(19)">P19 📄</span>
+              </div>
+              <div class="dialogue-list">
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u2_touch_mouth.mp3" data-text="Touch your mouth.">
+                  <div><strong>Action:</strong> Touch your mouth. (摸摸你的嘴巴。)</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u2_touch_nose.mp3" data-text="Touch your nose.">
+                  <div><strong>Action:</strong> Touch your nose. (摸摸你的鼻子。)</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u2_touch_eye.mp3" data-text="Touch your eye.">
+                  <div><strong>Action:</strong> Touch your eye. (摸摸你的眼睛。)</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="lesson-card">
+              <div class="lesson-title">
+                <span>Lesson 2: This is my...</span>
+                <span class="page-tag" onclick="jumpToPage(20)">P20 📄</span>
+              </div>
+              <div class="dialogue-list">
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u2_this_mouth.mp3" data-text="This is my mouth.">
+                  <div><strong>Dialogue:</strong> This is my mouth. (这是我的嘴巴。)</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u2_this_nose.mp3" data-text="This is my nose.">
+                  <div><strong>Dialogue:</strong> This is my nose. (这是我的鼻子。)</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u2_this_ear.mp3" data-text="This is my ear.">
+                  <div><strong>Dialogue:</strong> This is my ear. (这是我的耳朵。)</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <div id="quiz-unit-2" class="quiz-section"></div>
+        
+          <div class="unit-bottom-nav">
+            <button type="button" class="unit-nav-btn prev-btn" onclick="navigateToSection('unit-1')">
+              <span class="nav-arrow">←</span>
+              <div class="nav-text">
+                <span class="nav-label">PREVIOUS UNIT</span>
+                <span class="nav-title">🎒 Unit 1 School</span>
+              </div>
+            </button>
+            <div class="unit-nav-indicator">
+              <span>Unit 2 of 6 • P17-24</span>
+            </div>
+            <button type="button" class="unit-nav-btn next-btn" onclick="navigateToSection('unit-3')">
+              <div class="nav-text">
+                <span class="nav-label">NEXT UNIT</span>
+                <span class="nav-title">🐱 Unit 3 Animals</span>
+              </div>
+              <span class="nav-arrow">→</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- SECTION: UNIT 3 ANIMALS -->
+        <section id="unit-3" class="unit-section view-pane" style="display:none;">
+          <div class="unit-header-card" style="background: linear-gradient(135deg, #10b981 0%, #047857 100%);">
+            <span class="unit-badge">Unit 3</span>
+            <h2 class="unit-title">Animals (动物)</h2>
+            <p class="unit-desc">学习常见的动物英文名称及问答句型 What's this? (P25 - P32)</p>
+          </div>
+
+          <h3 style="margin-bottom:1rem; font-size:1.2rem; color:var(--primary-700)">核心词汇 Vocabulary</h3>
+          <div class="vocab-grid">
+            <div class="vocab-card audio-trigger" data-audio="audio/u3_cat.mp3" data-text="cat">
+              <div class="vocab-word">cat 🎵</div>
+              <div class="vocab-phonetic">/kæt/</div>
+              <div class="vocab-meaning">猫</div>
+            </div>
+            <div class="vocab-card audio-trigger" data-audio="audio/u3_dog.mp3" data-text="dog">
+              <div class="vocab-word">dog 🎵</div>
+              <div class="vocab-phonetic">/dɒɡ/</div>
+              <div class="vocab-meaning">狗</div>
+            </div>
+            <div class="vocab-card audio-trigger" data-audio="audio/u3_bird.mp3" data-text="bird">
+              <div class="vocab-word">bird 🎵</div>
+              <div class="vocab-phonetic">/bɜːd/</div>
+              <div class="vocab-meaning">鸟</div>
+            </div>
+            <div class="vocab-card audio-trigger" data-audio="audio/u3_monkey.mp3" data-text="monkey">
+              <div class="vocab-word">monkey 🎵</div>
+              <div class="vocab-phonetic">/ˈmʌŋki/</div>
+              <div class="vocab-meaning">猴子</div>
+            </div>
+            <div class="vocab-card audio-trigger" data-audio="audio/u3_tiger.mp3" data-text="tiger">
+              <div class="vocab-word">tiger 🎵</div>
+              <div class="vocab-phonetic">/ˈtaɪɡə/</div>
+              <div class="vocab-meaning">老虎</div>
+            </div>
+            <div class="vocab-card audio-trigger" data-audio="audio/u3_panda.mp3" data-text="panda">
+              <div class="vocab-word">panda 🎵</div>
+              <div class="vocab-phonetic">/ˈpændə/</div>
+              <div class="vocab-meaning">熊猫</div>
+            </div>
+          </div>
+
+          <div class="lessons-grid">
+            <div class="lesson-card">
+              <div class="lesson-title">
+                <span>Lesson 2: What's this?</span>
+                <span class="page-tag" onclick="jumpToPage(28)">P28 📄</span>
+              </div>
+              <div class="dialogue-list">
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u3_q_tiger.mp3" data-text="What's this? It's a tiger.">
+                  <div><strong>Question:</strong> What’s this? — It’s a tiger. (这是什么？这是一只老虎。)</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u3_q_dog.mp3" data-text="What's this? It's a dog.">
+                  <div><strong>Question:</strong> What’s this? — It’s a dog. (这是什么？这是一只狗。)</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u3_q_bird.mp3" data-text="What's this? It's a bird.">
+                  <div><strong>Question:</strong> What’s this? — It’s a bird. (这是什么？这是一只鸟。)</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <div id="quiz-unit-3" class="quiz-section"></div>
+        
+          <div class="unit-bottom-nav">
+            <button type="button" class="unit-nav-btn prev-btn" onclick="navigateToSection('unit-2')">
+              <span class="nav-arrow">←</span>
+              <div class="nav-text">
+                <span class="nav-label">PREVIOUS UNIT</span>
+                <span class="nav-title">👧 Unit 2 Face</span>
+              </div>
+            </button>
+            <div class="unit-nav-indicator">
+              <span>Unit 3 of 6 • P25-32</span>
+            </div>
+            <button type="button" class="unit-nav-btn next-btn" onclick="navigateToSection('revision-1')">
+              <div class="nav-text">
+                <span class="nav-label">NEXT REVISION</span>
+                <span class="nav-title">🎲 Revision 1</span>
+              </div>
+              <span class="nav-arrow">→</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- SECTION: REVISION 1 -->
+        <section id="revision-1" class="unit-section view-pane" style="display:none;">
+          <div class="unit-header-card" style="background: linear-gradient(135deg, #6366f1 0%, #4338ca 100%);">
+            <span class="unit-badge">Revision 1</span>
+            <h2 class="unit-title">Revision 1: Safety Island Game</h2>
+            <p class="unit-desc">阶段复习 1 (Unit 1 ~ Unit 3) 综合拓展与游戏 (P33 - P34)</p>
+          </div>
+          <div class="lesson-card">
+            <div class="lesson-title"><span>Safety Island 安全岛关卡句型</span><span class="page-tag" onclick="jumpToPage(34)">P34 📄</span></div>
+            <div class="dialogue-list">
+              <div class="dialogue-bubble audio-trigger" data-audio="audio/rev1_q_pencil.mp3" data-text="What's this? This is my pencil."><div>What’s this? — This is my pencil.</div><button class="speak-btn">🎵</button></div>
+              <div class="dialogue-bubble audio-trigger" data-audio="audio/rev1_show_book.mp3" data-text="Show me your book."><div>Show me your book.</div><button class="speak-btn">🎵</button></div>
+              <div class="dialogue-bubble audio-trigger" data-audio="audio/u2_touch_nose.mp3" data-text="Touch your nose."><div>Touch your nose.</div><button class="speak-btn">🎵</button></div>
+            </div>
+          </div>
+        
+          <div id="quiz-revision-1" class="quiz-section"></div>
+        
+          <div class="unit-bottom-nav">
+            <button type="button" class="unit-nav-btn prev-btn" onclick="navigateToSection('unit-3')">
+              <span class="nav-arrow">←</span>
+              <div class="nav-text">
+                <span class="nav-label">PREVIOUS UNIT</span>
+                <span class="nav-title">🐱 Unit 3 Animals</span>
+              </div>
+            </button>
+            <div class="unit-nav-indicator">
+              <span>Revision 1 • P33-34</span>
+            </div>
+            <button type="button" class="unit-nav-btn next-btn" onclick="navigateToSection('unit-4')">
+              <div class="nav-text">
+                <span class="nav-label">NEXT UNIT</span>
+                <span class="nav-title">🔢 Unit 4 Numbers</span>
+              </div>
+              <span class="nav-arrow">→</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- SECTION: UNIT 4 NUMBERS -->
+        <section id="unit-4" class="unit-section view-pane" style="display:none;">
+          <div class="unit-header-card" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);">
+            <span class="unit-badge">Unit 4</span>
+            <h2 class="unit-title">Numbers (数字 1 - 10)</h2>
+            <p class="unit-desc">学习英文数字 1-10 及数量询问句型 How many... are there? (P35 - P42)</p>
+          </div>
+
+          <h3 style="margin-bottom:1rem; font-size:1.2rem; color:var(--primary-700)">核心词汇 Vocabulary</h3>
+          <div class="vocab-grid">
+            <div class="vocab-card audio-trigger" data-audio="audio/u4_one.mp3" data-text="one"><div class="vocab-word">one (1) 🎵</div></div>
+            <div class="vocab-card audio-trigger" data-audio="audio/u4_two.mp3" data-text="two"><div class="vocab-word">two (2) 🎵</div></div>
+            <div class="vocab-card audio-trigger" data-audio="audio/u4_three.mp3" data-text="three"><div class="vocab-word">three (3) 🎵</div></div>
+            <div class="vocab-card audio-trigger" data-audio="audio/u4_four.mp3" data-text="four"><div class="vocab-word">four (4) 🎵</div></div>
+            <div class="vocab-card audio-trigger" data-audio="audio/u4_five.mp3" data-text="five"><div class="vocab-word">five (5) 🎵</div></div>
+            <div class="vocab-card audio-trigger" data-audio="audio/u4_six.mp3" data-text="six"><div class="vocab-word">six (6) 🎵</div></div>
+            <div class="vocab-card audio-trigger" data-audio="audio/u4_seven.mp3" data-text="seven"><div class="vocab-word">seven (7) 🎵</div></div>
+            <div class="vocab-card audio-trigger" data-audio="audio/u4_eight.mp3" data-text="eight"><div class="vocab-word">eight (8) 🎵</div></div>
+            <div class="vocab-card audio-trigger" data-audio="audio/u4_nine.mp3" data-text="nine"><div class="vocab-word">nine (9) 🎵</div></div>
+            <div class="vocab-card audio-trigger" data-audio="audio/u4_ten.mp3" data-text="ten"><div class="vocab-word">ten (10) 🎵</div></div>
+          </div>
+
+          <div class="lessons-grid">
+            <div class="lesson-card">
+              <div class="lesson-title"><span>Lesson 2: How many?</span><span class="page-tag" onclick="jumpToPage(38)">P38 📄</span></div>
+              <div class="dialogue-list">
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u4_q_tigers.mp3" data-text="How many tigers are there?">
+                  <div><strong>Question:</strong> How many tigers are there? (有多少只老虎？)</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u4_a_five.mp3" data-text="Five tigers.">
+                  <div><strong>Answer:</strong> Five tigers. (5只老虎。)</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <div id="quiz-unit-4" class="quiz-section"></div>
+        
+          <div class="unit-bottom-nav">
+            <button type="button" class="unit-nav-btn prev-btn" onclick="navigateToSection('revision-1')">
+              <span class="nav-arrow">←</span>
+              <div class="nav-text">
+                <span class="nav-label">PREVIOUS REVISION</span>
+                <span class="nav-title">🎲 Revision 1</span>
+              </div>
+            </button>
+            <div class="unit-nav-indicator">
+              <span>Unit 4 of 6 • P35-42</span>
+            </div>
+            <button type="button" class="unit-nav-btn next-btn" onclick="navigateToSection('unit-5')">
+              <div class="nav-text">
+                <span class="nav-label">NEXT UNIT</span>
+                <span class="nav-title">🎨 Unit 5 Colours</span>
+              </div>
+              <span class="nav-arrow">→</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- SECTION: UNIT 5 COLOURS -->
+        <section id="unit-5" class="unit-section view-pane" style="display:none;">
+          <div class="unit-header-card" style="background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);">
+            <span class="unit-badge">Unit 5</span>
+            <h2 class="unit-title">Colours (颜色)</h2>
+            <p class="unit-desc">学习常见色彩英文及问答句型 What colour is it? (P43 - P50)</p>
+          </div>
+
+          <h3 style="margin-bottom:1rem; font-size:1.2rem; color:var(--primary-700)">核心词汇 Vocabulary</h3>
+          <div class="vocab-grid">
+            <div class="vocab-card audio-trigger" data-audio="audio/u5_red.mp3" data-text="red"><div class="vocab-word" style="color:#ef4444;">red (红色) 🎵</div></div>
+            <div class="vocab-card audio-trigger" data-audio="audio/u5_yellow.mp3" data-text="yellow"><div class="vocab-word" style="color:#eab308;">yellow (黄色) 🎵</div></div>
+            <div class="vocab-card audio-trigger" data-audio="audio/u5_blue.mp3" data-text="blue"><div class="vocab-word" style="color:#3b82f6;">blue (蓝色) 🎵</div></div>
+            <div class="vocab-card audio-trigger" data-audio="audio/u5_green.mp3" data-text="green"><div class="vocab-word" style="color:#22c55e;">green (绿色) 🎵</div></div>
+            <div class="vocab-card audio-trigger" data-audio="audio/u5_black.mp3" data-text="black"><div class="vocab-word" style="color:#000000;">black (黑色) 🎵</div></div>
+          </div>
+
+          <div class="lessons-grid">
+            <div class="lesson-card">
+              <div class="lesson-title"><span>Lesson 2: What colour is it?</span><span class="page-tag" onclick="jumpToPage(46)">P46 📄</span></div>
+              <div class="dialogue-list">
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u5_q_yellow.mp3" data-text="What colour is it? It's yellow.">
+                  <div><strong>Question:</strong> What colour is it? — It’s yellow. (这是什么颜色？是黄色。)</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u5_a_black.mp3" data-text="It's black.">
+                  <div><strong>Answer:</strong> It’s black. (是黑色。)</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <div id="quiz-unit-5" class="quiz-section"></div>
+        
+          <div class="unit-bottom-nav">
+            <button type="button" class="unit-nav-btn prev-btn" onclick="navigateToSection('unit-4')">
+              <span class="nav-arrow">←</span>
+              <div class="nav-text">
+                <span class="nav-label">PREVIOUS UNIT</span>
+                <span class="nav-title">🔢 Unit 4 Numbers</span>
+              </div>
+            </button>
+            <div class="unit-nav-indicator">
+              <span>Unit 5 of 6 • P43-50</span>
+            </div>
+            <button type="button" class="unit-nav-btn next-btn" onclick="navigateToSection('unit-6')">
+              <div class="nav-text">
+                <span class="nav-label">NEXT UNIT</span>
+                <span class="nav-title">🍎 Unit 6 Fruit</span>
+              </div>
+              <span class="nav-arrow">→</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- SECTION: UNIT 6 FRUIT -->
+        <section id="unit-6" class="unit-section view-pane" style="display:none;">
+          <div class="unit-header-card" style="background: linear-gradient(135deg, #f43f5e 0%, #be123c 100%);">
+            <span class="unit-badge">Unit 6</span>
+            <h2 class="unit-title">Fruit (水果)</h2>
+            <p class="unit-desc">学习常见水果词汇及表达喜好的句型 Do you like...? (P51 - P58)</p>
+          </div>
+
+          <h3 style="margin-bottom:1rem; font-size:1.2rem; color:var(--primary-700)">核心词汇 Vocabulary</h3>
+          <div class="vocab-grid">
+            <div class="vocab-card audio-trigger" data-audio="audio/u6_apple.mp3" data-text="apple"><div class="vocab-word">apple (苹果) 🎵</div></div>
+            <div class="vocab-card audio-trigger" data-audio="audio/u6_banana.mp3" data-text="banana"><div class="vocab-word">banana (香蕉) 🎵</div></div>
+            <div class="vocab-card audio-trigger" data-audio="audio/u6_pear.mp3" data-text="pear"><div class="vocab-word">pear (梨) 🎵</div></div>
+            <div class="vocab-card audio-trigger" data-audio="audio/u6_orange.mp3" data-text="orange"><div class="vocab-word">orange (桔子) 🎵</div></div>
+          </div>
+
+          <div class="lessons-grid">
+            <div class="lesson-card">
+              <div class="lesson-title"><span>Lesson 2: Do you like...?</span><span class="page-tag" onclick="jumpToPage(54)">P54 📄</span></div>
+              <div class="dialogue-list">
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u6_like_bananas.mp3" data-text="Do you like bananas? Yes, I do.">
+                  <div><strong>Question:</strong> Do you like bananas? — Yes, I do. (你喜欢香蕉吗？是的，我喜欢。)</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u6_like_pears.mp3" data-text="Do you like pears? No, I don't.">
+                  <div><strong>Question:</strong> Do you like pears? — No, I don’t. (你喜欢梨吗？不，我不喜欢。)</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <div id="quiz-unit-6" class="quiz-section"></div>
+        
+          <div class="unit-bottom-nav">
+            <button type="button" class="unit-nav-btn prev-btn" onclick="navigateToSection('unit-5')">
+              <span class="nav-arrow">←</span>
+              <div class="nav-text">
+                <span class="nav-label">PREVIOUS UNIT</span>
+                <span class="nav-title">🎨 Unit 5 Colours</span>
+              </div>
+            </button>
+            <div class="unit-nav-indicator">
+              <span>Unit 6 of 6 • P51-58</span>
+            </div>
+            <button type="button" class="unit-nav-btn next-btn" onclick="navigateToSection('revision-2')">
+              <div class="nav-text">
+                <span class="nav-label">NEXT REVISION</span>
+                <span class="nav-title">🎲 Revision 2</span>
+              </div>
+              <span class="nav-arrow">→</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- SECTION: REVISION 2 -->
+        <section id="revision-2" class="unit-section view-pane" style="display:none;">
+          <div class="unit-header-card" style="background: linear-gradient(135deg, #0284c7 0%, #4f46e5 100%);">
+            <span class="unit-badge">Revision 2</span>
+            <h2 class="unit-title">Revision 2: Board Game & Review</h2>
+            <p class="unit-desc">阶段复习 2 (Unit 4 ~ Unit 6) 综合棋盘游戏与核心问答句型 (P59 - P60)</p>
+          </div>
+
+          <div class="lessons-grid">
+            <div class="lesson-card">
+              <div class="lesson-title"><span>Safety Island 1: Fruit & Preferences (水果与喜好问答)</span><span class="page-tag" onclick="jumpToPage(59)">P59 📄</span></div>
+              <div class="dialogue-list">
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/rev2_like_apples.mp3" data-text="Do you like apples? Yes, I do.">
+                  <div><strong>Question:</strong> Do you like apples? — Yes, I do. (你喜欢苹果吗？是的，我喜欢。)</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u6_like_bananas.mp3" data-text="Do you like bananas? Yes, I do.">
+                  <div><strong>Question:</strong> Do you like bananas? — Yes, I do. (你喜欢香蕉吗？是的，我喜欢。)</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u6_like_pears.mp3" data-text="Do you like pears? No, I don't.">
+                  <div><strong>Question:</strong> Do you like pears? — No, I don't. (你喜欢梨吗？不，我不喜欢。)</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="lesson-card">
+              <div class="lesson-title"><span>Safety Island 2: Colours & Recognition (颜色辨识与询问)</span><span class="page-tag" onclick="jumpToPage(59)">P59 📄</span></div>
+              <div class="dialogue-list">
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/rev2_q_colour.mp3" data-text="What colour is it? It's red.">
+                  <div><strong>Question:</strong> What colour is it? — It’s red. (它是什么颜色的？是红色的。)</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u5_q_yellow.mp3" data-text="What colour is it? It's yellow.">
+                  <div><strong>Question:</strong> What colour is it? — It’s yellow. (它是什么颜色的？是黄色的。)</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u5_a_black.mp3" data-text="It's black.">
+                  <div><strong>Answer:</strong> It’s black. (它是黑色的。)</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="lesson-card">
+              <div class="lesson-title"><span>Safety Island 3: Numbers & Counting (数量数数关卡)</span><span class="page-tag" onclick="jumpToPage(60)">P60 📄</span></div>
+              <div class="dialogue-list">
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/u4_q_tigers.mp3" data-text="How many tigers are there?">
+                  <div><strong>Question:</strong> How many tigers are there? (那里有多少只老虎？)</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/rev2_five.mp3" data-text="Five.">
+                  <div><strong>Answer:</strong> Five. (5只。)</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <div id="quiz-revision-2" class="quiz-section"></div>
+        
+          <div class="unit-bottom-nav">
+            <button type="button" class="unit-nav-btn prev-btn" onclick="navigateToSection('unit-6')">
+              <span class="nav-arrow">←</span>
+              <div class="nav-text">
+                <span class="nav-label">PREVIOUS UNIT</span>
+                <span class="nav-title">🍎 Unit 6 Fruit</span>
+              </div>
+            </button>
+            <div class="unit-nav-indicator">
+              <span>Revision 2 • P59-60</span>
+            </div>
+            <button type="button" class="unit-nav-btn next-btn" onclick="navigateToSection('app-chants')">
+              <div class="nav-text">
+                <span class="nav-label">NEXT APPENDIX</span>
+                <span class="nav-title">🎵 Chants & Songs</span>
+              </div>
+              <span class="nav-arrow">→</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- SECTION: APPENDIX CHANTS -->
+        <section id="app-chants" class="unit-section view-pane" style="display:none;">
+          <div class="unit-header-card" style="background: linear-gradient(135deg, #059669 0%, #047857 100%);">
+            <span class="unit-badge">附录一 Appendix 1</span>
+            <h2 class="unit-title">歌谣与歌曲 (Chants & Songs)</h2>
+            <p class="unit-desc">全册 6 个单元的经典歌谣与本地音轨朗读 (P61 - P62)</p>
+          </div>
+
+          <div class="lessons-grid">
+            <div class="lesson-card">
+              <div class="lesson-title"><span>Unit 1 Chant: Hello, Pencil!</span><span class="page-tag" onclick="jumpToPage(61)">P61 📄</span></div>
+              <div class="dialogue-list">
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/chant_u1.mp3" data-text="Hello, pencil! Hello, ruler!">
+                  <div>Hello, pencil! Hello, ruler! Hello, schoolbag! Hello!</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="lesson-card">
+              <div class="lesson-title"><span>Unit 3 Song: Two Little Black Birds</span><span class="page-tag" onclick="jumpToPage(62)">P62 📄</span></div>
+              <div class="dialogue-list">
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/chant_u3_1.mp3" data-text="Two little black birds sitting on a hill.">
+                  <div>Two little black birds sitting on a hill.<br>One named Jack, one named Jill.</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/chant_u3_2.mp3" data-text="Fly away Jack! Fly away Jill!">
+                  <div>Fly away Jack! Fly away Jill!<br>Come back Jack, come back Jill!</div>
+                  <button class="speak-btn">🎵</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <div class="unit-bottom-nav">
+            <button type="button" class="unit-nav-btn prev-btn" onclick="navigateToSection('revision-2')">
+              <span class="nav-arrow">←</span>
+              <div class="nav-text">
+                <span class="nav-label">PREVIOUS REVISION</span>
+                <span class="nav-title">🎲 Revision 2</span>
+              </div>
+            </button>
+            <div class="unit-nav-indicator">
+              <span>Appendix 1 • P61-62</span>
+            </div>
+            <button type="button" class="unit-nav-btn next-btn" onclick="navigateToSection('app-vocab')">
+              <div class="nav-text">
+                <span class="nav-label">NEXT APPENDIX</span>
+                <span class="nav-title">📖 Vocabulary List</span>
+              </div>
+              <span class="nav-arrow">→</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- SECTION: APPENDIX VOCABULARY -->
+        <section id="app-vocab" class="unit-section view-pane" style="display:none;">
+          <div class="unit-header-card">
+            <span class="unit-badge">附录二 Appendix 2</span>
+            <h2 class="unit-title">单元词汇表 (Vocabulary List)</h2>
+            <p class="unit-desc">全册重点单词发音与中文对照 (P63 - P66)</p>
+          </div>
+          <div class="vocab-grid" id="fullVocabGrid"></div>
+        
+          <div class="unit-bottom-nav">
+            <button type="button" class="unit-nav-btn prev-btn" onclick="navigateToSection('app-chants')">
+              <span class="nav-arrow">←</span>
+              <div class="nav-text">
+                <span class="nav-label">PREVIOUS APPENDIX</span>
+                <span class="nav-title">🎵 Chants & Songs</span>
+              </div>
+            </button>
+            <div class="unit-nav-indicator">
+              <span>Appendix 2 • P63-66</span>
+            </div>
+            <button type="button" class="unit-nav-btn next-btn" onclick="navigateToSection('app-expressions')">
+              <div class="nav-text">
+                <span class="nav-label">NEXT APPENDIX</span>
+                <span class="nav-title">💬 Expressions</span>
+              </div>
+              <span class="nav-arrow">→</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- SECTION: APPENDIX EXPRESSIONS -->
+        <section id="app-expressions" class="unit-section view-pane" style="display:none;">
+          <div class="unit-header-card" style="background: linear-gradient(135deg, #475569 0%, #1e293b 100%);">
+            <span class="unit-badge">附录三 Appendix 3</span>
+            <h2 class="unit-title">常用表达法 (Everyday Expressions)</h2>
+            <p class="unit-desc">日常问候与课堂常用交际用语 (P67)</p>
+          </div>
+          <div class="lessons-grid">
+            <div class="lesson-card">
+              <div class="lesson-title"><span>Greetings 问候语</span><span class="page-tag" onclick="jumpToPage(67)">P67 📄</span></div>
+              <div class="dialogue-list">
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/exp_morning.mp3" data-text="Good morning!"><div>Good morning! (早上好！)</div><button class="speak-btn">🎵</button></div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/exp_afternoon.mp3" data-text="Good afternoon!"><div>Good afternoon! (下午好！)</div><button class="speak-btn">🎵</button></div>
+                <div class="dialogue-bubble audio-trigger" data-audio="audio/exp_hello.mp3" data-text="Hello! / Hi!"><div>Hello! / Hi! (你好！)</div><button class="speak-btn">🎵</button></div>
+              </div>
+            </div>
+          </div>
+        
+          <div class="unit-bottom-nav">
+            <button type="button" class="unit-nav-btn prev-btn" onclick="navigateToSection('app-vocab')">
+              <span class="nav-arrow">←</span>
+              <div class="nav-text">
+                <span class="nav-label">PREVIOUS APPENDIX</span>
+                <span class="nav-title">📖 Vocabulary List</span>
+              </div>
+            </button>
+            <div class="unit-nav-indicator">
+              <span>Appendix 3 • P67</span>
+            </div>
+            <button type="button" class="unit-nav-btn next-btn" onclick="navigateToSection('unit-starter')">
+              <div class="nav-text">
+                <span class="nav-label">RETURN TO START</span>
+                <span class="nav-title">📌 Starter (Greetings)</span>
+              </div>
+              <span class="nav-arrow">→</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- SECTION: FULL PAGE PDF VIEWER (PAGEVIEW MODE) -->
+        <section id="pageview-mode-section" class="view-pane" style="display:none;">
+          <div class="page-viewer-container">
+            <div class="page-image-wrapper">
+              <img id="pdfPageImage" src="images/pages/page_01.webp" alt="Textbook Page View">
+              <div class="page-controls">
+                <button onclick="changePage(-1)">◀ 上一页</button>
+                <span>第 <strong id="currentPageNum">1</strong> / 78 页</span>
+                <button onclick="changePage(1)">下一页 ▶</button>
+              </div>
+            </div>
+            <div class="page-transcript-panel">
+              <h3 style="font-size:1.1rem; color:var(--primary-700); margin-bottom:1rem;" id="pageTranscriptTitle">第 1 页 文本识别</h3>
+              <div id="pageTextContent" style="font-size:0.9rem; line-height:1.7; color:var(--text-main);"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Rich Editorial Footer -->
+        <footer class="footer-info">
+          <div class="footer-brand">
+            <span class="footer-brand-icon">📘</span>
+            <div class="footer-text">
+              <h4>义务教育教科书 英语（一年级起点）一年级上册</h4>
+              <p>人民教育出版社 (PEP) • 数字化互动电子教材与学习平台</p>
+            </div>
+          </div>
+          <div class="footer-links">
+            <span class="footer-chip">💡 6大核心单元 & 2阶段复习</span>
+            <span class="footer-chip">🎧 100% 本地高保真音轨</span>
+            <button type="button" class="footer-chip" onclick="scrollToTop()" style="cursor:pointer; background:#e0f2fe; color:#0369a1; border-color:#bae6fd; font-weight:700;">⬆️ 回到顶部</button>
+          </div>
+        </footer>

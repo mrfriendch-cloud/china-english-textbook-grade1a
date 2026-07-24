@@ -1,0 +1,22 @@
+{
+  "name": "china-english-textbook-grade1a",
+  "version": "1.0.0",
+  "description": "义务教育教科书 英语（一年级起点）一年级上册 数字化HTML电子教材与交互平台",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "serve": "node server.js",
+    "build": "node scripts/build_dist.js"
+  },
+  "keywords": [
+    "english-textbook",
+    "pep",
+    "pdf-to-html",
+    "education",
+    "tts-audio"
+  ],
+  "author": "Antigravity AI",
+  "license": "MIT"
+}

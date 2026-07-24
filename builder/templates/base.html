@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>义务教育教科书 英语（一年级起点）一年级上册 | 电子教材与互动学习平台</title>
+  <meta name="description" content="义务教育教科书 英语（一年级起点）一年级上册 数字化HTML电子教材，包含单元课程、本地提取音轨、词汇朗读、歌谣与歌曲及高清原版页面预览。">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Mobile Sidebar Backdrop Overlay -->
+  <div id="sidebarOverlay" class="sidebar-overlay" onclick="toggleSidebar(false)"></div>
+
+  <!-- Audio Toast Visual Indicator -->
+  <div id="audioToast" class="audio-toast">
+    <span style="font-size:1.2rem;">🔊</span>
+    <span id="audioToastText">正在播放...</span>
+  </div>
+
+  <!-- Floating Back-To-Top Button -->
+  <button type="button" id="backToTopBtn" class="floating-top-btn" onclick="scrollToTop()" aria-label="回到顶部" title="回到顶部">▲</button>
+
+  <div class="app-container">
+    <!-- Sidebar Navigation -->
+    <aside class="app-sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-title">
+          <h1>英语 一年级上册</h1>
+          <span>义务教育教科书（一年级起点）</span>
+        </div>
+        <button class="close-sidebar-btn" onclick="toggleSidebar(false)" aria-label="关闭菜单">✕</button>
+      </div>
+      
+      <nav class="sidebar-nav">
+        <div class="nav-section-title">课程单元 Navigation</div>
+        <a href="#unit-starter" class="nav-item active" onclick="switchNav('unit-starter', this)">
+          <span class="icon">📌</span>
+          <span>Starter (Greetings)</span>
+          <span class="badge">P5-8</span>
+        </a>
+        <a href="#unit-1" class="nav-item" onclick="switchNav('unit-1', this)">
+          <span class="icon">🎒</span>
+          <span>Unit 1 School</span>
+          <span class="badge">P9-16</span>
+        </a>
+        <a href="#unit-2" class="nav-item" onclick="switchNav('unit-2', this)">
+          <span class="icon">👧</span>
+          <span>Unit 2 Face</span>
+          <span class="badge">P17-24</span>
+        </a>
+        <a href="#unit-3" class="nav-item" onclick="switchNav('unit-3', this)">
+          <span class="icon">🐱</span>
+          <span>Unit 3 Animals</span>
+          <span class="badge">P25-32</span>
+        </a>
+        <a href="#revision-1" class="nav-item" onclick="switchNav('revision-1', this)">
+          <span class="icon">🎲</span>
+          <span>Revision 1</span>
+          <span class="badge">P33-34</span>
+        </a>
+        <a href="#unit-4" class="nav-item" onclick="switchNav('unit-4', this)">
+          <span class="icon">🔢</span>
+          <span>Unit 4 Numbers</span>
+          <span class="badge">P35-42</span>
+        </a>
+        <a href="#unit-5" class="nav-item" onclick="switchNav('unit-5', this)">
+          <span class="icon">🎨</span>
+          <span>Unit 5 Colours</span>
+          <span class="badge">P43-50</span>
+        </a>
+        <a href="#unit-6" class="nav-item" onclick="switchNav('unit-6', this)">
+          <span class="icon">🍎</span>
+          <span>Unit 6 Fruit</span>
+          <span class="badge">P51-58</span>
+        </a>
+        <a href="#revision-2" class="nav-item" onclick="switchNav('revision-2', this)">
+          <span class="icon">🎲</span>
+          <span>Revision 2</span>
+          <span class="badge">P59-60</span>
+        </a>
+
+        <div class="nav-section-title">附录与词汇 Appendices</div>
+        <a href="#app-chants" class="nav-item" onclick="switchNav('app-chants', this)">
+          <span class="icon">🎵</span>
+          <span>歌谣与歌曲 Chants & Songs</span>
+        </a>
+        <a href="#app-vocab" class="nav-item" onclick="switchNav('app-vocab', this)">
+          <span class="icon">📖</span>
+          <span>单元词汇表 Vocabulary</span>
+        </a>
+        <a href="#app-expressions" class="nav-item" onclick="switchNav('app-expressions', this)">
+          <span class="icon">💬</span>
+          <span>常用表达法 Expressions</span>
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Main Workspace -->
+    <main class="app-main">
+      <!-- Top Navigation Header -->
+      <header class="top-bar">
+        <div class="top-bar-main">
+          <div class="top-bar-brand">
+            <button class="menu-toggle-btn" onclick="toggleSidebar(true)" aria-label="打开菜单">☰</button>
+            <div class="header-book-title">
+              <span class="book-title-main">英语 一年级上册</span>
+              <span class="book-title-sub">义务教育教科书</span>
+            </div>
+          </div>
+
+          <div class="top-bar-center">
+            <div class="view-mode-tabs">
+              <button class="view-tab active" id="tab-interactive" onclick="setViewMode('interactive')">
+                <span class="tab-icon">💡</span>
+                <span class="tab-text">互动课程</span>
+              </button>
+              <button class="view-tab" id="tab-pageview" onclick="setViewMode('pageview')">
+                <span class="tab-icon">📄</span>
+                <span class="tab-text">原版全页</span>
+              </button>
+              <button class="view-tab" id="tab-vocab" onclick="setViewMode('vocab')">
+                <span class="tab-icon">🎴</span>
+                <span class="tab-text">词汇卡片</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="top-bar-right">
+            <div class="search-box">
+              <span class="search-icon">🔍</span>
+              <input type="text" id="searchInput" placeholder="搜索课文、单词..." oninput="handleSearch()">
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Viewport Content Container -->
+      <div class="content-viewport" id="contentViewport">
+        __MAIN_CONTENT__
+      </div>
+    </main>
+  </div>
+
+  <!-- Audio Player & Script Engine -->
+  <script>
+    // Embedded Data Injection Placeholders
+    window.FALLBACK_PDF_STRUCTURE = __PDF_DATA__;
+    const QUIZZES = __QUIZ_DATA__;
+
+    // Audio Controller
+    let currentAudio = null;
+    let toastTimeout = null;
+
+    function playAudio(audioUrl, text) {
+      if (!audioUrl) return;
+      if (currentAudio) {
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
+      }
+      currentAudio = new Audio(audioUrl);
+      
+      const toast = document.getElementById('audioToast');
+      const toastText = document.getElementById('audioToastText');
+      if (toast && toastText) {
+        toastText.textContent = text ? `正在播放: "${text}"` : '正在播放音轨...';
+        toast.classList.add('show');
+        clearTimeout(toastTimeout);
+      }
+
+      currentAudio.play().catch(err => console.log('Audio playback prevented:', err));
+      currentAudio.onended = () => {
+        if (toast) {
+          toastTimeout = setTimeout(() => toast.classList.remove('show'), 1500);
+        }
+      };
+    }
+
+    // Attach delegated audio triggers
+    document.addEventListener('click', function(e) {
+      const trigger = e.target.closest('.audio-trigger');
+      if (trigger) {
+        const audio = trigger.getAttribute('data-audio');
+        const text = trigger.getAttribute('data-text');
+        if (audio) playAudio(audio, text);
+      }
+    });
+
+    // Web Speech API Fallback
+    function speak(text) {
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+        const msg = new SpeechSynthesisUtterance(text);
+        msg.lang = 'en-US';
+        msg.rate = 0.85;
+        window.speechSynthesis.speak(msg);
+      }
+    }
+
+    // PDF Structure Text Data Loader
+    let pdfData = window.FALLBACK_PDF_STRUCTURE || [];
+    let currentPage = 1;
+
+    if (window.location.protocol.startsWith('http')) {
+      fetch('pdf_structure.json')
+        .then(res => res.json())
+        .then(data => {
+          pdfData = data;
+          renderFullVocab();
+          updatePageViewer(1);
+        })
+        .catch(err => {
+          console.log('Loaded embedded JSON fallback:', err);
+          renderFullVocab();
+          updatePageViewer(1);
+        });
+    } else {
+      renderFullVocab();
+      updatePageViewer(1);
+    }
+
+    // Toggle Mobile Sidebar Drawer
+    function toggleSidebar(show) {
+      const sidebar = document.querySelector('.app-sidebar');
+      const overlay = document.getElementById('sidebarOverlay');
+      if (!sidebar || !overlay) return;
+      if (show === undefined) {
+        show = !sidebar.classList.contains('open');
+      }
+      if (show) {
+        sidebar.classList.add('open');
+        overlay.classList.add('show');
+      } else {
+        sidebar.classList.remove('open');
+        overlay.classList.remove('show');
+      }
+    }
+
+    let lastActiveUnit = 'unit-starter';
+
+    function switchNav(sectionId, element) {
+      document.querySelectorAll('.sidebar-nav .nav-item').forEach(item => item.classList.remove('active'));
+      if (element) element.classList.add('active');
+
+      lastActiveUnit = sectionId;
+
+      document.querySelectorAll('.unit-section').forEach(sec => sec.style.display = 'none');
+      document.getElementById('pageview-mode-section').style.display = 'none';
+
+      const targetSec = document.getElementById(sectionId);
+      if (targetSec) targetSec.style.display = 'block';
+
+      setViewMode('interactive');
+
+      // Scroll top
+      document.getElementById('contentViewport').scrollTop = 0;
+
+      // Close mobile drawer on item selection
+      toggleSidebar(false);
+    }
+
+    function scrollToTop() {
+      const viewport = document.getElementById('contentViewport');
+      if (viewport) {
+        viewport.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }
+
+    function navigateToSection(targetId) {
+      if (!targetId) return;
+      const targetNav = document.querySelector(`.sidebar-nav .nav-item[href="#${targetId}"]`);
+      switchNav(targetId, targetNav);
+      scrollToTop();
+    }
+
+    // Toggle Back-To-Top button on viewport scroll
+    window.addEventListener('DOMContentLoaded', function() {
+      const viewport = document.getElementById('contentViewport');
+      const topBtn = document.getElementById('backToTopBtn');
+      if (viewport && topBtn) {
+        viewport.addEventListener('scroll', function() {
+          if (viewport.scrollTop > 220) {
+            topBtn.classList.add('show');
+          } else {
+            topBtn.classList.remove('show');
+          }
+        });
+      }
+    });
+
+    // Listen for hashchange for native browser back/forward and direct links
+    window.addEventListener('hashchange', function() {
+      const hash = window.location.hash.replace('#', '');
+      if (hash) {
+        const targetNav = document.querySelector(`.sidebar-nav .nav-item[href="#${hash}"]`);
+        if (targetNav) {
+          switchNav(hash, targetNav);
+        }
+      }
+    });
+
+    function setViewMode(mode) {
+      document.querySelectorAll('.view-tab').forEach(t => t.classList.remove('active'));
+      
+      if (mode === 'interactive') {
+        document.getElementById('tab-interactive').classList.add('active');
+        document.getElementById('pageview-mode-section').style.display = 'none';
+        document.querySelectorAll('.unit-section').forEach(sec => sec.style.display = 'none');
+        document.getElementById(lastActiveUnit).style.display = 'block';
+      } else if (mode === 'pageview') {
+        document.getElementById('tab-pageview').classList.add('active');
+        document.querySelectorAll('.unit-section').forEach(sec => sec.style.display = 'none');
+        document.getElementById('pageview-mode-section').style.display = 'block';
+      } else if (mode === 'vocab') {
+        document.getElementById('tab-vocab').classList.add('active');
+        document.querySelectorAll('.unit-section').forEach(sec => sec.style.display = 'none');
+        document.getElementById('pageview-mode-section').style.display = 'none';
+        document.getElementById('app-vocab').style.display = 'block';
+      }
+    }
+
+    function changePage(delta) {
+      let newPage = currentPage + delta;
+      if (newPage >= 1 && newPage <= 78) {
+        currentPage = newPage;
+        updatePageViewer(currentPage);
+      }
+    }
+
+    function updatePageViewer(pageNum) {
+      const pageStr = String(pageNum).padStart(2, '0');
+      document.getElementById('pdfPageImage').src = `images/pages/page_${pageStr}.webp`;
+      document.getElementById('currentPageNum').innerText = pageNum;
+      document.getElementById('pageTranscriptTitle').innerText = `第 ${pageNum} 页 文本与提取内容`;
+
+      const pageInfo = pdfData.find(p => p.page === pageNum);
+      const textContainer = document.getElementById('pageTextContent');
+      if (pageInfo && pageInfo.text && pageInfo.text.trim()) {
+        textContainer.innerHTML = pageInfo.text.split('\\n').map(line => `<p style="margin-bottom:0.5rem; cursor:pointer;" onclick="speak(this.innerText)">🗣️ ${line}</p>`).join('');
+      } else {
+        textContainer.innerHTML = '<p style="color:#94a3b8; font-style:italic;">(此页面为整页图画/插图，无纯文本识别数据。请参看左侧高清页面。)</p>';
+      }
+
+      // Performance Optimization: Preload adjacent textbook page images
+      [pageNum + 1, pageNum - 1].forEach(pNum => {
+        if (pNum >= 1 && pNum <= 78) {
+          const img = new Image();
+          img.src = `images/pages/page_${String(pNum).padStart(2, '0')}.webp`;
+        }
+      });
+    }
+
+    function renderFullVocab() {
+      const vocabList = [
+        { w: 'book', p: '/bʊk/', m: '书，书本', u: 'Unit 1', audio: 'audio/u1_book.mp3' },
+        { w: 'ruler', p: '/ˈruːlə/', m: '尺子', u: 'Unit 1', audio: 'audio/u1_ruler.mp3' },
+        { w: 'pencil', p: '/ˈpensl/', m: '铅笔', u: 'Unit 1', audio: 'audio/u1_pencil.mp3' },
+        { w: 'eraser', p: '/ɪˈreɪzə/', m: '橡皮', u: 'Unit 1', audio: 'audio/u1_eraser.mp3' },
+        { w: 'schoolbag', p: '/ˈskuːlbæɡ/', m: '书包', u: 'Unit 1', audio: 'audio/u1_schoolbag.mp3' },
+        { w: 'face', p: '/feɪs/', m: '脸', u: 'Unit 2', audio: 'audio/u2_face.mp3' },
+        { w: 'eye', p: '/aɪ/', m: '眼睛', u: 'Unit 2', audio: 'audio/u2_eye.mp3' },
+        { w: 'ear', p: '/ɪə/', m: '耳朵', u: 'Unit 2', audio: 'audio/u2_ear.mp3' },
+        { w: 'nose', p: '/nəʊz/', m: '鼻子', u: 'Unit 2', audio: 'audio/u2_nose.mp3' },
+        { w: 'mouth', p: '/maʊθ/', m: '嘴巴', u: 'Unit 2', audio: 'audio/u2_mouth.mp3' },
+        { w: 'cat', p: '/kæt/', m: '猫', u: 'Unit 3', audio: 'audio/u3_cat.mp3' },
+        { w: 'dog', p: '/dɒɡ/', m: '狗', u: 'Unit 3', audio: 'audio/u3_dog.mp3' },
+        { w: 'bird', p: '/bɜːd/', m: '鸟', u: 'Unit 3', audio: 'audio/u3_bird.mp3' },
+        { w: 'monkey', p: '/ˈmʌŋki/', m: '猴子', u: 'Unit 3', audio: 'audio/u3_monkey.mp3' },
+        { w: 'tiger', p: '/ˈtaɪɡə/', m: '老虎', u: 'Unit 3', audio: 'audio/u3_tiger.mp3' },
+        { w: 'panda', p: '/ˈpændə/', m: '熊猫', u: 'Unit 3', audio: 'audio/u3_panda.mp3' },
+        { w: 'one', p: '/wʌn/', m: '一', u: 'Unit 4', audio: 'audio/u4_one.mp3' },
+        { w: 'two', p: '/tuː/', m: '二', u: 'Unit 4', audio: 'audio/u4_two.mp3' },
+        { w: 'three', p: '/θriː/', m: '三', u: 'Unit 4', audio: 'audio/u4_three.mp3' },
+        { w: 'four', p: '/fɔː/', m: '四', u: 'Unit 4', audio: 'audio/u4_four.mp3' },
+        { w: 'five', p: '/faɪv/', m: '五', u: 'Unit 4', audio: 'audio/u4_five.mp3' },
+        { w: 'six', p: '/sɪks/', m: '六', u: 'Unit 4', audio: 'audio/u4_six.mp3' },
+        { w: 'seven', p: '/ˈsevn/', m: '七', u: 'Unit 4', audio: 'audio/u4_seven.mp3' },
+        { w: 'eight', p: '/eɪt/', m: '八', u: 'Unit 4', audio: 'audio/u4_eight.mp3' },
+        { w: 'nine', p: '/naɪn/', m: '九', u: 'Unit 4', audio: 'audio/u4_nine.mp3' },
+        { w: 'ten', p: '/ten/', m: '十', u: 'Unit 4', audio: 'audio/u4_ten.mp3' },
+        { w: 'red', p: '/red/', m: '红色', u: 'Unit 5', audio: 'audio/u5_red.mp3' },
+        { w: 'yellow', p: '/ˈjeləʊ/', m: '黄色', u: 'Unit 5', audio: 'audio/u5_yellow.mp3' },
+        { w: 'blue', p: '/bluː/', m: '蓝色', u: 'Unit 5', audio: 'audio/u5_blue.mp3' },
+        { w: 'green', p: '/ɡriːn/', m: '绿色', u: 'Unit 5', audio: 'audio/u5_green.mp3' },
+        { w: 'black', p: '/blæk/', m: '黑色', u: 'Unit 5', audio: 'audio/u5_black.mp3' },
+        { w: 'apple', p: '/ˈæpl/', m: '苹果', u: 'Unit 6', audio: 'audio/u6_apple.mp3' },
+        { w: 'banana', p: '/bəˈnɑːnə/', m: '香蕉', u: 'Unit 6', audio: 'audio/u6_banana.mp3' },
+        { w: 'pear', p: '/peə/', m: '梨', u: 'Unit 6', audio: 'audio/u6_pear.mp3' },
+        { w: 'orange', p: '/ˈɒrɪndʒ/', m: '桔子', u: 'Unit 6', audio: 'audio/u6_orange.mp3' }
+      ];
+
+      const grid = document.getElementById('fullVocabGrid');
+      if (grid) {
+        grid.innerHTML = vocabList.map(item => `
+          <div class="vocab-card audio-trigger" data-audio="${item.audio}" data-text="${item.w}">
+            <div class="vocab-word">${item.w} 🎵</div>
+            <div class="vocab-phonetic">${item.p}</div>
+            <div class="vocab-meaning">${item.m}</div>
+            <div style="font-size:0.7rem; color:#94a3b8; margin-top:0.3rem;">${item.u}</div>
+          </div>
+        `).join('');
+      }
+    }
+
+    // Performance Optimization: Cached DOM Text Search Index to prevent layout thrashing
+    let searchIndexCache = null;
+
+    function getSearchIndex() {
+      if (!searchIndexCache) {
+        searchIndexCache = Array.from(document.querySelectorAll('.vocab-card, .dialogue-bubble, .lesson-card')).map(el => ({
+          element: el,
+          text: el.textContent.toLowerCase()
+        }));
+      }
+      return searchIndexCache;
+    }
+
+    function handleSearch() {
+      const q = document.getElementById('searchInput').value.toLowerCase().trim();
+      const index = getSearchIndex();
+
+      if (!q) {
+        index.forEach(item => item.element.style.display = '');
+        return;
+      }
+
+      setViewMode('interactive');
+      document.querySelectorAll('.unit-section').forEach(sec => sec.style.display = 'block');
+
+      index.forEach(item => {
+        item.element.style.display = item.text.includes(q) ? '' : 'none';
+      });
+    }
+
+    // ===== QUIZ ENGINE =====
+    function renderQuiz(unitId) {
+      const container = document.getElementById('quiz-' + unitId);
+      if (!container || !QUIZZES[unitId]) return;
+      const quiz = QUIZZES[unitId];
+      const labels = ['A', 'B', 'C', 'D'];
+      let html = `
+        <div class="quiz-header">
+          <h3>📝 ${quiz.title}</h3>
+          <span class="quiz-badge">10 Points</span>
+        </div>
+        <div id="quiz-questions-${unitId}">`;
+      quiz.questions.forEach((q, qi) => {
+        const listeningTag = q.audioText ? `<span class="quiz-listening-tag">🎧 听力题</span>` : '';
+        const safeText = q.audioText ? q.audioText.replace(/"/g, '&quot;') : '';
+        const playBtn = q.audioText ? `<button type="button" class="quiz-speak-btn audio-trigger" data-audio="${q.audio || ''}" data-text="${safeText}">🔊 点击听音 Play</button>` : '';
+        html += `<div class="quiz-question" id="qq-${unitId}-${qi}">
+          <div class="quiz-q-text"><span class="quiz-q-num">${qi+1}</span>${listeningTag}${q.q}${playBtn}</div>
+          <div class="quiz-options">`;
+        q.opts.forEach((opt, oi) => {
+          html += `<label class="quiz-option" id="opt-${unitId}-${qi}-${oi}">
+            <input type="radio" name="q-${unitId}-${qi}" value="${oi}"> ${labels[oi]}. ${opt}
+          </label>`;
+        });
+        html += `</div></div>`;
+      });
+      html += `</div>
+        <div class="quiz-actions">
+          <button class="quiz-submit-btn" onclick="submitQuiz('${unitId}')">✅ Submit Quiz</button>
+          <button class="quiz-reset-btn" onclick="resetQuiz('${unitId}')">🔄 Reset</button>
+        </div>
+        <div class="quiz-result" id="quiz-result-${unitId}">
+          <span class="quiz-result-icon"></span>
+          <div class="quiz-result-text">
+            <div class="quiz-result-score"></div>
+            <div class="quiz-result-label"></div>
+          </div>
+        </div>`;
+      container.innerHTML = html;
+    }
+
+    function submitQuiz(unitId) {
+      const quiz = QUIZZES[unitId];
+      if (!quiz) return;
+      let score = 0;
+      quiz.questions.forEach((q, qi) => {
+        const selected = document.querySelector(`input[name="q-${unitId}-${qi}"]:checked`);
+        const correct = q.ans;
+        let chosen = null;
+        if (selected) {
+          chosen = parseInt(selected.value);
+          if (chosen === correct) score++;
+        }
+        // Mark all options
+        q.opts.forEach((_, oi) => {
+          const label = document.getElementById(`opt-${unitId}-${qi}-${oi}`);
+          if (!label) return;
+          label.classList.add('disabled');
+          if (oi === correct) label.classList.add('correct-answer');
+          if (chosen !== null && oi === chosen && chosen !== correct) label.classList.add('wrong');
+          if (chosen !== null && oi === chosen && chosen === correct) label.classList.add('correct');
+        });
+      });
+
+      // Disable submit button
+      const submitBtn = document.querySelector(`#quiz-${unitId} .quiz-submit-btn`);
+      if (submitBtn) submitBtn.disabled = true;
+
+      // Show result score card
+      const resultEl = document.getElementById(`quiz-result-${unitId}`);
+      if (!resultEl) return;
+      const grade = score >= 9 ? 'a' : score >= 6 ? 'b' : 'c';
+      const icons = { a: '🏆', b: '👍', c: '💪' };
+      const msgs = {
+        a: 'Excellent! Outstanding work!',
+        b: 'Good job! Keep practicing!',
+        c: score === 0 ? 'Score: 0 / 10. Try taking the test again!' : 'Keep going! Try again!'
+      };
+      resultEl.className = `quiz-result show grade-${grade}`;
+      resultEl.querySelector('.quiz-result-icon').textContent = icons[grade];
+      resultEl.querySelector('.quiz-result-score').textContent = `${score} / 10`;
+      resultEl.querySelector('.quiz-result-label').textContent = msgs[grade];
+      resultEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    function resetQuiz(unitId) {
+      renderQuiz(unitId);
+    }
+
+    function renderAllQuizzes() {
+      Object.keys(QUIZZES).forEach(uid => renderQuiz(uid));
+    }
+
+    renderAllQuizzes();
+  </script>
+</body>
+</html>
